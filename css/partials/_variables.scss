@@ -1,0 +1,33 @@
+////////////////////////////////////////
+            /***VARIABLES***/
+////////////////////////////////////////
+
+$primary-color: #19416F;   
+$secundary-color: #00A7F6;   
+$main-font: 'avant';
+$secundary-font: 'avant-std';
+
+@font-face {
+    font-family: 'avant';
+    src: url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot');
+    src: url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff2') format('woff2'),
+         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff') format('woff'),
+         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avant-std';
+    src: url('../fonts/ITCAvantGardeStd-Md.eot');
+    src: url('../fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
+        url('../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
+        url('../fonts/ITCAvantGardeStd-Md.ttf') format('truetype'),
+        url('../fonts/ITCAvantGardeStd-Md.svg#ITCAvantGardeStd-Md') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

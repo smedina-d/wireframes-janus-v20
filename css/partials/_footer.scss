@@ -1,0 +1,62 @@
+////////////////////////////////////////
+            /***FOOTER***/
+////////////////////////////////////////
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+    
+    .item {
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+
+        .sociales {
+            display: flex;
+
+            img {
+                width: 28px;
+                margin-right: 24px;
+            }
+        }
+
+        p {
+            
+            a {
+                color: #7f8591;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+.secundary-footer {
+    background: #2b436e;
+    padding: 30px;
+    font-family: $secundary-font;
+    
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 300px;
+            height: 56px;
+        }
+
+        p {
+            color: #ffffff;
+        }
+        p a{
+            color: #ffffff;
+        }
+    }
+
+}

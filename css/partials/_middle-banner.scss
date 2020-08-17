@@ -1,0 +1,30 @@
+////////////////////////////////////////
+          /***MIDDLE BANNER***/
+////////////////////////////////////////
+
+.middle-banner {
+    background: linear-gradient( #1a44ce, #34acff);
+    color: #ffffff;
+    padding: 50px 0;
+    margin-bottom: 50px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .row-items {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 30px auto;
+
+        .item {
+            text-align: center;
+
+            img {
+                height: 35px;
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+}

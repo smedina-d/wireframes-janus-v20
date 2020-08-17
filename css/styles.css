@@ -1,0 +1,252 @@
+/***VARIABLES***/
+@font-face {
+  font-family: 'avant';
+  src: url("../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot");
+  src: url("../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff2") format("woff2"), url("../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff") format("woff"), url("../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'avant-std';
+  src: url("../fonts/ITCAvantGardeStd-Md.eot");
+  src: url("../fonts/ITCAvantGardeStd-Md.eot?#iefix") format("embedded-opentype"), url("../fonts/ITCAvantGardeStd-Md.woff2") format("woff2"), url("../fonts/ITCAvantGardeStd-Md.woff") format("woff"), url("../fonts/ITCAvantGardeStd-Md.ttf") format("truetype"), url("../fonts/ITCAvantGardeStd-Md.svg#ITCAvantGardeStd-Md") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+body {
+  font-family: "avant";
+  background: #F5F5F5;
+  color: #19416F;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+  body > div {
+    display: flex; }
+  body .container {
+    margin: 0 auto;
+    width: 1199px; }
+  body img {
+    width: 100%;
+    height: 100%; }
+  body a {
+    text-decoration: none; }
+  body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  body p {
+    font-family: "avant-std"; }
+  body .separador {
+    height: 5px;
+    width: 166px;
+    background: #00A7F6;
+    margin: 20px auto; }
+
+/***MAIN IMAGEN***/
+#home {
+  position: relative;
+  height: 100vh; }
+  #home .dots {
+    width: 100%;
+    height: 73vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 14;
+    background: url("../img/dots.png");
+    background-size: cover; }
+  #home .image-figure {
+    background: url("../img/bg-image-figure.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    width: 720px;
+    height: 540px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10; }
+    #home .image-figure .figure-secundary-1 {
+      position: absolute;
+      z-index: 9;
+      right: 400px;
+      top: 140px;
+      width: 349px;
+      height: 70px;
+      background: #19416F;
+      border-radius: 50px;
+      transform: rotate(-40deg); }
+    #home .image-figure .figure-secundary-2 {
+      position: absolute;
+      z-index: 9;
+      right: 120px;
+      top: 520px;
+      width: 230px;
+      height: 70px;
+      background: #19416F;
+      border-radius: 50px;
+      transform: rotate(-38deg); }
+    #home .image-figure .figure-secundary-circle-1 {
+      position: absolute;
+      z-index: 14;
+      right: 70px;
+      top: 365px;
+      background: linear-gradient(#34acff, #1a44ce);
+      border-radius: 50%;
+      width: 100px;
+      height: 100px; }
+    #home .image-figure .figure-secundary-circle-2 {
+      position: absolute;
+      z-index: 14;
+      right: 120px;
+      top: 470px;
+      background: linear-gradient(#34acff, #1a44ce);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px; }
+
+/***HEADER***/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 0; }
+  header .logo {
+    max-width: 300px; }
+
+/***SLOGAN***/
+.slogan {
+  width: 50%;
+  margin-top: 10vh;
+  z-index: 0; }
+  .slogan h1 {
+    font-size: 3em;
+    font-family: "avant"; }
+  .slogan .nav {
+    display: flex;
+    justify-content: center; }
+    .slogan .nav a {
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1em;
+      color: #00A7F6;
+      width: 232px; }
+    .slogan .nav .btn-1 {
+      color: #ffffff;
+      border-radius: 30px;
+      background-color: #00a7f6;
+      margin: 20px;
+      padding: 15px; }
+    .slogan .nav .btn-2 {
+      color: #ffffff;
+      border-radius: 30px;
+      background-color: #19416F;
+      margin: 20px;
+      padding: 15px; }
+
+/***HOME***/
+.title {
+  text-align: center; }
+  .title h1 {
+    font-size: 3em; }
+  .title p {
+    width: 65%;
+    margin: 0 auto; }
+
+.info {
+  margin: 30px 0;
+  display: flex; }
+  .info .info-items {
+    width: 50%; }
+    .info .info-items h3 {
+      font-size: 40px;
+      margin: 30px 0; }
+    .info .info-items p {
+      margin-bottom: 30px; }
+    .info .info-items .info-items-image {
+      background-image: url("../img/info-item-imagen.png");
+      background-position-x: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%; }
+    .info .info-items .info-items-image-2 {
+      background-image: url("../img/money-2.png");
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%; }
+
+.tarifas {
+  display: flex; }
+  .tarifas .item {
+    width: 50%;
+    padding: 60px; }
+    .tarifas .item h1 {
+      font-size: 50px;
+      color: #3d424b;
+      margin-bottom: 50px; }
+    .tarifas .item h3 {
+      font-size: 30px;
+      color: #7f8591; }
+  .tarifas .item:first-child {
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: dotted;
+    border-width: 5px;
+    border-color: #cacaca; }
+
+/***MIDDLE BANNER***/
+.middle-banner {
+  background: linear-gradient(#1a44ce, #34acff);
+  color: #ffffff;
+  padding: 50px 0;
+  margin-bottom: 50px; }
+  .middle-banner h2 {
+    text-align: center; }
+  .middle-banner .row-items {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto; }
+    .middle-banner .row-items .item {
+      text-align: center; }
+      .middle-banner .row-items .item img {
+        height: 35px;
+        margin: 0 0 5px 0; }
+
+/***FOOTER***/
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 80px 0; }
+  .footer .item h3 {
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .footer .item .sociales {
+    display: flex; }
+    .footer .item .sociales img {
+      width: 28px;
+      margin-right: 24px; }
+  .footer .item p a {
+    color: #7f8591;
+    text-decoration: underline; }
+
+.secundary-footer {
+  background: #2b436e;
+  padding: 30px;
+  font-family: "avant-std"; }
+  .secundary-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .secundary-footer .container img {
+      width: 300px;
+      height: 56px; }
+    .secundary-footer .container p {
+      color: #ffffff; }
+    .secundary-footer .container p a {
+      color: #ffffff; }
+
+/*# sourceMappingURL=styles.css.map */

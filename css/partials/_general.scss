@@ -1,0 +1,48 @@
+body {
+	font-family: $main-font;
+    background: #F5F5F5;
+    color: $primary-color;
+	font-size: 16px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    >div { 
+        display: flex;
+    }
+
+
+    // div {border: solid 1px red;}
+
+    .container {
+        margin: 0 auto;
+        width: 1199px;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+        
+    a {
+    text-decoration: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    p {
+        font-family: $secundary-font;
+    }
+
+    .separador {
+        height: 5px;
+        width: 166px;
+        background: $secundary-color;
+        margin: 20px auto;
+
+    }
+}
