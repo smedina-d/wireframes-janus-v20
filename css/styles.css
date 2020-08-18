@@ -12,197 +12,14 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
-body {
-  font-family: "avant";
-  background: #F5F5F5;
-  color: #19416F;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  padding: 0; }
-  body > div {
-    display: flex; }
-  body .container {
-    margin: 0 auto;
-    width: 1199px; }
-  body img {
-    width: 100%;
-    height: 100%; }
-  body a {
-    text-decoration: none; }
-  body * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-  body p {
-    font-family: "avant-std"; }
-  body .separador {
-    height: 5px;
-    width: 166px;
-    background: #00A7F6;
-    margin: 20px auto; }
-
-/***MAIN IMAGEN***/
-#home {
-  position: relative;
-  height: 100vh; }
-  #home .dots {
-    width: 100%;
-    height: 73vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 14;
-    background: url("../img/dots.png");
-    background-size: cover; }
-  #home .image-figure {
-    background: url("../img/bg-image-figure.png");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
-    width: 720px;
-    height: 540px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 10; }
-    #home .image-figure .figure-secundary-1 {
-      position: absolute;
-      z-index: 9;
-      right: 400px;
-      top: 140px;
-      width: 349px;
-      height: 70px;
-      background: #19416F;
-      border-radius: 50px;
-      transform: rotate(-40deg); }
-    #home .image-figure .figure-secundary-2 {
-      position: absolute;
-      z-index: 9;
-      right: 120px;
-      top: 520px;
-      width: 230px;
-      height: 70px;
-      background: #19416F;
-      border-radius: 50px;
-      transform: rotate(-38deg); }
-    #home .image-figure .figure-secundary-circle-1 {
-      position: absolute;
-      z-index: 14;
-      right: 70px;
-      top: 365px;
-      background: linear-gradient(#34acff, #1a44ce);
-      border-radius: 50%;
-      width: 100px;
-      height: 100px; }
-    #home .image-figure .figure-secundary-circle-2 {
-      position: absolute;
-      z-index: 14;
-      right: 120px;
-      top: 470px;
-      background: linear-gradient(#34acff, #1a44ce);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px; }
-
-/***HEADER***/
-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 30px 0; }
-  header .logo {
-    max-width: 300px; }
-
-/***SLOGAN***/
-.slogan {
-  width: 50%;
-  margin-top: 10vh;
-  z-index: 0; }
-  .slogan h1 {
-    font-size: 3em;
-    font-family: "avant"; }
-  .slogan .nav {
-    display: flex;
-    justify-content: center; }
-    .slogan .nav a {
-      color: #ffffff;
-      text-decoration: none;
-      text-align: center;
-      font-size: 1em;
-      color: #00A7F6;
-      width: 232px; }
-    .slogan .nav .btn-1 {
-      color: #ffffff;
-      border-radius: 30px;
-      background-color: #00a7f6;
-      margin: 20px;
-      padding: 15px; }
-    .slogan .nav .btn-2 {
-      color: #ffffff;
-      border-radius: 30px;
-      background-color: #19416F;
-      margin: 20px;
-      padding: 15px; }
-
-/***HOME***/
-.title {
-  text-align: center; }
-  .title h1 {
-    font-size: 3em; }
-  .title p {
-    width: 65%;
-    margin: 0 auto; }
-
-.info {
-  margin: 30px 0;
-  display: flex; }
-  .info .info-items {
-    width: 50%; }
-    .info .info-items h3 {
-      font-size: 40px;
-      margin: 30px 0; }
-    .info .info-items p {
-      margin-bottom: 30px; }
-    .info .info-items .info-items-image {
-      background-image: url("../img/info-item-imagen.png");
-      background-position-x: right;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 100%; }
-    .info .info-items .info-items-image-2 {
-      background-image: url("../img/money-2.png");
-      background-position-x: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 100%; }
-
-.tarifas {
-  display: flex; }
-  .tarifas .item {
-    width: 50%;
-    padding: 60px; }
-    .tarifas .item h1 {
-      font-size: 50px;
-      color: #3d424b;
-      margin-bottom: 50px; }
-    .tarifas .item h3 {
-      font-size: 30px;
-      color: #7f8591; }
-  .tarifas .item:first-child {
-    border-bottom: 0;
-    border-top: 0;
-    border-left: 0;
-    border-right: dotted;
-    border-width: 5px;
-    border-color: #cacaca; }
-
 /***MIDDLE BANNER***/
 .middle-banner {
   background: linear-gradient(#1a44ce, #34acff);
   color: #ffffff;
   padding: 50px 0;
-  margin-bottom: 50px; }
+  margin: 80px 0; }
+  .middle-banner .title {
+    margin: 0; }
   .middle-banner h2 {
     text-align: center; }
   .middle-banner .row-items {
@@ -216,16 +33,276 @@ header {
         height: 35px;
         margin: 0 0 5px 0; }
 
+/***MODAL***/
+/***MODAL***/
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s; }
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.25); }
+
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+  border-radius: 30px; }
+
+.modal-window header {
+  font-weight: bold; }
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px; }
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 21px;
+  width: 70px;
+  text-decoration: none; }
+
+.modal-close img {
+  width: 20px; }
+
+.modal-close img:hover {
+  opacity: 0.5; }
+
+.modal-close:hover {
+  color: black; }
+
+/* Demo Styles */
+a {
+  color: inherit; }
+
+/* .container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px; }
+
+small {
+  color: #aaa; }
+
+.btn {
+  background-color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 3px;
+  text-decoration: none; }
+
+.btn i {
+  padding-right: 0.3em; }
+
+/*FORM*/
+input, textarea {
+  font-family: "avant-std";
+  color: #7f8591;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-color: #dbdbdb;
+  border: solid 1px #dbdbdb; }
+
+input:focus, textarea:focus {
+  color: #7f8591;
+  outline: transparent;
+  border-color: #7f8591; }
+
+input {
+  border-radius: 30px; }
+
+textarea {
+  height: 77px;
+  resize: none;
+  border-radius: 20px; }
+
+input[type=submit] {
+  background-color: #dbdbdb; }
+
+input[type=submit]:hover {
+  opacity: 0.8; }
+
+/*FORM*/
+body {
+  font-family: "avant";
+  background: #F5F5F5;
+  color: #19416F;
+  font-size: 15px;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+  body > div {
+    display: flex; }
+  body .desktop {
+    display: block !important; }
+  body .mobile {
+    display: none !important; }
+  body .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px; }
+  body .row {
+    margin: 0 -15px; }
+  body img {
+    width: 100%; }
+  body a {
+    text-decoration: none; }
+  body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  body p {
+    font-family: "avant-std";
+    line-height: 21px; }
+  body .separador {
+    height: 5px;
+    width: 166px;
+    background: #00A7F6;
+    margin: 30px auto; }
+  body h2 {
+    font-size: 2.5em; }
+
+/***HEADER***/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 0; }
+
+.logo {
+  max-width: 300px;
+  width: 20%; }
+
+/***SLOGAN***/
+.slogan {
+  max-width: 600px; }
+  .slogan .txt-slogan h1 {
+    font-size: 3em;
+    font-family: "avant"; }
+  .slogan .txt-slogan .nav {
+    display: flex;
+    justify-content: center; }
+    .slogan .txt-slogan .nav a {
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1em;
+      color: #00A7F6;
+      width: 232px; }
+    .slogan .txt-slogan .nav .btn-1 {
+      color: #ffffff;
+      border-radius: 30px;
+      background-color: #00a7f6;
+      margin: 20px;
+      padding: 15px; }
+    .slogan .txt-slogan .nav .btn-2 {
+      color: #ffffff;
+      border-radius: 30px;
+      background-color: #19416F;
+      margin: 20px;
+      padding: 15px; }
+
+/***HOME***/
+#header-body {
+  padding: 15px 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+#home {
+  position: relative;
+  height: 90vh;
+  background-size: cover !important; }
+  #home > .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.title {
+  text-align: center;
+  margin: 80px 0; }
+  .title h1 {
+    font-size: 3em; }
+  .title p {
+    margin: 0 auto; }
+
+.info {
+  margin: 30px 0;
+  display: flex;
+  align-items: center; }
+  .info .info-items {
+    width: 50%;
+    padding: 0 15px; }
+    .info .info-items h3 {
+      font-size: 2em;
+      margin: 30px 0; }
+    .info .info-items p {
+      margin-bottom: 30px; }
+  .info .info-items-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .info .info-items-image img {
+      padding: 30px 0 30px 30px;
+      width: 80%; }
+  .info .info-items-image-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .info .info-items-image-2 img {
+      padding: 30px 0 30px 30px;
+      width: 80%;
+      width: 80%; }
+
+.tarifas {
+  display: flex; }
+  .tarifas .item {
+    width: 50%;
+    padding: 60px; }
+    .tarifas .item:first-child {
+      border-color: #cacaca; }
+    .tarifas .item h1 {
+      font-size: 2.5em !important;
+      color: #3d424b;
+      margin-bottom: 50px; }
+    .tarifas .item h3 {
+      font-size: 1.5em;
+      color: #7f8591; }
+
 /***FOOTER***/
 .footer {
   display: flex;
   justify-content: space-evenly;
-  margin: 80px 0; }
+  margin: 80px 0 100px 0; }
   .footer .item h3 {
-    font-size: 30px;
+    font-size: 1.5em;
     margin-bottom: 30px; }
   .footer .item .sociales {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .footer .item .sociales img {
       width: 28px;
       margin-right: 24px; }

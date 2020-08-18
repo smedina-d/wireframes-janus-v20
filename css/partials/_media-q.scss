@@ -1,0 +1,236 @@
+////////////////////////////////////////
+            /***FOOTER***/
+////////////////////////////////////////
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    .desktop {
+        display: none !important;
+    }
+    
+    .mobile {
+        display: block !important;
+        background-color: red;
+    }
+
+ }
+
+
+/* // Medium devices (tablets, 768px and up)// */
+@media (max-width: 768px) {
+
+    .desktop {
+        display: none !important;
+    }
+    
+    body {
+      border: solid 1px red;
+      background: linear-gradient( #0d54a8, #1ea4f6);
+      background: url('../img/bg-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    
+
+    .container-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      top: 50%;
+      margin-top: -50%;
+      position: absolute;
+    }
+
+    .logo-mobile {
+    }
+
+    .container-mobile form {
+      width: 85%;
+    }
+
+    input, textarea {
+      padding: 10px 20px;
+    }
+
+    .container-mobile input {
+      background: transparent;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: #ffffff;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #ffffff;
+      opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #ffffff;
+      opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #ffffff;
+    }
+
+    
+    input[type=submit] {
+      background-color: #ffffff;
+      color: #2b436e;
+    }
+
+    .container-mobile p {
+      font-size: 12px;
+    }
+
+    .container-mobile p a {
+      color: #ffffff;
+    }
+
+    .mini-footer p{
+      color: #ffffff;
+      font-size: 8px;
+    }
+
+    
+
+ } 
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+
+    #home {
+        height: inherit;
+        .dots {
+            height: 50vh;
+        }
+    }
+
+    .slogan { 
+
+        .txt-slogan {
+            width: 40%;
+            margin-top: 5vh;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .title {
+        margin: 10px 0;
+        h1 {
+            font-size: 1.9em;
+        }
+    }
+
+    .middle-banner {
+        margin: 0 0 20px 0;
+    }
+
+    .tarifas {
+        .item {
+            h1 {
+                font-size: 1.6em !important;
+            }
+
+            h3 {
+                font-size: 12px !important;
+            }
+        }
+    }
+    
+    .secundary-footer {
+        padding: 10px;
+        .container {
+            img {
+                max-width: 300px;
+                width: 20%;
+            }
+        }
+    }
+  
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+
+    #home {
+        .dots {
+
+            .main-figure {
+                height: 75%;
+            }
+
+            .figure-secundary-1 {
+                right: 340px;
+                top: 90px;
+                width: 300px;
+                height: 40px;
+            }
+
+            .figure-secundary-2 {
+                right: 60px;
+                top: 400px;
+                width: 210px;
+                height: 50px;
+            }
+
+            .figure-secundary-circle-1 {
+                width: 80px;
+                height: 80px;
+                right: 45px;
+                top: 340px;
+            }
+
+            .figure-secundary-circle-2 {
+                right: 530px;
+                top: 230px;
+            }
+        }
+    }
+
+    .tarifas { 
+        
+        .item {
+
+            h1 {
+                font-size: 2.4em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .info {
+        .info-items {
+            h3 {
+                font-size: 1.8em;
+            }
+        }
+    }
+}

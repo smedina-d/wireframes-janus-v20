@@ -1,0 +1,131 @@
+////////////////////////////////////////
+           /***MODAL***/
+////////////////////////////////////////
+/***MODAL***/
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 21px;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close img {
+  width: 20px;
+}
+.modal-close img:hover {
+  opacity: 0.5;
+}
+
+.modal-close:hover {
+  color: black;
+}
+
+/* Demo Styles */
+a {
+  color: inherit;
+}
+
+/* .container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+small {
+  color: #aaa;
+}
+
+.btn {
+  background-color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.btn i {
+  padding-right: 0.3em;
+}
+
+/*FORM*/
+input, textarea {
+  font-family: "avant-std";
+  color: #7f8591;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-color: #dbdbdb;
+  border: solid 1px #dbdbdb;
+}
+input:focus, textarea:focus {
+  color: #7f8591;
+  outline: transparent;
+  border-color: #7f8591;
+}
+
+input {
+  border-radius: 30px;
+}
+
+textarea {
+  height: 77px;
+  resize: none;
+  border-radius: 20px;
+}
+
+input[type=submit] {
+  background-color: #dbdbdb;
+}
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/*FORM*/

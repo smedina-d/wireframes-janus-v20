@@ -2,26 +2,38 @@ body {
 	font-family: $main-font;
     background: #F5F5F5;
     color: $primary-color;
-	font-size: 16px;
+	font-size: 15px;
     height: auto;
     margin: 0;
     padding: 0;
 
-    >div { 
+    > div { 
         display: flex;
+    }
+
+    .desktop {
+        display: block !important;
+    }
+    
+    .mobile {
+        display: none !important;
     }
 
 
     // div {border: solid 1px red;}
 
     .container {
+        width: 1170px;
         margin: 0 auto;
-        width: 1199px;
+        padding: 0 15px;
     }
     
+    .row{
+        margin:0 -15px;
+    }
+
     img {
         width: 100%;
-        height: 100%;
     }
         
     a {
@@ -29,20 +41,25 @@ body {
     }
 
     * {
-        margin: 0;
-        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
 
     p {
         font-family: $secundary-font;
+        line-height: 21px;
     }
 
     .separador {
         height: 5px;
         width: 166px;
         background: $secundary-color;
-        margin: 20px auto;
+        margin: 30px auto;
 
     }
+
+    h2 {
+        font-size: 2.5em;
+      }
 }

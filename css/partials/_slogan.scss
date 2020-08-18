@@ -4,42 +4,42 @@
 ////////////////////////////////////////
 
 .slogan {
-    width: 50%;
-    margin-top: 10vh;
-    z-index: 0;
+    max-width:600px; 
+    .txt-slogan {
 
-     h1 {
-         font-size: 3em;
-         font-family: $main-font;
-     }
-
-     .nav {
-         display: flex;
-         justify-content: center;
-
-        a {
-          color: #ffffff;  
-          text-decoration: none;
-          text-align: center;
-          font-size: 1em; 
-          color: $secundary-color; 
-          width: 232px;
+        h1 {
+            font-size: 3em;
+            font-family: $main-font;
         }
-        
-        .btn-1 {
-            color: #ffffff;
-            border-radius: 30px;
-            background-color: #00a7f6;
-            margin: 20px;
-            padding: 15px;
-        }
-        
-        .btn-2 {
-            color: #ffffff;
-            border-radius: 30px;
-            background-color: $primary-color;
-            margin: 20px;
-            padding: 15px;
+   
+        .nav {
+            display: flex;
+            justify-content: center;
+   
+           a {
+             color: #ffffff;  
+             text-decoration: none;
+             text-align: center;
+             font-size: 1em; 
+             color: $secundary-color; 
+             width: 232px;
+           }
+           
+           .btn-1 {
+               color: #ffffff;
+               border-radius: 30px;
+               background-color: #00a7f6;
+               margin: 20px;
+               padding: 15px;
+           }
+           
+           .btn-2 {
+               color: #ffffff;
+               border-radius: 30px;
+               background-color: $primary-color;
+               margin: 20px;
+               padding: 15px;
+           }
         }
     }
 }
