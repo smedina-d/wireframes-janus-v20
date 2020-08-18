@@ -283,7 +283,7 @@ header {
     width: 50%;
     padding: 60px; }
     .tarifas .item:first-child {
-      border-color: #cacaca; }
+      border-right: dotted 5px #cacaca; }
     .tarifas .item h1 {
       font-size: 2.5em !important;
       color: #3d424b;
