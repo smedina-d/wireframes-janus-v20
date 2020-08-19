@@ -41,22 +41,21 @@
     font-family: $secundary-font;
     
 
-    .container {
+    > .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
 
         img {
             width: 300px;
             height: 56px;
         }
 
-        p {
+        p, a {
             color: #ffffff;
         }
-        p a{
-            color: #ffffff;
-        }
-    }
+        
+    
 
 }

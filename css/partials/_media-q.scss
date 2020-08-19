@@ -1,180 +1,6 @@
 ////////////////////////////////////////
-            /***FOOTER***/
+            /***MEDIA QUIERYES***/
 ////////////////////////////////////////
-
-
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-
-    .desktop {
-        display: none !important;
-    }
-    
-    .mobile {
-        display: block !important;
-        background-color: red;
-    }
-
- }
-
-
-/* // Medium devices (tablets, 768px and up)// */
-@media (max-width: 768px) {
-
-    .desktop {
-        display: none !important;
-    }
-    
-    body {
-      border: solid 1px red;
-      background: linear-gradient( #0d54a8, #1ea4f6);
-      background: url('../img/bg-mobile.jpg') no-repeat;
-      background-size: cover;
-    }
-
-    .mobile {
-        display: block !important;
-    }
-
-    
-
-    .container-mobile {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      top: 50%;
-      margin-top: -50%;
-      position: absolute;
-    }
-
-    .logo-mobile {
-    }
-
-    .container-mobile form {
-      width: 85%;
-    }
-
-    input, textarea {
-      padding: 10px 20px;
-    }
-
-    .container-mobile input {
-      background: transparent;
-      color: #ffffff;
-      border-radius: 10px;
-    }
-
-    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-      color: #ffffff;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: #ffffff;
-      opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: #ffffff;
-      opacity:  1;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: #ffffff;
-    }
-
-    
-    input[type=submit] {
-      background-color: #ffffff;
-      color: #2b436e;
-    }
-
-    .container-mobile p {
-      font-size: 12px;
-    }
-
-    .container-mobile p a {
-      color: #ffffff;
-    }
-
-    .mini-footer p{
-      color: #ffffff;
-      font-size: 8px;
-    }
-
-    
-
- } 
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    body {
-        font-size: 14px;
-    }
-
-    #home {
-        height: inherit;
-        .dots {
-            height: 50vh;
-        }
-    }
-
-    .slogan { 
-
-        .txt-slogan {
-            width: 40%;
-            margin-top: 5vh;
-
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 12px;
-            }
-        }
-    }
-
-    .title {
-        margin: 10px 0;
-        h1 {
-            font-size: 1.9em;
-        }
-    }
-
-    .middle-banner {
-        margin: 0 0 20px 0;
-    }
-
-    .tarifas {
-        .item {
-            h1 {
-                font-size: 1.6em !important;
-            }
-
-            h3 {
-                font-size: 12px !important;
-            }
-        }
-    }
-    
-    .secundary-footer {
-        padding: 10px;
-        .container {
-            img {
-                max-width: 300px;
-                width: 20%;
-            }
-        }
-    }
-  
-}
-
-// Extra large devices (large desktops, 1200px and up)
 @media (max-width: 1200px) {
 
     #home {
@@ -233,4 +59,306 @@
             }
         }
     }
+}
+@media (max-width: 1024px) { 
+
+    #home {
+        position: relative;
+        height: 56vh;
+        background-size: cover !important;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+
+    #home {
+        .dots {
+            height: 50vh;
+        }
+    }
+
+    .slogan { 
+
+        .txt-slogan {
+            margin-top: 5vh;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .title {
+        margin: 10px 0;
+        h1 {
+            font-size: 1.9em;
+        }
+    }
+
+    .middle-banner {
+        margin: 0 0 20px 0;
+    }
+
+    .tarifas {
+        .item {
+            h1 {
+                font-size: 1.6em !important;
+            }
+
+            h3 {
+                font-size: 12px !important;
+            }
+        }
+    }
+    
+    .secundary-footer {
+        .container {
+            img {
+                max-width: 300px;
+                width: 20%;
+            }
+        }
+    }
+  
+}
+
+
+
+ /**************************/
+         // IOS //
+/**************************/
+
+
+/* // Medium devices (tablets, 768px and up)// */
+@media (max-width: 768px) {
+
+    body {
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .logo {
+        max-width: 250px;
+        margin:0 auto;
+    }
+
+    .info {
+        .info-items-image {
+            img {
+                
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
+        .info-items-image-2 {
+            img {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+    }
+
+    .title {
+        margin: 40px 0;
+    }
+
+    .middle-banner{
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    .tarifas {
+        .item {
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h4 {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .footer {
+        .item {
+            h3 {
+                font-size: 1em;
+            }
+
+            .sociales {
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    .secundary-footer {
+        img {
+            width: 200px;
+        }
+
+            p {
+            font-size: 10px;
+
+                a {
+                    font-size: 10px;
+                }
+            }
+    }
+
+    
+ } 
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+
+    body {
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+
+    #home {
+        position: relative;
+        background-image: none;
+        height: 100vh !important;
+    }
+
+    h2, p {
+        text-align: center;
+    }
+
+    .slogan {
+        max-width: inherit;
+        .txt-slogan{
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    .info {
+        flex-flow: wrap;
+        .info-items {
+            width: 100%;
+
+            h3 {
+                text-align: center;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+        }
+        .info-items-image,
+        .info-items-image-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                padding: 30px ;
+            }
+        }
+    }
+
+    .middle-banner {
+        .row-items {
+            display: flex;
+            flex-wrap: wrap;
+            // flex-direction: column;
+
+            .item {
+                width: 50%;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .title {
+        margin: 40px 0;
+    }
+
+    .tarifas {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .item {
+            width: 100%;
+            padding: 40px;
+
+            &:first-child {
+                border: none;
+            }
+
+            h4 {
+                text-align: center;
+            }
+        }
+    }
+
+    .footer {
+        flex-flow: wrap;
+
+        .item {
+            width: 50%;
+            h3 {
+                text-align: left;
+                font-size: 1em;
+                margin: 20px 0;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .sociales {
+                justify-content: start;
+
+                .item {
+                    width: 20%;
+                    img {
+                        margin: 0 15px 0 15px;
+                    }
+                }
+
+               
+            }
+        }
+    }
+
+    .secundary-footer {
+        > .container {
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            p, a {
+                font-size: 12px;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: 0 0 10px 0;
+        }
+
+       
+    }
+
 }

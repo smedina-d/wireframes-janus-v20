@@ -10,6 +10,7 @@
 #home {
     position: relative;
     height: 90vh;
+    background: url("../img/main-image.png") center top no-repeat;
     background-size:cover!important;
     > .container{
         height: 100%;
@@ -18,7 +19,42 @@
         justify-content: center;
     }
 }
-
+.slogan {
+    max-width:600px; 
+    .txt-slogan {
+        h1 {
+            font-size: 3em;
+            font-family: $main-font;
+        }
+   
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+           a {
+            color: #ffffff;  
+            text-decoration: none;
+            text-align: center;
+            font-size: 1em; 
+            color: $secundary-color; 
+            width: 232px;
+            margin: 5px;
+            padding: 15px;
+           }
+           
+           .btn-1 {
+               color: #ffffff;
+               border-radius: 30px;
+               background-color: #00a7f6;
+           }
+           
+           .btn-2 {
+               color: #ffffff;
+               border-radius: 30px;
+               background-color: $primary-color;
+           }
+        }
+    }
+}
 .title {
     text-align: center;
     margin: 80px 0;
