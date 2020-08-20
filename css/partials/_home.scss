@@ -9,9 +9,10 @@
 }
 #home {
     position: relative;
-    height: 90vh;
+    height: 85vh;
     background: url("../img/main-image.png") center top no-repeat;
     background-size:cover!important;
+    background-position-x: right;
     > .container{
         height: 100%;
         display: flex;
