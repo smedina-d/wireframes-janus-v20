@@ -4,29 +4,53 @@
 
 .bg-body {
     background: linear-gradient( #0d54a8, #1ea4f6);
-    background: url('../img/bg-login.png') no-repeat;
     background-size: cover;
-
     display: flex;
     justify-content: center;
     height: 100vh;
-
-}
-
-.login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    > .container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: auto;
+    &:before{
+        content:'';
+        background:url('../img/dots-bottom-login.png') no-repeat bottom left;
+        position:absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
     }
+    &:after{
+        content:'';
+        background:url('../img/dot-top-login.png') no-repeat top right;
+        position:absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        &:after{
+            content:'';
+            background:url('../img/login-web.png') no-repeat center right;
+            position:absolute;
+            height: 100%;
+            width: 100%;
+            background-size:contain;
+            z-index: -1;
+        }
+        > .container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            text-align: center;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: auto;
+        }
 
         .logo-mobile {
             max-width:400px;
@@ -36,52 +60,55 @@
                 max-width: 250px;
             }
         }
-    
+
         form {
             max-width:400px;
         }
-    
+
         input, textarea {
             padding: 10px 20px;
         }
-    
+
         input {
             background: transparent;
             color: #ffffff;
             border-radius: 20px;
         }
-    
-            ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-                color: #ffffff;
-            }
+        
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: #ffffff;
+        }
 
-            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-                color: #ffffff;
-                opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
-            }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #ffffff;
+            opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+        }
 
-            ::-moz-placeholder { /* Mozilla Firefox 19+ */
-                color: #ffffff;
-                opacity:  1;
-            }
-            
-            :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                color: #ffffff;
-            }
-    
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #ffffff;
+            opacity:  1;
+        }
+        
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #ffffff;
+        }
+        
         input[type=submit] {
             background-color: #ffffff;
             color: #2b436e;
         }
-    
+
         p {
             font-size: 12px;
         }
-    
+
         p a {
             color: #ffffff;
         }
+    }
 }
+
+
 .mini-footer {
     margin-top: auto;
     align-self: center;
@@ -95,25 +122,22 @@
 @media (max-width: 1024px ) { 
 
     .bg-body {
-        background: linear-gradient(#0d54a8, #1ea4f6);
-        background: url(../img/bg-login.png) no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        background-position-x: center;
-        align-items: center;
-        height: 100vh;
+        &:before,
+        &:after{
+            background-size: 100%;
+        }
+        .login{
+            &:after{
+                display: none;
+            }
+        }
+        // background-size: cover;
+        // display: flex;
+        // justify-content: center;
+        // background-position-x: center;
+        // align-items: center;
+        // height: 100vh;
     }
-}
-
-@media (max-width: 768px) { 
-
-    .bg-body {
-        background: url('../img/bg-mobile.jpg') no-repeat;
-        background-size: cover;
-        background-position-x: left;
-      }
-
 }
 
 

@@ -3,41 +3,6 @@
 ////////////////////////////////////////
 @media (max-width: 1200px) {
 
-    #home {
-        .dots {
-
-            .main-figure {
-                height: 75%;
-            }
-
-            .figure-secundary-1 {
-                right: 340px;
-                top: 90px;
-                width: 300px;
-                height: 40px;
-            }
-
-            .figure-secundary-2 {
-                right: 60px;
-                top: 400px;
-                width: 210px;
-                height: 50px;
-            }
-
-            .figure-secundary-circle-1 {
-                width: 80px;
-                height: 80px;
-                right: 45px;
-                top: 340px;
-            }
-
-            .figure-secundary-circle-2 {
-                right: 530px;
-                top: 230px;
-            }
-        }
-    }
-
     .tarifas { 
         
         .item {
@@ -65,7 +30,7 @@
     #home {
         position: relative;
         height: 56vh;
-        background-size: cover !important;
+        background-size: contain !important;
     }
 }
 // Large devices (desktops, 992px and up)
@@ -74,23 +39,19 @@
         font-size: 14px;
     }
 
-    #home {
-        .dots {
-            height: 50vh;
-        }
-    }
+    #home{
+        .slogan { 
 
-    .slogan { 
+            .txt-slogan {
+                margin-top: 5vh;
 
-        .txt-slogan {
-            margin-top: 5vh;
+                h1 {
+                    font-size: 2em;
+                }
 
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 12px;
+                p {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -144,10 +105,20 @@
             font-size: 12px;
         }
     }
-
+    #home{
+        &:before,
+        &:after{
+            background-size: 100%;
+        }
+        .container{
+            &:before{
+                display: none;
+            }
+        }
+    }
     .logo {
         max-width: 250px;
-        margin:0 auto;
+        // margin:0 auto;
     }
 
     .info {
@@ -227,6 +198,10 @@
         h2 {
             font-size: 2em;
         }
+    }
+
+    .logo {
+        margin:0 auto;
     }
 
 
@@ -316,7 +291,7 @@
         flex-flow: wrap;
 
         .item {
-            width: 50%;
+            width: 100%;
             h3 {
                 text-align: left;
                 font-size: 1em;
@@ -328,8 +303,6 @@
             }
 
             .sociales {
-                justify-content: start;
-
                 .item {
                     width: 20%;
                     img {

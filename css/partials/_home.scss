@@ -10,14 +10,44 @@
 #home {
     position: relative;
     height: 85vh;
-    background: url("../img/main-image.png") center top no-repeat;
     background-size:cover!important;
     background-position-x: right;
+    &:before{
+        content:'';
+        background:url('../img/dots-bootm.png') no-repeat bottom left;
+        position:absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+    &:after{
+        content:'';
+        background:url('../img/dots-top.png') no-repeat top right;
+        position:absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
     > .container{
         height: 100%;
         display: flex;
         flex-direction:column;
         justify-content: center;
+        &:before{
+            content:'';
+            background:url('../img/bg-image.png') no-repeat top right;
+            position:absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
     }
 }
 .slogan {
