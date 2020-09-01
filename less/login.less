@@ -39,6 +39,7 @@
             position:absolute;
             height: 100%;
             width: 100%;
+            left:0;
             background-size:contain;
             z-index: -1;
         }
@@ -63,47 +64,45 @@
 
         form {
             max-width:400px;
-        }
+            input, textarea {
+                padding: 10px 20px;
+            }
+            input{
+                background: transparent;
+                color: #ffffff;
+                border-radius: 5px;
+                border: solid 1px #e8e8e8;
+                &:focus,
+                &:active{
+                    outline:none;
+                }
+                &[type=submit] {
+                    background-color: #ffffff;
+                    color: #272727;
+                    border-radius:20px;
 
-        input, textarea {
-            padding: 10px 20px;
-        }
-
-        input {
-            background: transparent;
-            color: #ffffff;
-            border-radius: 20px;
-        }
-        
-        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-            color: #ffffff;
-        }
-
-        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color: #ffffff;
-            opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
-        }
-
-        ::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color: #ffffff;
-            opacity:  1;
-        }
-        
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #ffffff;
-        }
-        
-        input[type=submit] {
-            background-color: #ffffff;
-            color: #2b436e;
-        }
-
-        p {
-            font-size: 12px;
-        }
-
-        p a {
-            color: #ffffff;
+                }
+                &::-webkit-input-placeholder{
+                    color: #ffffff;
+                }
+                &:-moz-placeholder{
+                    color: #ffffff;
+                    opacity: 1;
+                }
+                &::-moz-placeholder{
+                    color: #ffffff;
+                    opacity:  1;
+                }
+                &:-ms-input-placeholder{
+                    color: #ffffff;
+                }
+            }
+            p{
+                font-size: 12px;
+                a {
+                    color: #ffffff;
+                }
+            }
         }
     }
 }
@@ -111,7 +110,9 @@
 
 .mini-footer {
     margin-top: auto;
-    align-self: center;
+    align-self: flex-start;
+    width: 400px;
+    text-align: center;
     p {
         color: #ffffff;
         font-size: 8px;

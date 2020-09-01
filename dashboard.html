@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janus</title>
-    <link type="text/css" rel="stylesheet" href="css/styles.css" /> 
+    <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
 </head>
 <body class="dashboard">
 
     <div class="header-dashboard">
         <div class="container">
-                <div class="logo"><img src="img/logo.svg"></div>
-
-                <div class="nav">
-                    <div class="item">
-                        <h3 class="title">Disponible</h3>
-                        <h3 class="subtitle-1">$102.36 US</h3>
-                    </div>
-                    <div class="item">
-                        <h3 class="title">Disponible</h3>
-                        <h3 class="subtitle-2">$102.36 US</h3>
-                    </div>
-
-                    <div class="alert">
-                        <img src="img/dashboard/alert.svg">
-                    </div>
-
-                    <div class="ajustes">
-                        <img src="img/dashboard/gear.svg">
-                    </div>
-
-                    <div class="user">
-                        <img src="img/dashboard/user.svg">
-                        <div id="user"><p>7623658</p></div>
-                        <img class="polygon-1" src="img/dashboard/arrow-down.svg">
-                    </div>
+            <div class="logo"><img src="img/logo.svg"></div>
+            <div class="nav">
+                <div class="item">
+                    <h3 class="title">Disponible</h3>
+                    <h3 class="subtitle-1">$102.36 US</h3>
                 </div>
+                <div class="item">
+                    <h3 class="title">Disponible</h3>
+                    <h3 class="subtitle-2">$102.36 US</h3>
+                </div>
+
+                <div class="icon-rounded alert"></div>
+
+                <div class="icon-rounded settings"></div>
+
+                <div class="user">
+                    <img class="user-img" src="img/dashboard/user.svg">
+                    <div>7623658</div>
+                    <img class="polygon-1" src="img/dashboard/arrow-down.svg">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -214,11 +209,6 @@
 
             </div>
     </div>
-    
-            
-     
-
-   
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>
 </html>

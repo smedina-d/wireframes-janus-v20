@@ -1,7 +1,7 @@
 body {
-	font-family: $main-font;
+	font-family: @main-font;
     background: #F5F5F5;
-    color: $primary-color;
+    color: @primary-color;
 	font-size: 15px;
     height: auto;
     margin: 0;
@@ -17,21 +17,21 @@ body {
     padding: 0 15px;
 }
 .container{
-    @media (max-width: $screen-xs-min) {
+    @media (max-width: @screen-xs-min) {
         width: 100%;
     }
-    @media (min-width: $screen-xs-min) {
+    @media (min-width: @screen-xs-min) {
         width: 100%;
     }
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: @screen-sm-min) {
         width: 100%;
     }
-    @media (min-width: $screen-md-min) {
-        width: $container-md;
+    @media (min-width: @screen-md-min) {
+        width: @container-md;
         
     }
-    @media (min-width: $screen-lg-min) {
-        width: $container-lg;
+    @media (min-width: @screen-lg-min) {
+        width: @container-lg;
     }
 }
 
@@ -50,7 +50,7 @@ text-decoration: none;
 }
 
 p {
-    font-family: $secundary-font;
+    font-weight: 500;
     line-height: 21px;
     color: #3d424b;
 }
@@ -58,7 +58,7 @@ p {
 .separador {
     height: 5px;
     width: 166px;
-    background: $secundary-color;
+    background: @secundary-color;
     margin: 30px auto;
 
 }
