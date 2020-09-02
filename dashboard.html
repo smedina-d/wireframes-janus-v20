@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Janus</title>
-    <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/bootstrap.less" /> -->
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+
+    <!-- Online Less compiler -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.5.0/less.min.js" ></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body class="dashboard">
 
@@ -17,14 +33,28 @@
                     <h3 class="subtitle-1">$102.36 US</h3>
                 </div>
                 <div class="item">
-                    <h3 class="title">Disponible</h3>
+                    <h3 class="title">Pendiente</h3>
                     <h3 class="subtitle-2">$102.36 US</h3>
                 </div>
-
-                <div class="icon-rounded alert"></div>
-
-                <div class="icon-rounded settings"></div>
-
+                <div class="icon-rounded">
+                    <span class="icon-alert"></span>
+                    <ul>
+                        <li>Mensajes</li>
+                        <li>Has recibido US $20.00</li>
+                        <li>Has recibido US $20.00</li>
+                        <li>Has recibido US $20.00</li>
+                    </ul>
+                </div>
+                <div class="icon-rounded">
+                    <span class="icon-gear"></span>
+                    <ul>
+                        <li>Configuración</li>
+                        <li>Seguridad</li>
+                        <li>Notificaciones</li>
+                        <li>Mis cuentas</li>
+                        <li>Servicios</li>
+                    </ul>
+                </div>
                 <div class="user">
                     <img class="user-img" src="img/dashboard/user.svg">
                     <div>7623658</div>
@@ -33,181 +63,144 @@
             </div>
         </div>
     </div>
-
-    <div class="sub-menu">
+    <div id="sub-menu-container">
         <div class="container">
-            <a href="#">Inicio</a>
-            <a href="#">Agregar fondos</a>
-            <a href="#">Retirar / Transferir</a>
-            <a href="#">Mis contactos</a>
+            <div class="sub-menu">
+                <a href="#">Inicio</a>
+                <a href="#">Agregar fondos</a>
+                <a href="#">Retirar / Transferir</a>
+                <a href="#">Mis contactos</a>
+            </div>
         </div>     
     </div>
-
-    <div class="container" >
+    <div id="main-menu-dashboard">
+        <div class="container">
             <div class="sidebar-menu">
                 <div class="menu-dasboard">
                     <div class="title">
-                        <h3>¡Hola, Rodolfo!</h3>
+                        <h3>¡Hola, Pako!</h3>
                     </div>
                     <h3>Acceso directo</h3>
-                    <span><img src="img/dashboard/correo-electronico.svg"><a href="#">Correo electrónico</a></span>
-                    <span><img src="img/dashboard/transferencia-bancaria.svg"><a href="#">Transferencia bancaria</a></span>
-                    <span><img src="img/dashboard/efectivo.svg"><a href="#">Efectivo</a></span>
-                    <span><img src="img/dashboard/recarga-telefonica.svg"><a href="#">Recarga telefónica</a></span>
-                    <span><img src="img/dashboard/transacciones.svg"><a href="#">Transacciones</a></span>
+                    <a href="#"><span class="icon-correo-electronico"></span>Correo electrónico</a>
+                    <a href="#"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
+                    <a href="#"><span class="icon-efectivo"></span>Efectivo</a>
+                    <a href="#"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
+                    <a href="#"><span class="icon-transacciones"></span>Transacciones</a>
                 </div>
-        
                 <div class="menu-dasboard">
                     <h3>Favoritos</h3>
-                    <span><img src="img/dashboard/user.svg"><a href="#">Alejandra de los Santos</a></span>
-                    <span><img src="img/dashboard/user.svg"><a href="#">Samuel Medina</a></span>
-                    <span><img src="img/dashboard/user.svg"><a href="#">Sofia Martinez</a></span>
+                    <a href="#"><span class="icon-user"></span>Alejandra de los Santos</a>
+                    <a href="#"><span class="icon-user"></span>Samuel Medina</a>
+                    <a href="#"><span class="icon-user"></span>Sofia Martinez</a>
                 </div>
-        
                 <div class="menu-dasboard">
                     <h3>Acceso directo</h3>
-                    <span><img src="img/dashboard/invitar-amigos.svg"><a href="#">Invitar amigos</a></span>
-                    <span><img src="img/dashboard/ajustes.svg"><a href="#">Ajustes</a></span>
-                    <span><img src="img/dashboard/ayuda.svg"><a href="#">Ayuda</a></span>
-                    <span><img src="img/dashboard/cerrar-sesion.svg"><a href="#">Cerrar Sesión</a></span>
+                    <a href="#"><img src="img/dashboard/invitar-amigos.svg">Invitar amigos</a>
+                    <a href="#"><img src="img/dashboard/ajustes.svg">Ajustes</a>
+                    <a href="#"><span class="icon-ayuda"></span>Ayuda</a>
+                    <a href="#"><span class="icon-cerrar-sesion"></span>Cerrar Sesión</a>
                 </div>
-
             </div>
-
-
             <div class="main">
                 <div class="breadcrumb">
-                    <a href="#">Transferir /</a>
+                    <a href="#">Transferir</a>&nbsp;/
                     <a href="#">Retirar por correo electrónico</a>
                 </div>
-                
                 <div class="items-nav">
                     <div class="item">
-                        <p>Tiempo de transferencia</p>
-                        <span><img src="img/dashboard/flash.svg"><h4>En minutos</h4></span>
+                        <h3>Tiempo de transferencia</h3>
+                        <div class="info-items"><span class="icon-flash"></span><h4>En minutos</h4></div>
                     </div>
                     <div class="item">
-                        <p>Tiempo de transferencia</p>
-                        <span><h4>USD 5%</h4></span>
+                        <h3>Tiempo de transferencia</h3>
+                        <div class="info-items"><h4>USD 5%</h4></div>
                     </div>
-                    <div class="item">
-                        <p>Tiempo de transferencia</p>
-                        <span><h4>$97.25 USD</h4></span>
+                    <div class="item no-border">
+                        <h3>Tiempo de transferencia</h3>
+                        <div class="info-items"><h4>$97.25 USD</h4></div>
                     </div>
-                    <div class="btn">
-                        <a href="#" class="btn-continuar">
-                            Continuar
-                            <img src="img/dashboard/down-arrow-2.svg">
-                        </a>
-                    </div>
+                    <a href="#" class="btn-continuar">
+                        Continuar
+                        <span class="icon-down-arrow-2"></span>
+                    </a>
                 </div>
-
-                <div class="title">
+                <div id="ultimas-transacciones">
                     <h3>Últimas transacciones</h3>
-                </div>
+                    <div class="row-dashboard headers-row">
+                        <div class="column-1">Fecha</div>
+                        <div class="column-2">Detalle</div>
+                        <div class="column-3">Estatus</div>
+                        <div class="column-4">Monto</div>
+                    </div>
+                    <div class="row-dashboard">
+                        <div class="column-1">28 Jun</div>
+                        <div class="column-2">
+                            <div class="sub-title">Depósito desde AirTm</div>
+                            <div class="name-detalle">Samuel Medina de Giudice</div>
+                        </div>
+                        <div class="column-3">
+                            <span class="icon-minus"></span>
+                        </div>
+                        <div class="column-4 blue">-27 USD</div>
+                    </div>
 
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p><b>Fecha</b></p>
+                    <div class="row-dashboard">
+                        <div class="column-1">28 Jun</div>
+                        <div class="column-2">
+                            <div class="sub-title">Pago recibido con TDC BBVA</div>
+                            <div class="name-detalle">Laurelys Johana Castillo Cisneros (Visa)</div>
+                        </div>
+                        <div class="column-3">
+                            <span class="icon-check"></span>
+                        </div>
+                        <div class="column-4 green">35 USD</div>
                     </div>
-                    <div class="column-2">
-                        <p><b>Detalle</b></p>
-                    </div>
-                    <div class="column-3">
-                    <p><b>Estatus</b></p>
-                    </div>
-                    <div class="column-4">
-                    <p><b>Monto</b></p>
-                    </div>
-                </div>
 
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p>28 Jun</p>
+                    <div class="row-dashboard">
+                        <div class="column-1">27 Jun</div>
+                        <div class="column-2">
+                            <div class="sub-title">Pago recibido con TDD Santander</div>
+                            <div class="name-detalle">Alejandra De los Santos (Visa)</div>
+                        </div>
+                        <div class="column-3">
+                            <span class="icon-check"></span>
+                        </div>
+                        <div class="column-4 green">15 USD</div>
                     </div>
-                    <div class="column-2">
-                        <p>Depósito desde AirTm</p>
-                        <div class="detail">Samuel Medina de Giudice</div>
-                    </div>
-                    <div class="column-3">
-                        <img src="img/dashboard/minus.svg">
-                    </div>
-                    <div class="column-4">
-                        <div class="blue">-27 USD</div>
-                    </div>
-                </div>
 
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p>28 Jun</p>
+                    <div class="row-dashboard">
+                        <div class="column-1">25 Jun 2020</div>
+                        <div class="column-2">
+                            <div class="sub-title">Depósito desde Banorte</div>
+                            <div class="name-detalle">Samuel Medina de Giudice</div>
+                        </div>
+                        <div class="column-3">
+                            <span class="icon-equis"></span>
+                        </div>
+                        <div class="column-4 red">-35 USD</div>
                     </div>
-                    <div class="column-2">
-                        <p>Pago recibido con TDC BBVA</p>
-                        <div class="detail">Laurelys Johana Castillo Cisneros (Visa)</div>
-                    </div>
-                    <div class="column-3">
-                        <img src="img/dashboard/check.svg">
-                    </div>
-                    <div class="column-4">
-                        <div class="green">35 USD</div>
-                    </div>
-                </div>
 
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p>27 Jun</p>
-                    </div>
-                    <div class="column-2">
-                        <p>Pago recibido con TDD Santander</p>
-                        <div class="detail">Alejandra De los Santos (Visa)</div>
-                    </div>
-                    <div class="column-3">
-                        <img src="img/dashboard/check.svg">
-                    </div>
-                    <div class="column-4">
-                        <div class="green">15 USD</div>
-                    </div>
-                </div>
-
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p>25 Jun 2020</p>
-                    </div>
-                    <div class="column-2">
-                        <p>Depósito desde Banorte</p>
-                        <div class="detail">Samuel Medina de Giudice</div>
-                    </div>
-                    <div class="column-3">
-                        <img src="img/dashboard/equis.svg">
-                    </div>
-                    <div class="column-4">
-                        <div class="red">-35 USD</div>
+                    <div class="row-dashboard">
+                        <div class="column-1">18 Jun</div>
+                        <div class="column-2">
+                            <div class="sub-title">Depósito desde AirTm</div>
+                            <div class="name-detalle">Samuel Medina de Giudice</div>
+                        </div>
+                        <div class="column-3">
+                            <span class="icon-minus"></span>
+                        </div>
+                        <div class="column-4 blue">-27 USD</div>
                     </div>
                 </div>
-
-                <div class="row-dashboard">
-                    <div class="column-1">
-                        <p>18 Jun</p>
-                    </div>
-                    <div class="column-2">
-                        <p>Depósito desde AirTm</p>
-                        <div class="detail">Samuel Medina de Giudice</div>
-                    </div>
-                    <div class="column-3">
-                        <img src="img/dashboard/minus.svg">
-                    </div>
-                    <div class="column-4">
-                        <div class="blue">-27 USD</div>
-                    </div>
-                </div>
-
                 <div class="main-nav-footer">
-                    <a href="#">Términos y Condiciones |</a>
-                    <a href="#">Política de privacidad |</a>
-                    <a href="#">Uso aceptable</a>
+                    <div class="row">
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="#">Política de privacidad</a>
+                        <a href="#">Uso aceptable</a>
+                    </div>
                 </div>
-
             </div>
+        </div>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>

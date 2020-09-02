@@ -4,31 +4,23 @@
 
 @primary-color: #19416F;   
 @secundary-color: #00A7F6;   
-@main-font: 'avant';
+@main-font: 'Avant';
 
-@font-face {
-    font-family: 'avant';
-    src: url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot');
-    src: url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff2') format('woff2'),
-         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.woff') format('woff'),
-         url('../fonts/itc_avant_garde_gothic_lt_demi_regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'janus'!important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-@font-face {
-    font-family: 'avant';
-    src: url('../fonts/ITCAvantGardeStd-Md.eot');
-    src: url('../fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
-        url('../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
-        url('../fonts/ITCAvantGardeStd-Md.ttf') format('truetype'),
-        url('../fonts/ITCAvantGardeStd-Md.svg#ITCAvantGardeStd-Md') format('svg');
-    font-weight: 500;
-    font-style: normal;
-}
-
 @grid-gutter-width:         30px;
 //** Deprecated `@screen-xs` as of v3.0.1
 @screen-xs:                  480px;
@@ -72,5 +64,92 @@
 //** For `@screen-lg-min` and up.
 @container-lg:                @container-large-desktop;
 
+.icon-alert-2 .path1:before {
+  content: "\e901";
+  color: rgb(113, 112, 112);
+}
+.icon-alert-2 .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(113, 112, 112);
+}
+.icon-alert-2 .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(113, 112, 112);
+}
+.icon-alert-2 .path4:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(113, 112, 112);
+}
+.icon-alert-2 .path5:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(229, 36, 33);
+}
+.icon-alert:before {
+  content: "\e906";
+  color: #717070;
+}
+.icon-arrow-down:before {
+  content: "\e907";
+}
+.icon-ayuda:before {
+  content: "\e908";
+  color: #707070;
+}
+.icon-cerrar-sesion:before {
+  content: "\e909";
+  color: #707070;
+}
+.icon-check:before {
+  content: "\e90a";
+  color: #67bb8c;
+}
+.icon-correo-electronico:before {
+  content: "\e90b";
+  color: #707070;
+}
+.icon-down-arrow-2:before {
+  content: "\e90c";
+  color: #40df97;
+}
+.icon-efectivo:before {
+  content: "\e90d";
+  color: #707070;
+}
+.icon-equis:before {
+  content: "\e90e";
+  color: #e8451d;
+}
+.icon-flash:before {
+  content: "\e90f";
+  color: #1677ff;
+}
+.icon-gear:before {
+  content: "\e910";
+  color: #717070;
+}
+.icon-minus:before {
+  content: "\e912";
+  color: #30bad1;
+}
+.icon-recarga-telefonica:before {
+  content: "\e913";
+  color: #707070;
+}
+.icon-transacciones:before {
+  content: "\e914";
+  color: #707070;
+}
+.icon-transferencia-bancaria:before {
+  content: "\e915";
+  color: #707070;
+}
+.icon-user:before {
+  content: "\e916";
+  color: #707070;
+}
 
 

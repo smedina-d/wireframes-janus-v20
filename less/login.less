@@ -7,7 +7,7 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     &:before{
         content:'';
         background:url('../img/dots-bottom-login.png') no-repeat bottom left;
@@ -63,24 +63,24 @@
         }
 
         form {
-            max-width:400px;
-            input, textarea {
-                padding: 10px 20px;
-            }
+            max-width:300px;
             input{
                 background: transparent;
                 color: #ffffff;
                 border-radius: 5px;
                 border: solid 1px #e8e8e8;
+                font-family: @main-font;
+                font-size: 1em;
+                padding: 11px 20px 8px;
                 &:focus,
                 &:active{
                     outline:none;
                 }
-                &[type=submit] {
-                    background-color: #ffffff;
+                &[type=submit]{
+                    background: #ffffff;
                     color: #272727;
-                    border-radius:20px;
-
+                    appearance: none;
+                    -webkit-appearance: none;
                 }
                 &::-webkit-input-placeholder{
                     color: #ffffff;
@@ -111,34 +111,13 @@
 .mini-footer {
     margin-top: auto;
     align-self: flex-start;
-    width: 400px;
+    max-width: 300px;
+    width: 100%;
     text-align: center;
-    p {
+    color: #ffffff;
+    margin-bottom: 10px;
+    a{
         color: #ffffff;
-        font-size: 8px;
+        font-size: 12PX;
     }
 }
-
-
-@media (max-width: 1024px ) { 
-
-    .bg-body {
-        &:before,
-        &:after{
-            background-size: 100%;
-        }
-        .login{
-            &:after{
-                display: none;
-            }
-        }
-        // background-size: cover;
-        // display: flex;
-        // justify-content: center;
-        // background-position-x: center;
-        // align-items: center;
-        // height: 100vh;
-    }
-}
-
-

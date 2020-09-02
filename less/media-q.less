@@ -2,7 +2,6 @@
             /***MEDIA QUIERYES***/
 ////////////////////////////////////////
 @media (max-width: 1200px) {
-
     .tarifas { 
         
         .item {
@@ -26,22 +25,36 @@
     }
 }
 @media (max-width: 1024px) { 
-
     #home {
         position: relative;
-        height: 56vh;
         background-size: contain !important;
     }
+    .bg-body {
+        &:before,
+        &:after{
+            background-size: 100%;
+        }
+        .login{
+            &:after{
+                display: none;
+            }
+        }
+    }
 }
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     body {
         font-size: 14px;
     }
-
     #home{
+        .container{
+            align-items: center;
+            text-align: center;
+            &:before{
+                display: none;
+            }
+        }
         .slogan { 
-
+            max-width: inherit;
             .txt-slogan {
                 margin-top: 5vh;
 
@@ -87,9 +100,10 @@
             }
         }
     }
-  
+    .bg-body .login form{
+        max-width: 250px;
+    } 
 }
-
 
 
  /**************************/
@@ -99,7 +113,6 @@
 
 /* // Medium devices (tablets, 768px and up)// */
 @media (max-width: 768px) {
-
     body {
         p {
             font-size: 12px;
@@ -109,11 +122,6 @@
         &:before,
         &:after{
             background-size: 100%;
-        }
-        .container{
-            &:before{
-                display: none;
-            }
         }
     }
     .logo {
@@ -193,7 +201,6 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) {
-
     body {
         h2 {
             font-size: 2em;
