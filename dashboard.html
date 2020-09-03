@@ -194,27 +194,27 @@
                 </div>
                 <div class="main-nav-footer">
                     <div class="row">
-                        <a href="#">Términos y Condiciones</a>
-                        <a href="#">Política de privacidad</a>
+                        <a href="#" onclick="openModalTransferencia(event)">Términos y Condiciones</a>
+                        <a href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
                         <a href="#">Uso aceptable</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal-window dashboard-modal">
+    <div id="open-modal-correo" class="modal-window dashboard-modal">
         <div class="inside-modal">
             <img src="img/question.png" alt="Mensaje">
             <h3>Transferencia por correo electrónico</h3>
             <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
             <p>En caso de lo contratrio, presione cancelar.</p>
             <div class="button-modal">
-                <a href="#" class="cancel-button">Cancelar</a>
-                <a href="#" class="continuar-button">Continuar</a>
+                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
+                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
             </div>
         </div>
     </div>
-    <div class="modal-window dashboard-modal openmodal">
+    <div id="open-modal-transferencia" class="modal-window dashboard-modal openmodal">
         <div class="inside-modal">
             <h3>Confirmación de transferencia</h3>
             <div class="tabla-transferencia">
@@ -257,11 +257,28 @@
                 <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
             </div>
             <div class="button-modal">
-                <a href="#" class="cancel-button">Cancelar</a>
-                <a href="#" class="continuar-button">Continuar</a>
+                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
+                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
             </div>
         </div>
     </div>
+    <script>
+        var modalT = document.getElementById('open-modal-transferencia');
+        var modalC = document.getElementById('open-modal-correo');
+        function openModalTransferencia(ev) {
+            ev.preventDefault();
+            modalT.classList.add('openmodal');
+        }
+        function openModalcorreo(ev) {
+            ev.preventDefault();
+            modalC.classList.add('openmodal');
+        }
+        function closeModal(ev) {
+            ev.preventDefault();
+            modalT.classList.remove('openmodal');
+            modalC.classList.remove('openmodal');
+        }
+    </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>
 </html>
