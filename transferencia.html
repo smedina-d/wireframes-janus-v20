@@ -82,10 +82,10 @@
                     </div>
                     <h3>Acceso directo</h3>
                     <a href="correo.html"><span class="icon-correo-electronico"></span>Correo electrónico</a>
-                    <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
+                    <a class="active" href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
                     <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
                     <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
-                    <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
+                    <a href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
                 </div>
                 <div class="menu-dashboard">
                     <h3>Favoritos</h3>
@@ -103,8 +103,7 @@
             </div>
             <div class="main">
                 <div class="breadcrumb">
-                    <a href="#">Transferir</a>&nbsp;/
-                    <a href="#">Retirar por correo electrónico</a>
+                    <a href="#">Transferencia bancaria</a>
                 </div>
                 <div class="items-nav">
                     <div class="item">
@@ -123,6 +122,65 @@
                         Continuar
                         <span class="icon-down-arrow-2"></span>
                     </a>
+                </div>
+                <div id="transferir-correo">
+                    <div class="row">
+                        <div id="input-transferencias" class="left">
+                            <form>
+                                <label>
+                                    <label>Beneficiario</label>
+                                    <input type="tet" name="beneficiario" placeholder="Correo electrónico">
+                                </label>
+                                <label>
+                                    <label>Método de envío</label>
+                                    <select>
+                                        <option selected="true" disabled>Seleccione una opción</option>
+                                        <option>opción #1</option>
+                                        <option>opción #2</option>
+                                        <option>opción #3</option>
+                                    </select>
+                                    <span class="icon-arrow-down"></span>
+                                </label>
+                                <label>
+                                    <label>Monto</label>
+                                    <div class="row-inputs">
+                                        <input type="number" name="enviar" placeholder="Enviar">
+                                        <input type="number" name="recibir" placeholder="Recibir">
+                                    </div>
+                                </label>
+                                <label>
+                                    <label>Nota/Observaciones</label>
+                                    <textarea></textarea>
+                                </label>
+                            </form>
+                        </div>
+                        <div id="detalle-movimiento">
+                            <h3>Detalles de movimiento</h3>
+                            <div class="container-movimientos">
+                                <div class="row-movimientos">
+                                    <div class="left">Moneda destino</div>
+                                    <div class="right">COP</div>
+                                </div>
+                                <div class="row-movimientos">
+                                    <div class="left">Cantidad a enviar</div>
+                                    <div class="right">USD $100.00</div>
+                                </div>
+                                <div class="row-movimientos">
+                                    <div class="left">Comisión (5%)</div>
+                                    <div class="right">USD $5.00</div>
+                                </div>
+                                <div class="row-movimientos">
+                                    <div class="left">Total a debitar</div>
+                                    <div class="right"> USD $105.00</div>
+                                </div>
+                                <div class="row-movimientos">
+                                    <div class="left">Rebiciran</div>
+                                    <div class="right">COP 3.254.125,00</div>
+                                </div>
+                                <a href="#" class="btn-continuar">Confirmar transacción</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="ultimas-transacciones">
                     <h3>Últimas transacciones</h3>
@@ -143,7 +201,6 @@
                         </div>
                         <div class="column-4 blue">-27 USD</div>
                     </div>
-
                     <div class="row-dashboard">
                         <div class="column-1">28 Jun</div>
                         <div class="column-2">
@@ -214,7 +271,7 @@
             </div>
         </div>
     </div>
-    <div id="open-modal-transferencia" class="modal-window dashboard-modal openmodal">
+    <div id="open-modal-transferencia" class="modal-window dashboard-modal">
         <div class="inside-modal">
             <h3>Confirmación de transferencia</h3>
             <div class="tabla-transferencia">
@@ -262,6 +319,76 @@
             </div>
         </div>
     </div>
+    <div id="modal-transfer-confirm" class="modal-window transfer-confirm openmodal">
+        <div class="inside-modal">
+            <span class="modal-close" onclick="closeModal(event)">x</span>
+            <h3>Transferencia por correo electrónico</h3>
+            <h4>09:14 AM, Junio 27 2020</h4>
+            <div id="receipt-content">
+                <div class="amout-detials">
+                    <div class="payment-amount">15 USD</div>
+                    <div class="payment-subtitle">Pago recibido</div>
+                </div>
+                <div class="user"><span class="icon-user"></span>Alejandra de los Santos</div>
+                <div class="bank-info">
+                    <div class="row-receipt">
+                        <div class="left">Referencia:</div>
+                        <div class="right">0997 1345 3588</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">BIC:</div>
+                        <div class="right">CMBRFR2B</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Banco destino:</div>
+                        <div class="right">Banorte</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Comisión:</div>
+                        <div class="right">5%</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Monto a recibir:</div>
+                        <div class="right">45 USD</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Estatus:</div>
+                        <div class="right">Completada</div>
+                    </div>
+                </div>
+                <div class="receipt-download">
+                    <img src="img/dashboard/download-1.png" alt="Download">Descargar comprobante
+                </div>
+            </div>
+            <div id="receipt-content">
+                <div class="bank-info">
+                    <div class="row-receipt two-rows">
+                        <div class="left">Nota:</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">BIC:</div>
+                        <div class="right">CMBRFR2B</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Banco destino:</div>
+                        <div class="right">Banorte</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Comisión:</div>
+                        <div class="right">5%</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Monto a recibir:</div>
+                        <div class="right">45 USD</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Estatus:</div>
+                        <div class="right">Completada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var modalT = document.getElementById('open-modal-transferencia');
         var modalC = document.getElementById('open-modal-correo');
@@ -275,6 +402,7 @@
         }
         function closeModal(ev) {
             ev.preventDefault();
+            document.getElementById('modal-transfer-confirm').remove('openmodal');
             modalT.classList.remove('openmodal');
             modalC.classList.remove('openmodal');
         }

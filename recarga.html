@@ -66,7 +66,7 @@
     <div id="sub-menu-container">
         <div class="container">
             <div class="sub-menu">
-                <a href="dashboard.html">Inicio</a>
+                <a href="/sitios/janus/dashboard.html">Inicio</a>
                 <a href="#">Agregar fondos</a>
                 <a href="#">Retirar / Transferir</a>
                 <a href="#">Mis contactos</a>
@@ -84,8 +84,8 @@
                     <a href="correo.html"><span class="icon-correo-electronico"></span>Correo electrónico</a>
                     <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
                     <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
-                    <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
-                    <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
+                    <a class="active" href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
+                    <a href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
                 </div>
                 <div class="menu-dashboard">
                     <h3>Favoritos</h3>
@@ -103,8 +103,7 @@
             </div>
             <div class="main">
                 <div class="breadcrumb">
-                    <a href="#">Transferir</a>&nbsp;/
-                    <a href="#">Retirar por correo electrónico</a>
+                    <a href="#">Recarga telefónica</a>&nbsp;
                 </div>
                 <div class="items-nav">
                     <div class="item">
@@ -124,6 +123,17 @@
                         <span class="icon-down-arrow-2"></span>
                     </a>
                 </div>
+                <div id="available-countries">
+                    <h3>Países disponibles</h3>
+                    <div class="row">
+                        <a href="#"><img src="img/dashboard/brazil.png"></a>
+                        <a href="#"><img src="img/dashboard/chile.png"></a>
+                        <a href="#"><img src="img/dashboard/argentina.png"></a>
+                        <a href="#"><img src="img/dashboard/ecuador.png"></a>
+                        <a href="#"><img src="img/dashboard/mexico.png"></a>
+                        <a href="#"><img src="img/dashboard/usa.png"></a>
+                    </div>
+                </div>  
                 <div id="ultimas-transacciones">
                     <h3>Últimas transacciones</h3>
                     <div class="row-dashboard headers-row">
@@ -143,7 +153,6 @@
                         </div>
                         <div class="column-4 blue">-27 USD</div>
                     </div>
-
                     <div class="row-dashboard">
                         <div class="column-1">28 Jun</div>
                         <div class="column-2">
@@ -202,83 +211,6 @@
             </div>
         </div>
     </div>
-    <div id="open-modal-correo" class="modal-window dashboard-modal">
-        <div class="inside-modal">
-            <img src="img/question.png" alt="Mensaje">
-            <h3>Transferencia por correo electrónico</h3>
-            <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
-            <p>En caso de lo contratrio, presione cancelar.</p>
-            <div class="button-modal">
-                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
-                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
-            </div>
-        </div>
-    </div>
-    <div id="open-modal-transferencia" class="modal-window dashboard-modal openmodal">
-        <div class="inside-modal">
-            <h3>Confirmación de transferencia</h3>
-            <div class="tabla-transferencia">
-                <div class="row-tabla">
-                    <div class="left">Beneficiario</div>
-                    <div class="right">Bancolombia</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Banco destino</div>
-                    <div class="right">Bancolombia</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Cuenta destino</div>
-                    <div class="right">Terminación 6496</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">País destino</div>
-                    <div class="right">Colombia</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Moneda</div>
-                    <div class="right">COP</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Monto a enviar</div>
-                    <div class="right">USD $105.00</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Comisión</div>
-                    <div class="right">USD $5.00</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Tasa de cambio</div>
-                    <div class="right">USD $1.00 = 3.124.00 COP</div>
-                </div>
-                <div class="row-tabla">
-                    <div class="left">Su beneficiario recibirá</div>
-                    <div class="right">COP 3.124.025,36</div>
-                </div>
-                <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
-            </div>
-            <div class="button-modal">
-                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
-                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        var modalT = document.getElementById('open-modal-transferencia');
-        var modalC = document.getElementById('open-modal-correo');
-        function openModalTransferencia(ev) {
-            ev.preventDefault();
-            modalT.classList.add('openmodal');
-        }
-        function openModalcorreo(ev) {
-            ev.preventDefault();
-            modalC.classList.add('openmodal');
-        }
-        function closeModal(ev) {
-            ev.preventDefault();
-            modalT.classList.remove('openmodal');
-            modalC.classList.remove('openmodal');
-        }
-    </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </body>
 </html>
