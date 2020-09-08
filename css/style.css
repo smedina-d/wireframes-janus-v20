@@ -124,6 +124,9 @@ img {
   .container {
     width: 1280px;
   }
+  body.login .container {
+    width: 980px;
+  }
 }
 @media (max-width: 992px) {
   .dashboard {
@@ -384,8 +387,8 @@ textarea {
   font-weight: 500;
   color: #7f8591;
   width: 100%;
-  margin: 10px 0;
-  padding: 15px 20px;
+  margin-bottom: 10px;
+  padding: 12px 15px;
   border: solid 1px #dbdbdb;
 }
 input:focus,
@@ -592,7 +595,7 @@ header {
   color: #ffffff;
   font-size: 13px;
 }
-/***LOGIN***/
+/* LOGIN */
 .bg-body {
   background: linear-gradient(#0d54a8, #1ea4f6);
   background-size: cover;
@@ -648,29 +651,28 @@ header {
 .bg-body .login .logo-mobile {
   max-width: 400px;
   width: 100%;
-  margin: 20px 0;
+  margin-bottom: 50px;
 }
 .bg-body .login .logo-mobile img {
-  max-width: 250px;
+  max-width: 300px;
 }
 .bg-body .login form {
-  max-width: 300px;
+  max-width: 320px;
 }
 .bg-body .login form input {
   background: transparent;
   color: #ffffff;
   border-radius: 5px;
   border: solid 1px #e8e8e8;
-  font-family: 'Avant';
+  font-family: 'Avant', Helvetica, Arial, sans-serif;
   font-size: 1em;
-  padding: 11px 20px 8px;
 }
 .bg-body .login form input:focus,
 .bg-body .login form input:active {
   outline: none;
 }
 .bg-body .login form input[type=submit] {
-  background: #ffffff;
+  background: #e8e8e8;
   color: #272727;
   appearance: none;
   -webkit-appearance: none;
@@ -690,7 +692,7 @@ header {
   color: #ffffff;
 }
 .bg-body .login form p {
-  font-size: 12px;
+  font-size: 15px;
 }
 .bg-body .login form p a {
   color: #ffffff;
@@ -698,7 +700,7 @@ header {
 .mini-footer {
   margin-top: auto;
   align-self: flex-start;
-  max-width: 300px;
+  max-width: 380px;
   width: 100%;
   text-align: center;
   color: #ffffff;
@@ -808,7 +810,7 @@ header {
     width: 20%;
   }
   .bg-body .login form {
-    max-width: 250px;
+    max-width: 320px;
   }
 }
 
