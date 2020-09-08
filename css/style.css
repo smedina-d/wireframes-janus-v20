@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.3;
 }
 input,
 button,
@@ -56,17 +56,20 @@ input {
 }
 p {
   font-weight: 500;
-  line-height: 21px;
+  line-height: 1.3;
   color: #3d424b;
 }
 .separador {
-  height: 5px;
-  width: 166px;
+  height: 3px;
+  width: 130px;
   background: #00a7f6;
-  margin: 30px auto;
+  margin: 15px auto 30px;
+  border-radius: 30px;
 }
 h2 {
   font-size: 2.5em;
+  margin: 0;
+  color: #3d424b;
 }
 h3,
 h4 {
@@ -114,10 +117,10 @@ img {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 980px;
   }
 }
-@media (min-width: 1367px) {
+@media (min-width: 1280px) {
   .container {
     width: 1280px;
   }
@@ -135,16 +138,18 @@ img {
   margin: 80px 0;
 }
 .middle-banner .title {
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 .middle-banner h2 {
   text-align: center;
+  color: #fff;
+  font-size: 2em;
 }
 .middle-banner .row-items {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  margin: 30px auto;
+  margin: auto;
 }
 .middle-banner .row-items .item {
   text-align: center;
@@ -416,15 +421,15 @@ header {
 }
 /***HOME***/
 #header-body {
-  padding: 15px 0;
+  padding: 20px 0;
   position: absolute;
   top: 0;
   width: 100%;
 }
 #home {
   position: relative;
-  height: 85vh;
-  background-size: cover!important;
+  height: 100vh;
+  background-size: cover;
   background-position-x: right;
 }
 #home:before {
@@ -455,58 +460,48 @@ header {
 }
 #home > .container:before {
   content: '';
-  background: url('../img/bg-image.png') no-repeat top right;
+  background: url('../img/bg-image.svg') no-repeat top right;
   background-size: contain;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 85%;
   z-index: -1;
 }
 .slogan {
-  max-width: 600px;
+  max-width: 405px;
 }
-.slogan .txt-slogan h1 {
-  font-size: 3em;
-  font-family: 'Avant';
+.slogan .txt-slogan h2 {
+  color: #2b436e;
 }
 .slogan .txt-slogan .nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .slogan .txt-slogan .nav a {
-  color: #ffffff;
   text-decoration: none;
   text-align: center;
-  font-size: 1em;
-  color: #00a7f6;
-  width: 232px;
-  margin: 5px;
-  padding: 15px;
-}
-.slogan .txt-slogan .nav .btn-1 {
+  font-size: 15px;
   color: #ffffff;
   border-radius: 30px;
+  width: 49%;
+  padding: 15px 0;
+}
+.slogan .txt-slogan .nav .btn-1 {
   background-color: #00a7f6;
 }
 .slogan .txt-slogan .nav .btn-2 {
-  color: #ffffff;
-  border-radius: 30px;
   background-color: #19416f;
 }
 .title {
   text-align: center;
-  margin: 80px 0;
-}
-.title h1 {
-  font-size: 3em;
+  margin: 80px 0 30px;
 }
 .title p {
   margin: 0 auto;
 }
 .info {
-  margin: 30px 0;
   display: flex;
   align-items: center;
 }
@@ -516,7 +511,7 @@ header {
 }
 .info .info-items h3 {
   font-size: 2em;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 .info .info-items p {
   margin-bottom: 30px;
@@ -526,10 +521,6 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
-.info .info-items-image img {
-  padding: 30px 0 30px 30px;
-  width: 80%;
-}
 .info .info-items-image-2 {
   display: flex;
   justify-content: flex-end;
@@ -537,36 +528,39 @@ header {
 }
 .info .info-items-image-2 img {
   padding: 30px 0 30px 30px;
-  width: 80%;
+  width: 85%;
 }
 .tarifas {
   display: flex;
+  justify-content: center;
 }
 .tarifas .item {
-  width: 50%;
-  padding: 60px;
+  width: 45%;
+  padding: 30px 75px;
+  text-align: center;
 }
 .tarifas .item:first-child {
-  border-right: dotted 5px #cacaca;
+  border-right: dotted 5px #b7d0d8;
 }
-.tarifas .item h1 {
-  font-size: 2.5em !important;
+.tarifas .item h2 {
+  font-size: 2.3em;
   color: #3d424b;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
-.tarifas .item h3 {
-  font-size: 1.5em;
+.tarifas .item h4 {
+  font-size: 1.1em;
   color: #7f8591;
 }
 /***FOOTER***/
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0 100px 0;
+  margin: 30px 0 80px;
 }
 .footer .item h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 30px;
+  color: #3d424b;
 }
 .footer .item .sociales {
   display: flex;
@@ -582,7 +576,7 @@ header {
 }
 .secundary-footer {
   background: #2b436e;
-  padding: 30px;
+  padding: 20px 0;
   font-weight: 500;
 }
 .secundary-footer > .container {
@@ -591,12 +585,12 @@ header {
   align-items: center;
 }
 .secundary-footer img {
-  width: 300px;
-  height: 56px;
+  width: 160px;
 }
 .secundary-footer p,
 .secundary-footer a {
   color: #ffffff;
+  font-size: 13px;
 }
 /***LOGIN***/
 .bg-body {
@@ -714,7 +708,42 @@ header {
   color: #ffffff;
   font-size: 12PX;
 }
-/***MEDIA QUIERYES***/
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px), 
+(height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  #home {
+    height: 70vh;
+  }  
+}
+@media only screen and (max-width: 900px), 
+(width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  #home {
+    height: 50vh;
+  }  
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+  .tarifas .item {
+    width: 50%;
+    padding: 30px 70px;
+  }
+  .tarifas .item h2 {
+    font-size: 1.8em;
+  } 
+}
+@media (min-width: 980px) and (max-width: 1280px) {
+  .tarifas .item {
+    width: 50%;
+    padding: 30px 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 1280px) {
+  #home > .container:before {
+    height: 70%;
+  }
+}
 @media (max-width: 1200px) {
   .tarifas .item h1 {
     font-size: 2.4em;
@@ -738,8 +767,11 @@ header {
   .bg-body .login:after {
     display: none;
   }
+  #home > .container:before {
+    height: 60%;
+  }
 }
-@media (max-width: 992px) {
+@media (max-width: 980px) {
   #home .container {
     align-items: center;
     text-align: center;
@@ -748,22 +780,19 @@ header {
     display: none;
   }
   #home .slogan {
-    max-width: inherit;
-  }
-  #home .slogan .txt-slogan {
-    margin-top: 5vh;
+    max-width: 80%;
   }
   #home .slogan .txt-slogan h1 {
     font-size: 2em;
   }
-  #home .slogan .txt-slogan p {
-    font-size: 12px;
+  .slogan .txt-slogan .nav {
+    justify-content: center;
   }
-  .title {
-    margin: 10px 0;
+  .slogan .txt-slogan .nav a {
+    width: 230px;
   }
-  .title h1 {
-    font-size: 1.9em;
+  .slogan .txt-slogan .nav .btn-1 {
+    margin-right: 15px;
   }
   .middle-banner {
     margin: 0 0 20px 0;
@@ -782,12 +811,14 @@ header {
     max-width: 250px;
   }
 }
-/**************************/
-/**************************/
-/* // Medium devices (tablets, 768px and up)// */
+
+/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  #home .slogan {
+    max-width: 90%;
+  }
   body p {
-    font-size: 12px;
+    font-size: 15px;
   }
   #home:before,
   #home:after {
@@ -811,10 +842,11 @@ header {
     font-size: 1.5em;
   }
   .tarifas .item h2 {
-    font-size: 1.5em;
+    font-size: 2em;
+    margin-bottom: 10px;
   }
   .tarifas .item h4 {
-    font-size: 0.8em;
+    font-size: 15px;
   }
   .footer .item h3 {
     font-size: 1em;
@@ -830,6 +862,9 @@ header {
   }
   .secundary-footer p a {
     font-size: 10px;
+  }
+  .slogan .txt-slogan .nav .btn-1 {
+    margin: 0 0 10px 0;
   }
 }
 @media (max-width: 767px) {
