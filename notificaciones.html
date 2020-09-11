@@ -8,9 +8,9 @@
     <title>Janus</title>
 
     <!-- Bootstrap -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
     <!-- <link rel="stylesheet/less" type="text/css" href="less/bootstrap.less" /> -->
-    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less" /> -->
 
     <!-- Online Less compiler -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.5.0/less.min.js" ></script> -->
@@ -23,82 +23,125 @@
     <![endif]-->
 </head>
 <body class="dashboard">
-
     <div class="header-dashboard">
         <div class="container">
             <div class="logo-dashboard"><img src="img/logo.svg"></div>
             <div class="nav">
-                <div class="item">
-                    <h3 class="title">Disponible</h3>
-                    <h3 class="subtitle-1">$102.36 US</h3>
+                <div class="available-money">
+                    <div class="item">
+                        <h3 class="title">Disponible</h3>
+                        <h3 class="subtitle-1">$102.36 US</h3>
+                    </div>
+                    <div class="item">
+                        <h3 class="title">Pendiente</h3>
+                        <h3 class="subtitle-2">$102.36 US</h3>
+                    </div>
                 </div>
-                <div class="item">
-                    <h3 class="title">Pendiente</h3>
-                    <h3 class="subtitle-2">$102.36 US</h3>
-                </div>
-                <div class="icon-rounded">
-                    <span class="icon-alert"></span>
-                    <ul>
-                        <li>Mensajes</li>
-                        <li>Has recibido US $20.00</li>
-                        <li>Has recibido US $20.00</li>
-                        <li>Has recibido US $20.00</li>
-                    </ul>
-                </div>
-                <div class="icon-rounded">
-                    <span class="icon-gear"></span>
-                    <ul>
-                        <li>Configuración</li>
-                        <li><a href="seguridad.html">Seguridad</a></li>
-                        <li>Notificaciones</li>
-                        <li>Mis cuentas</li>
-                        <li>Servicios</li>
-                    </ul>
-                </div>
-                <div class="user">
-                    <img class="user-img" src="img/dashboard/user.svg">
-                    <div>7623658</div>
-                    <img class="polygon-1" src="img/dashboard/arrow-down.svg">
+                <div class="menu-notifications">
+                    <div class="menu-mobile">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </div>
+                    <div class="messages icon-rounded">
+                        <span class="icon-alert"></span>
+                        <ul>
+                            <li>Mensajes</li>
+                            <li>Has recibido US $20.00</li>
+                            <li>Has recibido US $20.00</li>
+                            <li>Has recibido US $20.00</li>
+                        </ul>
+                    </div>
+                    <div class="settings icon-rounded">
+                        <span class="icon-gear"></span>
+                        <ul>
+                            <li>Configuración</li>
+                            <li>Seguridad</li>
+                            <li>Notificaciones</li>
+                            <li>Mis cuentas</li>
+                            <li>Servicios</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <!-- <img class="user-img" src="img/dashboard/user.svg"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.552" height="20.067" viewBox="0 0 17.552 20.067">
+                            <g id="user" transform="translate(-1132.48 -90.435)">
+                                <g id="Grupo_7" data-name="Grupo 7" transform="translate(1136.485 90.435)">
+                                    <path id="Trazado_95" data-name="Trazado 95" d="M383.006,62.662a4.711,4.711,0,0,1-4.786-4.621v-.165a4.786,4.786,0,1,1,9.572,0h0a4.711,4.711,0,0,1-4.621,4.786Zm0-7.986a3.2,3.2,0,1,0,3.186,3.2,3.2,3.2,0,0,0-3.186-3.2Z" transform="translate(-378.22 -53.09)" fill="#707070"/>
+                                </g>
+                                <g id="Grupo_8" data-name="Grupo 8" transform="translate(1132.484 102.399)">
+                                    <path id="Trazado_96" data-name="Trazado 96" d="M392.3,69.076a.748.748,0,0,1-.793-.7v-3.29a2.453,2.453,0,0,0-2.393-2.393h-9.572a2.453,2.453,0,0,0-2.393,2.393v3.186a.808.808,0,1,1-1.6,0V65.083a3.963,3.963,0,0,1,3.918-3.993h9.646a3.948,3.948,0,0,1,3.978,3.918v3.26a.748.748,0,0,1-.688.808Z" transform="translate(-375.545 -61.09)" fill="#707070"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <div>7623658</div>
+                        <img class="polygon-1" src="img/dashboard/arrow-down.svg">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="sub-menu-container">
         <div class="container">
-            <div class="sub-menu">
+            <div id="menu-mobile-slide" class="sub-menu">
                 <a href="dashboard.html">Inicio</a>
                 <a href="#">Agregar fondos</a>
                 <a href="#">Retirar / Transferir</a>
                 <a href="#">Mis contactos</a>
+            </div>
+            <div id="messages-slide" class="sub-menu">
+                <a href="#">Mensajes</a>
+                <a href="#">Has recibido US $20.00</a>
+                <a href="#">Has recibido US $20.00</a>
+                <a href="#">Has recibido US $20.00</a>
+            </div>
+            <div id="settings-slide" class="sub-menu">
+                <a href="#">Configuración</a>
+                <a href="#">Seguridad</a>
+                <a href="#">Notificaciones</a>
+                <a href="#">Mis cuentas</a>
+                <a href="#">Servicios</a>
+            </div>
+            <div id="user-slide" class="sub-menu">
+                <a href="#">¡Hola Pako!</a>
+                <a href="dashboard.html">Janus ID: 7623658</a>
+                <a href="#">Mi cuenta</a>
+                <a href="#">Cerrar sesión</a>
             </div>
         </div>     
     </div>
     <div id="main-menu-dashboard">
         <div class="container">
             <div class="sidebar-menu">
-                <div class="menu-dashboard">
+                <div id="shortcuts" class="menu-dashboard">
                     <div class="title">
                         <h3>¡Hola, Pako!</h3>
                     </div>
                     <h3>Acceso directo</h3>
-                    <a href="correo.html"><span class="icon-correo-electronico"></span>Correo electrónico</a>
-                    <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
-                    <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
-                    <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
-                    <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
+                    <div>
+                        <a href="correo.html"><span class="icon-correo-electronico"></span>Correo electrónico</a>
+                        <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
+                        <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
+                        <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
+                        <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
+                    </div>
                 </div>
                 <div class="menu-dashboard">
                     <h3>Favoritos</h3>
-                    <a href="#"><span class="icon-user"></span>Alejandra de los Santos</a>
-                    <a href="#"><span class="icon-user"></span>Samuel Medina</a>
-                    <a href="#"><span class="icon-user"></span>Sofia Martinez</a>
+                    <div>
+                        <a href="#"><span class="icon-user"></span>Alejandra de los Santos</a>
+                        <a href="#"><span class="icon-user"></span>Samuel Medina</a>
+                        <a href="#"><span class="icon-user"></span>Sofia Martinez</a>
+                    </div>
                 </div>
                 <div class="menu-dashboard">
                     <h3>Acceso directo</h3>
-                    <a href="#"><img src="img/dashboard/invitar-amigos.svg">Invitar amigos</a>
-                    <a href="#"><img src="img/dashboard/ajustes.svg">Ajustes</a>
-                    <a href="#"><span class="icon-ayuda"></span>Ayuda</a>
-                    <a href="#"><span class="icon-cerrar-sesion"></span>Cerrar Sesión</a>
+                    <div>
+                        <a href="#"><img src="img/dashboard/invitar-amigos.svg">Invitar amigos</a>
+                        <a href="#"><img src="img/dashboard/ajustes.svg">Ajustes</a>
+                        <a href="#"><span class="icon-ayuda"></span>Ayuda</a>
+                        <a href="#"><span class="icon-cerrar-sesion"></span>Cerrar Sesión</a>
+                    </div>
                 </div>
             </div>
             <div class="main">
@@ -145,6 +188,13 @@
                             <h4>Activar / Desactivar</h4>
                             <a href="#"class="btn-continuar active"><span></span>Activado</a>
                         </div>
+                    </div>
+                </div>
+                <div class="main-nav-footer">
+                    <div class="row">
+                        <a href="#" onclick="openModalTransferencia(event)">Términos y Condiciones</a>
+                        <a id="modalCorreo" href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
+                        <a href="#">Uso aceptable</a>
                     </div>
                 </div>
             </div>
@@ -210,23 +260,8 @@
             </div>
         </div>
     </div>
-    <script>
-        var modalT = document.getElementById('open-modal-transferencia');
-        var modalC = document.getElementById('open-modal-correo');
-        function openModalTransferencia(ev) {
-            ev.preventDefault();
-            modalT.classList.add('openmodal');
-        }
-        function openModalcorreo(ev) {
-            ev.preventDefault();
-            modalC.classList.add('openmodal');
-        }
-        function closeModal(ev) {
-            ev.preventDefault();
-            modalT.classList.remove('openmodal');
-            modalC.classList.remove('openmodal');
-        }
-    </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/styles.js"></script>
 </body>
 </html>

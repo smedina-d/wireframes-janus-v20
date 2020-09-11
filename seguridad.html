@@ -146,113 +146,122 @@
             </div>
             <div class="main">
                 <div class="breadcrumb">
-                    <a href="#">Recarga telefónica</a>&nbsp;
+                    Configuración / Seguridad
                 </div>
-                <div class="items-nav">
-                    <div class="item">
-                        <h3>Tiempo de transferencia</h3>
-                        <div class="info-items"><span class="icon-flash"></span><h4>En minutos</h4></div>
+                <div id="main-config">
+                    <div class="block-config">
+                        <div class="row-config first-row">
+                            <div class="titles-config">
+                                <h3><img src="img/ui.svg">Activar doble factor de autenticación</h3>
+                                <h4>Esta acción necesita de la aplicación de Google Autheticator</h4>
+                            </div>
+                            <a href="#" class="desactivado">Desactivado</a>
+                        </div>
+                        <div class="row-config">
+                            <h4>Activar para entrar a Janus</h4>
+                            <a href="#"class="btn-continuar active"><span></span>Activado</a>
+                        </div>
+                        <div class="row-config">
+                            <h4>Esta acción necesita de la aplicación de Google Autheticator</h4>
+                            <a href="#" class="desactivado">Desactivado</a>
+                        </div>
                     </div>
-                    <div class="item">
-                        <h3>Tiempo de transferencia</h3>
-                        <div class="info-items"><h4>USD 5%</h4></div>
+                    <div class="block-config">
+                        <div class="row-config first-row">
+                            <div class="titles-config">
+                                <h3><img src="img/shield.svg">Tokens de seguridad</h3>
+                                <h4>Se enviará un código de 4 a 6 dígitos numéricos para certificar las transacciones salientes</h4>
+                            </div>
+                        </div>
+                        <div class="row-config">
+                            <h4>Token vía SMS</h4>
+                            <a href="#"class="btn-continuar active"><span></span>Activado</a>
+                        </div>
+                        <div class="row-config">
+                            <h4>Token vía whatspp</h4>
+                            <a href="#" class="desactivado">Desactivado</a>
+                        </div>
                     </div>
-                    <div class="item no-border">
-                        <h3>Tiempo de transferencia</h3>
-                        <div class="info-items"><h4>$97.25 USD</h4></div>
-                    </div>
-                    <a href="#" class="btn-continuar">
-                        Continuar
-                        <span class="icon-down-arrow-2"></span>
-                    </a>
-                </div>
-                <div id="available-countries">
-                    <h3>Países disponibles</h3>
-                    <div class="row">
-                        <a href="#"><img src="img/dashboard/brazil.png"></a>
-                        <a href="#"><img src="img/dashboard/chile.png"></a>
-                        <a href="#"><img src="img/dashboard/argentina.png"></a>
-                        <a href="#"><img src="img/dashboard/ecuador.png"></a>
-                        <a href="#"><img src="img/dashboard/mexico.png"></a>
-                        <a href="#"><img src="img/dashboard/usa.png"></a>
-                    </div>
-                </div>  
-                <div id="ultimas-transacciones">
-                    <h3>Últimas transacciones</h3>
-                    <div>
-                        <div class="row-dashboard headers-row">
-                            <div class="column-1">Fecha</div>
-                            <div class="column-2">Detalle</div>
-                            <div class="column-3">Estatus</div>
-                            <div class="column-4">Monto</div>
+                    <div class="block-config">
+                        <div class="row-config first-row">
+                            <div class="titles-config">
+                                <h3><img src="img/mail.svg">Correo electrónico</h3>
+                                <h4>Se enviará un código de 4 a 6 dígitos numéricos para certificar las transacciones salientes</h4>
+                            </div>
                         </div>
-                        <div class="row-dashboard">
-                            <div class="column-1">28 Jun</div>
-                            <div class="column-2">
-                                <div class="sub-title">Depósito desde AirTm</div>
-                                <div class="name-detalle">Samuel Medina de Giudice</div>
-                            </div>
-                            <div class="column-3">
-                                <span class="icon-minus"></span>
-                            </div>
-                            <div class="column-4 blue">-27 USD</div>
-                        </div>
-                        <div class="row-dashboard">
-                            <div class="column-1">28 Jun</div>
-                            <div class="column-2">
-                                <div class="sub-title">Pago recibido con TDC BBVA</div>
-                                <div class="name-detalle">Laurelys Johana Castillo Cisneros (Visa)</div>
-                            </div>
-                            <div class="column-3">
-                                <span class="icon-check"></span>
-                            </div>
-                            <div class="column-4 green">35 USD</div>
-                        </div>
-
-                        <div class="row-dashboard">
-                            <div class="column-1">27 Jun</div>
-                            <div class="column-2">
-                                <div class="sub-title">Pago recibido con TDD Santander</div>
-                                <div class="name-detalle">Alejandra De los Santos (Visa)</div>
-                            </div>
-                            <div class="column-3">
-                                <span class="icon-check"></span>
-                            </div>
-                            <div class="column-4 green">15 USD</div>
-                        </div>
-
-                        <div class="row-dashboard">
-                            <div class="column-1">25 Jun 2020</div>
-                            <div class="column-2">
-                                <div class="sub-title">Depósito desde Banorte</div>
-                                <div class="name-detalle">Samuel Medina de Giudice</div>
-                            </div>
-                            <div class="column-3">
-                                <span class="icon-equis"></span>
-                            </div>
-                            <div class="column-4 red">-35 USD</div>
-                        </div>
-
-                        <div class="row-dashboard">
-                            <div class="column-1">18 Jun</div>
-                            <div class="column-2">
-                                <div class="sub-title">Depósito desde AirTm</div>
-                                <div class="name-detalle">Samuel Medina de Giudice</div>
-                            </div>
-                            <div class="column-3">
-                                <span class="icon-minus"></span>
-                            </div>
-                            <div class="column-4 blue">-27 USD</div>
+                        <div class="row-config">
+                            <h4>Token vía email</h4>
+                            <a href="#"class="btn-continuar active"><span></span>Activado</a>
                         </div>
                     </div>
                 </div>
                 <div class="main-nav-footer">
                     <div class="row">
                         <a href="#" onclick="openModalTransferencia(event)">Términos y Condiciones</a>
-                        <a href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
+                        <a id="modalCorreo" href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
                         <a href="#">Uso aceptable</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="open-modal-correo" class="modal-window dashboard-modal">
+        <div class="inside-modal">
+            <img src="img/question.png" alt="Mensaje">
+            <h3>Transferencia por correo electrónico</h3>
+            <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
+            <p>En caso de lo contratrio, presione cancelar.</p>
+            <div class="button-modal">
+                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
+                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
+            </div>
+        </div>
+    </div>
+    <div id="open-modal-transferencia" class="modal-window dashboard-modal">
+        <div class="inside-modal">
+            <h3>Confirmación de transferencia</h3>
+            <div class="tabla-transferencia">
+                <div class="row-tabla">
+                    <div class="left">Beneficiario</div>
+                    <div class="right">Bancolombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Banco destino</div>
+                    <div class="right">Bancolombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Cuenta destino</div>
+                    <div class="right">Terminación 6496</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">País destino</div>
+                    <div class="right">Colombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Moneda</div>
+                    <div class="right">COP</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Monto a enviar</div>
+                    <div class="right">USD $105.00</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Comisión</div>
+                    <div class="right">USD $5.00</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Tasa de cambio</div>
+                    <div class="right">USD $1.00 = 3.124.00 COP</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Su beneficiario recibirá</div>
+                    <div class="right">COP 3.124.025,36</div>
+                </div>
+                <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
+            </div>
+            <div class="button-modal">
+                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
+                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
             </div>
         </div>
     </div>
