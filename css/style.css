@@ -111,9 +111,7 @@ img {
   margin-left: auto;
 }
 @media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
+  
 }
 @media (min-width: 992px) {
   .container {
@@ -131,6 +129,9 @@ img {
 @media (max-width: 992px) {
   .dashboard {
     min-width: 992px;
+  }
+  .container {
+    width: 95%;
   }
 }
 /***MIDDLE BANNER***/
@@ -473,14 +474,14 @@ header {
   z-index: -1;
 }
 .slogan {
-  max-width: 405px;
+  max-width: 480px;
 }
 .slogan .txt-slogan h2 {
   color: #2b436e;
 }
 .slogan .txt-slogan .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .slogan .txt-slogan .nav a {
   text-decoration: none;
@@ -488,29 +489,33 @@ header {
   font-size: 15px;
   color: #ffffff;
   border-radius: 30px;
-  width: 49%;
+  width: 200px;
   padding: 15px 0;
 }
 .slogan .txt-slogan .nav .btn-1 {
   background-color: #00a7f6;
+  margin-right: 15px;
 }
 .slogan .txt-slogan .nav .btn-2 {
   background-color: #19416f;
 }
 .title {
   text-align: center;
-  margin: 80px 0 30px;
+  margin: 60px 0;
 }
 .title p {
   margin: 0 auto;
 }
 .info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .info .info-items {
   width: 50%;
-  padding: 0 15px;
+  padding: 0 70px 0 0;
+}
+.info .info-items-image {
+  width: 50%;
 }
 .info .info-items h3 {
   font-size: 2em;
@@ -519,19 +524,9 @@ header {
 .info .info-items p {
   margin-bottom: 30px;
 }
-.info .info-items-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.info .info-items-image-2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.info .info-items-image-2 img {
-  padding: 30px 0 30px 30px;
-  width: 85%;
+.info .info-items-image img {
+  float: right;
+  width: 65%;
 }
 .tarifas {
   display: flex;
@@ -712,14 +707,12 @@ header {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px), 
-(height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+@media only screen and (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
   #home {
     height: 70vh;
   }  
 }
-@media only screen and (max-width: 900px), 
-(width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+@media only screen and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
   #home {
     height: 50vh;
   }  
@@ -744,6 +737,9 @@ header {
 @media (max-width: 1280px) {
   #home > .container:before {
     height: 70%;
+  }
+  .info .info-items-image img {
+    width: 95%;
   }
 }
 @media (max-width: 1200px) {
@@ -774,6 +770,35 @@ header {
   }
 }
 @media (max-width: 980px) {
+  .info .info-items, .info .info-items-image {
+    width: 100%;
+  }
+  .info .info-items-image img {
+    height: 350px;
+    width: auto;
+  }
+  .info {
+    flex-flow: wrap;
+  }
+  .info .info-items {
+    width: 100%;
+    padding: 0;
+  }
+  .info .info-items h3 {
+    text-align: center;
+  }
+  .info .info-items p {
+    text-align: justify;
+  }
+  .info .info-items-image,
+  .info .info-items-image-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .info .info-items-image img {
+    padding: 30px ;
+  }
   #home .container {
     align-items: center;
     text-align: center;
@@ -808,9 +833,6 @@ header {
   .secundary-footer .container img {
     max-width: 300px;
     width: 20%;
-  }
-  .bg-body .login form {
-    max-width: 320px;
   }
 }
 
@@ -891,28 +913,6 @@ header {
   .slogan .txt-slogan .nav {
     flex-direction: column;
     align-items: center;
-  }
-  .info {
-    flex-flow: wrap;
-  }
-  .info .info-items {
-    width: 100%;
-  }
-  .info .info-items h3 {
-    text-align: center;
-  }
-  .info .info-items p {
-    text-align: justify;
-  }
-  .info .info-items-image,
-  .info .info-items-image-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .info .info-items-image img,
-  .info .info-items-image-2 img {
-    padding: 30px ;
   }
   .middle-banner .row-items {
     display: flex;
