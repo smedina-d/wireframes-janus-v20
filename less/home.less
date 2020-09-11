@@ -2,32 +2,32 @@
              /***HOME***/
 ////////////////////////////////////////
 #header-body{
-    padding:15px 0;
-    position:absolute;
-    top:0;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
     width: 100%;
 }
 #home {
     position: relative;
-    height: 85vh;
-    background-size:cover!important;
+    height: 100vh;
+    background-size: cover;
     background-position-x: right;
     &:before{
-        content:'';
-        background:url('../img/dots-bootm.png') no-repeat bottom left;
-        position:absolute;
+        content: '';
+        background: url('../img/dots-bootm.png') no-repeat bottom left;
+        position: absolute;
         top: 0;
-        left:0;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: -2;
     }
     &:after{
-        content:'';
-        background:url('../img/dots-top.png') no-repeat top right;
-        position:absolute;
+        content: '';
+        background: url('../img/dots-top.png') no-repeat top right;
+        position: absolute;
         top: 0;
-        left:0;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
@@ -35,80 +35,69 @@
     > .container{
         height: 100%;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: center;
         &:before{
-            content:'';
-            background:url('../img/bg-image.png') no-repeat top right;
-            background-size:contain;
-            position:absolute;
+            content: '';
+            background: url('../img/bg-image.svg') no-repeat top right;
+            background-size: contain;
+            position: absolute;
             top: 0;
-            left:0;
+            left: 0;
             width: 100%;
-            height: 100%;
+            height: 85%;
             z-index: -1;
         }
         
     }
 }
 .slogan {
-    max-width:600px; 
+    max-width: 480px;
     .txt-slogan {
-        h1 {
-            font-size: 3em;
-            font-family: @main-font;
+        h2 {
+            color: #2b436e;
         }
    
         .nav {
             display: flex;
             justify-content: flex-start;
            a {
-            color: #ffffff;  
             text-decoration: none;
             text-align: center;
-            font-size: 1em; 
-            color: @secundary-color; 
-            width: 232px;
-            margin: 5px;
-            padding: 15px;
+            font-size: 15px;
+            color: #ffffff;
+            border-radius: 30px;
+            width: 200px;
+            padding: 15px 0;
            }
            
            .btn-1 {
-               color: #ffffff;
-               border-radius: 30px;
-               background-color: #00a7f6;
+                background-color: #00a7f6;
+                margin-right: 15px;
            }
            
            .btn-2 {
-               color: #ffffff;
-               border-radius: 30px;
-               background-color: @primary-color;
+                background-color: #19416f;
            }
         }
     }
 }
 .title {
     text-align: center;
-    margin: 80px 0;
-
-    h1 {
-        font-size: 3em;
-    }
-
+    margin: 60px 0;
     p {
         margin: 0 auto;
     }  
 }
 .info {
-    margin: 30px 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     .info-items {
         width: 50%;
-        padding:0 15px;
+        padding: 0 70px 0 0;
         h3 {
             font-size: 2em;
-            margin: 30px 0;
+            margin: 0 0 30px 0;
         }
         p {
             margin-bottom: 30px;
@@ -116,43 +105,33 @@
 
     }
     .info-items-image{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        width: 50%;
         img {
-            padding: 30px 0 30px 30px;
-            width: 80%;
+            float: right;
+            width: 65%;
         }
     }
 
-    .info-items-image-2 {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        img {
-            padding: 30px 0 30px 30px;
-            width: 80%;
-            width: 80%;
-        }
-    }
 }
 
 .tarifas {
     display: flex;
+    justify-content: center;
     .item{
-        width: 50%;
-        padding: 60px;
+        width: 45%;
+        padding: 30px 75px;
+        text-align: center;
         &:first-child{       
-            border-right: dotted 5px #cacaca;
+            border-right: dotted 5px #b7d0d8;
         }
-        h1 {
-            font-size: 2.5em !important;
+        h2 {
+            font-size: 2.3em;
             color: #3d424b;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
-        h3 {
-           font-size: 1.5em;
-           color: #7f8591; 
+        h4 {
+            font-size: 1.1em;
+            color: #7f8591;
         }
     }
 }

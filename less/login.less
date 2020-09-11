@@ -3,17 +3,17 @@
 ////////////////////////////////////////
 
 .bg-body {
-    background: linear-gradient( #0d54a8, #1ea4f6);
+    background: linear-gradient(#0d54a8, #1ea4f6);
     background-size: cover;
     display: flex;
     justify-content: center;
     height: 100%;
     &:before{
-        content:'';
-        background:url('../img/dots-bottom-login.png') no-repeat bottom left;
-        position:absolute;
+        content: '';
+        background: url('../img/dots-bottom-login.png') no-repeat bottom left;
+        position: absolute;
         top: 0;
-        left:0;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: -2;
@@ -54,30 +54,29 @@
         }
 
         .logo-mobile {
-            max-width:400px;
+            max-width: 400px;
             width: 100%;
-            margin: 20px 0;
+            margin-bottom: 50px;
             img{
-                max-width: 250px;
+                max-width: 300px;
             }
         }
 
         form {
-            max-width:300px;
+            max-width: 320px;
             input{
                 background: transparent;
                 color: #ffffff;
                 border-radius: 5px;
                 border: solid 1px #e8e8e8;
-                font-family: @main-font;
+                font-family: 'Avant', Helvetica, Arial, sans-serif;
                 font-size: 1em;
-                padding: 11px 20px 8px;
                 &:focus,
                 &:active{
                     outline:none;
                 }
                 &[type=submit]{
-                    background: #ffffff;
+                    background: #e8e8e8;
                     color: #272727;
                     appearance: none;
                     -webkit-appearance: none;
@@ -98,7 +97,7 @@
                 }
             }
             p{
-                font-size: 12px;
+                font-size: 15px;
                 a {
                     color: #ffffff;
                 }
@@ -111,13 +110,13 @@
 .mini-footer {
     margin-top: auto;
     align-self: flex-start;
-    max-width: 300px;
+    max-width: 380px;
     width: 100%;
     text-align: center;
     color: #ffffff;
     margin-bottom: 10px;
     a{
         color: #ffffff;
-        font-size: 12PX;
+        font-size: 12px;
     }
 }
