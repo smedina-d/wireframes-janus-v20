@@ -31,53 +31,53 @@ function addClassBody(){
 jQuery(document).ready(function($) {
 
     //Modales
-    $('#modalCorreo').click(function(){
+    var windowWidth = $(window).width();
+    if(windowWidth < 768){
+        $('.menu-notifications > div').click(function(){
+            var menuActive = $(this).attr('class').split(' ')[0];
+            if($(this).hasClass('active')){
+                $('.menu-notifications > div').removeClass('active');
+                $('#'+menuActive+'-slide').css('visibility', 'hidden'); 
+                $('#sub-menu-container').slideUp(400);
+                $('.sub-menu').css('display', 'none');
+            }else{
+                $('.menu-notifications > div').removeClass('active');
+                $('.sub-menu').css('visibility', 'hidden'); 
+                $('#sub-menu-container').slideUp(400);
+                $('.sub-menu').css('display', 'none');
 
-    });
-    $('.menu-notifications > div').click(function(){
-        var menuActive = $(this).attr('class').split(' ')[0];
-        if($(this).hasClass('active')){
-            $('.menu-notifications > div').removeClass('active');
-            $('#'+menuActive+'-slide').css('visibility', 'hidden'); 
-            $('#sub-menu-container').slideUp(400);
-            $('.sub-menu').css('display', 'none');
-        }else{
-            $('.menu-notifications > div').removeClass('active');
-            $('.sub-menu').css('visibility', 'hidden'); 
-            $('#sub-menu-container').slideUp(400);
-            $('.sub-menu').css('display', 'none');
-
-            $(this).addClass('active');
-            $('#'+menuActive+'-slide').css('display', 'flex'); 
-            $('#sub-menu-container').slideDown(400, function() {
-                $('#'+menuActive+'-slide').css({
-                    'visibility': 'visible',
+                $(this).addClass('active');
+                $('#'+menuActive+'-slide').css('display', 'flex'); 
+                $('#sub-menu-container').slideDown(400, function() {
+                    $('#'+menuActive+'-slide').css({
+                        'visibility': 'visible',
+                    });
                 });
+            };
+            closeMenu(menuActive);
+        });
+
+
+        $('.menu-dashboard h3, #ultimas-transacciones h3').click(function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active').next().slideUp(400);
+            }else{
+                $('.menu-dashboard h3').removeClass('active').next().slideUp(400);
+                $(this).addClass('active');
+                $(this).next().slideDown(400);
+            }
+        });
+        function closeMenu(menuActive){
+            $(window).click(function() {
+                $('.menu-notifications > div').removeClass('active');
+                $('#'+menuActive+'-slide').css('visibility', 'hidden'); 
+                $('#sub-menu-container').slideUp(400);
+                $('.sub-menu').css('display', 'none');
             });
-        };
-        closeMenu(menuActive);
-    });
-
-
-    $('.menu-dashboard h3, #ultimas-transacciones h3').click(function(){
-        if($(this).hasClass('active')){
-            $(this).removeClass('active').next().slideUp(400);
-        }else{
-            $('.menu-dashboard h3').removeClass('active').next().slideUp(400);
-            $(this).addClass('active');
-            $(this).next().slideDown(400);
         }
-    });
-    function closeMenu(menuActive){
-        $(window).click(function() {
-            $('.menu-notifications > div').removeClass('active');
-            $('#'+menuActive+'-slide').css('visibility', 'hidden'); 
-            $('#sub-menu-container').slideUp(400);
-            $('.sub-menu').css('display', 'none');
+
+        $('.menu-notifications > div').click(function(event){
+            event.stopPropagation();
         });
     }
-
-    $('.menu-notifications > div').click(function(event){
-        event.stopPropagation();
-    });
 });

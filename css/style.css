@@ -818,6 +818,9 @@ header {
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover {
   background-color: #1f3c6f!important;
 }
+.dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover ul {
+  display: block;
+}
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover span:before {
   color: #fff!important;
 }
@@ -1866,6 +1869,15 @@ header {
     padding: 11px 0;
     display: block;
     position: unset;
+  }
+  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover {
+    background-color: #f2f2f2!important;
+  }
+  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover span:before {
+    color: #717070!important;
+  }
+  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover ul {
+    display: none!important;
   }
   .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded.active {
     background-color: #1f3c6f !important;
