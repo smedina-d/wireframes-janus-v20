@@ -1621,9 +1621,11 @@ header {
   .bg-body .login:after {
     display: none;
   }
-  .container:before {
-    height: 60%;
-  }
+  /*.container {
+        &:before {
+            height: 60%;
+        }
+    }*/
 }
 @media (max-width: 980px) {
   .info .info-items .info .info-items-image {
@@ -1684,15 +1686,15 @@ header {
 }
 /* // Medium devices (tablets, 768px and up)// */
 @media (max-width: 768px) {
-  #home .slogan {
-    max-width: 90%;
-  }
   body p {
     font-size: 15px;
   }
   #home:before,
   #home:after {
     background-size: 100%;
+  }
+  #home .slogan {
+    max-width: 90%;
   }
   .logo {
     max-width: 250px;
