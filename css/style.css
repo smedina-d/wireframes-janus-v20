@@ -826,6 +826,9 @@ header {
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover {
   background-color: #1f3c6f!important;
 }
+.dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover ul {
+  display: block;
+}
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded:hover span:before {
   color: #fff!important;
 }
@@ -1912,27 +1915,32 @@ header {
   .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded.active span:before {
     color: #fff !important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul {
-    width: 100%;
-    top: 46px;
-    left: 0;
-    transform: inherit;
-    text-align: left;
+  .dashboard .header-dashboard > .container .nav .icon-rounded {
+    height: inherit;
+    background: #f2f2f2!important;
+    box-shadow: inherit;
+    font-size: 1.2em;
+    border-radius: inherit;
+    padding: 11px 0;
+    display: block;
+    position: unset;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li {
-    padding: 25px 25px 0px;
+  .dashboard .header-dashboard > .container .nav .icon-rounded:hover {
+    background-color: #f2f2f2!important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li:first-child {
-    padding: 27px 25px 21px;
+  .dashboard .header-dashboard > .container .nav .icon-rounded:hover span:before {
+    color: #717070!important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li:last-child {
-    padding: 25px 25px 21px;
+  .dashboard .header-dashboard > .container .nav .icon-rounded:hover ul {
+    display: none!important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul:before,
-  .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul:after {
-    display: none;
+  .dashboard .header-dashboard > .container .nav .icon-rounded.active {
+    background-color: #1f3c6f !important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user {
+  .dashboard .header-dashboard > .container .nav .icon-rounded.active span:before {
+    color: #fff !important;
+  }
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user {
     background: transparent;
     box-shadow: inherit;
     width: inherit;
@@ -1940,17 +1948,17 @@ header {
     padding: 11px 0 5px;
     border-radius: inherit;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user.active {
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user.active {
     background-color: #1f3c6f !important;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user.active svg path {
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user.active svg path {
     fill: #fff;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user .user-img {
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user .user-img {
     width: 20px;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user .polygon-1,
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user > div {
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user .polygon-1,
+  .dashboard .header-dashboard > .container .nav .icon-rounded .user > div {
     display: none!important;
   }
   .dashboard .header-dashboard > .container .nav .available-money {
