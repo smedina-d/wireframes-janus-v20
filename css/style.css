@@ -2007,9 +2007,6 @@ header {
   .dashboard #sub-menu-container .container .sub-menu a:last-child {
     border-bottom: 0;
   }
-  .dashboard #main-menu-dashboard {
-    background: #fff;
-  }
   .dashboard #main-menu-dashboard .container {
     flex-direction: column;
     padding: 0;
