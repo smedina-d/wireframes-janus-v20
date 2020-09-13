@@ -140,20 +140,17 @@ img {
     width: 980px;
   }
 }
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
 @media (min-width: 1280px) {
   .container {
     width: 1280px;
   }
   body .login .container {
     width: 980px;
-  }
-}
-@media (max-width: 992px) {
-  .dashboard {
-    min-width: 992px;
-  }
-  .container {
-    width: 95%;
   }
 }
 /***MIDDLE BANNER***/
