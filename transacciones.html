@@ -123,7 +123,7 @@
                         <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
                         <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
                         <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
-                        <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
+                        <a class="active" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
                     </div>
                 </div>
                 <div class="menu-dashboard">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="menu-dashboard">
-                    <h3>Acceso directo</h3>
+                    <h3>Accesos rápidos</h3>
                     <div>
                         <a href="#"><img src="img/dashboard/invitar-amigos.svg">Invitar amigos</a>
                         <a href="#"><img src="img/dashboard/ajustes.svg">Ajustes</a>
@@ -161,7 +161,7 @@
                         <h3>Tiempo de transferencia</h3>
                         <div class="info-items"><h4>$97.25 USD</h4></div>
                     </div>
-                    <a href="#" class="btn-continuar">
+                    <a href="#" id="open-transaccion" class="btn-continuar">
                         Continuar
                         <span class="icon-down-arrow-2"></span>
                     </a>
@@ -174,6 +174,7 @@
                             <div class="column-2">Detalle</div>
                             <div class="column-3">Estatus</div>
                             <div class="column-4">Monto</div>
+                            <div class="column-5">&nbsp;</div>
                         </div>
                         <div class="row-dashboard">
                             <div class="column-1">28 Jun</div>
@@ -185,6 +186,7 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                         <div class="row-dashboard">
                             <div class="column-1">28 Jun</div>
@@ -196,6 +198,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">35 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -208,6 +211,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">15 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -220,6 +224,7 @@
                                 <span class="icon-equis"></span>
                             </div>
                             <div class="column-4 red">-35 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -232,14 +237,145 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="main-nav-footer">
                     <div class="row">
-                        <a href="#" onclick="openModalTransferencia(event)">Términos y Condiciones</a>
-                        <a href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
+                        <a data-modal="modalTransferencia" href="#">Términos y Condiciones</a>
+                        <a data-modal="modalCorreo" href="#">Política de privacidad</a>
                         <a href="#">Uso aceptable</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalCorreo" class="modal-window dashboard-modal">
+        <div class="inside-modal">
+            <img src="img/question.png" alt="Mensaje">
+            <h3>Transferencia por correo electrónico</h3>
+            <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
+            <p>En caso de lo contratrio, presione cancelar.</p>
+            <div class="button-modal">
+                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalTransferencia" class="modal-window dashboard-modal">
+        <div class="inside-modal">
+            <h3>Confirmación de transferencia</h3>
+            <div class="tabla-transferencia">
+                <div class="row-tabla">
+                    <div class="left">Beneficiario</div>
+                    <div class="right">Bancolombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Banco destino</div>
+                    <div class="right">Bancolombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Cuenta destino</div>
+                    <div class="right">Terminación 6496</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">País destino</div>
+                    <div class="right">Colombia</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Moneda</div>
+                    <div class="right">COP</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Monto a enviar</div>
+                    <div class="right">USD $105.00</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Comisión</div>
+                    <div class="right">USD $5.00</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Tasa de cambio</div>
+                    <div class="right">USD $1.00 = 3.124.00 COP</div>
+                </div>
+                <div class="row-tabla">
+                    <div class="left">Su beneficiario recibirá</div>
+                    <div class="right">COP 3.124.025,36</div>
+                </div>
+                <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
+            </div>
+            <div class="button-modal">
+                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalTransaccion" class="modal-window transfer-confirm">
+        <div class="inside-modal">
+            <span class="modal-close" data-close="close-modal">x</span>
+            <h3>Transferencia por correo electrónico</h3>
+            <h4>09:14 AM, Junio 27 2020</h4>
+            <div id="receipt-content">
+                <div class="amout-detials">
+                    <div class="payment-amount">15 USD</div>
+                    <div class="payment-subtitle">Pago recibido</div>
+                </div>
+                <div class="user"><span class="icon-user"></span>Alejandra de los Santos</div>
+                <div class="bank-info">
+                    <div class="row-receipt">
+                        <div class="left">Referencia:</div>
+                        <div class="right">0997 1345 3588</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">BIC:</div>
+                        <div class="right">CMBRFR2B</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Banco destino:</div>
+                        <div class="right">Banorte</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Comisión:</div>
+                        <div class="right">5%</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Monto a recibir:</div>
+                        <div class="right">45 USD</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Estatus:</div>
+                        <div class="right">Completada</div>
+                    </div>
+                </div>
+                <div class="receipt-download">
+                    <img src="img/dashboard/download-1.png" alt="Download">Descargar comprobante
+                </div>
+            </div>
+            <div id="receipt-content">
+                <div class="bank-info">
+                    <div class="row-receipt two-rows">
+                        <div class="left">Nota:</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">BIC:</div>
+                        <div class="right">CMBRFR2B</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Banco destino:</div>
+                        <div class="right">Banorte</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Comisión:</div>
+                        <div class="right">5%</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Monto a recibir:</div>
+                        <div class="right">45 USD</div>
+                    </div>
+                    <div class="row-receipt">
+                        <div class="left">Estatus:</div>
+                        <div class="right">Completada</div>
                     </div>
                 </div>
             </div>

@@ -958,7 +958,7 @@ header {
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a {
   display: flex;
   align-items: center;
-  padding: 7.5px 0;
+  padding: 8.5px 0 5.5px;
   display: block;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a:hover,
@@ -995,7 +995,7 @@ header {
 }
 .dashboard #main-menu-dashboard .main .items-nav {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 0px 0 20px;
@@ -1005,6 +1005,8 @@ header {
 .dashboard #main-menu-dashboard .main .items-nav .item {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item.no-border:before {
   display: none;
@@ -1029,6 +1031,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item div span {
   font-size: 2.8em;
@@ -1042,7 +1045,11 @@ header {
   font-weight: 500;
   margin: 0;
 }
+.dashboard #main-menu-dashboard .main .items-nav a {
+  align-self: center;
+}
 .dashboard #main-menu-dashboard .main #transferir-correo {
+  display: none;
   padding: 0px 0 20px;
   margin: 0 30px 30px;
 }
@@ -1222,6 +1229,15 @@ header {
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.red {
   color: #f34213;
+}
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
+  flex: 1 1 100px;
+  text-align: center;
+}
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 a {
+  font-size: .9em;
+  justify-content: center;
+  padding: 4px 0px 1px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard p {
   line-height: 5px;
@@ -2086,6 +2102,7 @@ header {
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3,
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4 {
     width: 50%;
+    margin-bottom: 15px;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 {
     text-align: left;
@@ -2110,6 +2127,9 @@ header {
     display: inline-block;
     margin-right: 5px;
   }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
+    margin-bottom: 10px;
+  }
   .dashboard #main-menu-dashboard .main .main-nav-footer {
     padding: 0;
     position: absolute;
@@ -2131,11 +2151,12 @@ header {
   .dashboard #main-menu-dashboard .main #available-countries {
     margin: 15px;
   }
+  .dashboard #main-menu-dashboard .main #transferir-correo {
+    margin: 0 0 30px;
+  }
   .dashboard #main-menu-dashboard .main #transferir-correo .row {
     flex-direction: column;
-  }
-  .dashboard #main-menu-dashboard .main #transferir-correo .row > div {
-    padding: 0;
+    margin: 0;
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config {
     padding: 0 15px 0;
@@ -2200,8 +2221,8 @@ header {
     padding: 15px;
   }
   .modal-window.transfer-confirm .inside-modal #receipt-content {
-    width: 100%;
-    margin: 0 0 25px;
+    width: 100%!important;
+    margin: 0 0 25px!important;
   }
   .modal-window .dashboard-modal .button-modal {
     flex-direction: column;
@@ -2236,7 +2257,7 @@ header {
     border: solid #40df97 1px;
     border-radius: 9px;
     margin-bottom: 15px;
-    width: calc(35%);
+    width: calc(50% - 15px);
     margin: 0 7.5px;
   }
 }

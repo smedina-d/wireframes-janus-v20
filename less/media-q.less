@@ -627,6 +627,7 @@
                     .column-3,
                     .column-4{
                         width: 50%;
+                        margin-bottom: 15px;
                     }
                     .column-3{
                         text-align:left;
@@ -656,6 +657,9 @@
                             margin-right: 5px;
                         }
                     }
+                    .column-5{
+                        margin-bottom: 10px;
+                    }
                 }
             }
             .main-nav-footer {
@@ -679,10 +683,11 @@
             #available-countries{
                 margin:15px;
             }
-            #transferir-correo .row{
-                flex-direction: column;
-                > div{
-                    padding:0;
+            #transferir-correo{
+                margin: 0 0 30px;
+                .row{
+                    flex-direction: column;
+                    margin:0;
                 }
             }
             #main-config{
@@ -755,8 +760,8 @@
             margin: 15px 0;
             padding:15px;
             #receipt-content{
-                width: 100%;
-                margin: 0 0 25px;
+                width: 100%!important;
+                margin: 0 0 25px!important;
             }
         }
     }
@@ -795,7 +800,7 @@
                 border: solid #40df97 1px;
                 border-radius: 9px;
                 margin-bottom: 15px;
-                width: calc(50% - 15px);
+                width: ~"calc(50% - 15px)";
                 margin: 0 7.5px;
             }
         }
