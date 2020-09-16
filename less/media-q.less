@@ -720,13 +720,9 @@
                 #available-countries{
                     margin:15px;
                 }
-                #transferir-correo .row{
-                    flex-direction: column;
-                    > div{
-                        padding:0;
-                    }
-                }
-                #main-config .block-config{
+            }
+            #main-config{
+                .block-config{
                     padding:0 15px 0;
                     .row-config{
                         flex-direction: column;
@@ -734,6 +730,50 @@
                         h4{
                             margin-left:0;
                             margin-bottom: 15px;
+                        }
+                    }
+                    .search-contact{
+                        flex-direction: column;
+                        a{
+                            margin-left: auto;
+                        }
+                    }
+                    .row-contact{
+                        flex-direction: column;
+                        .left{
+                            flex-wrap: wrap;
+                            .name{
+                                flex: 1 1 0;
+                            }
+                            span{
+                                display: none;
+                            }
+                            .email{
+                                width: 100%;
+                                margin:10px 0 0;
+                            }
+                        }
+                        .right{
+                            margin-top:10px;
+                        }
+                    }
+                    .add-account{
+                        flex-direction: column;
+                        .header-title{
+                            margin:5px 0 15px;
+                        }
+                    }
+                }
+                #new-container{
+                    .row{
+                        flex-direction: column;
+                        margin:0;
+                        padding:0;
+                        .item{
+                            width: 100%;
+                            &.half{
+                                max-width: inherit;
+                            }
                         }
                     }
                 }

@@ -1439,6 +1439,9 @@ header {
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .right a.delete-contact {
   color: #e03838;
 }
+.dashboard #main-menu-dashboard .main #main-config #new-container {
+  padding-bottom: 25px;
+}
 .dashboard #main-menu-dashboard .main #main-config #new-container .row {
   display: flex;
   flex-wrap: wrap;
@@ -1502,6 +1505,9 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item input:-ms-input-placeholder {
   color: #b7b7b7;
+}
+.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox {
+  margin-left: auto;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox label {
   display: flex;
@@ -2160,22 +2166,58 @@ header {
   .dashboard #main-menu-dashboard .main #available-countries {
     margin: 15px;
   }
-  .dashboard #main-menu-dashboard .main #transferir-correo .row {
-    flex-direction: column;
-  }
-  .dashboard #main-menu-dashboard .main #transferir-correo .row > div {
-    padding: 0;
-  }
-  .dashboard #main-menu-dashboard .main #main-config .block-config {
+  .dashboard #main-menu-dashboard #main-config .block-config {
     padding: 0 15px 0;
   }
-  .dashboard #main-menu-dashboard .main #main-config .block-config .row-config {
+  .dashboard #main-menu-dashboard #main-config .block-config .row-config {
     flex-direction: column;
     align-items: flex-start;
   }
-  .dashboard #main-menu-dashboard .main #main-config .block-config .row-config h4 {
+  .dashboard #main-menu-dashboard #main-config .block-config .row-config h4 {
     margin-left: 0;
     margin-bottom: 15px;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .search-contact {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .search-contact a {
+    margin-left: auto;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left {
+    flex-wrap: wrap;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left .name {
+    flex: 1 1 0;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left span {
+    display: none;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left .email {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .right {
+    margin-top: 10px;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .add-account {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard #main-config .block-config .add-account .header-title {
+    margin: 5px 0 15px;
+  }
+  .dashboard #main-menu-dashboard #main-config #new-container .row {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .dashboard #main-menu-dashboard #main-config #new-container .row .item {
+    width: 100%;
+  }
+  .dashboard #main-menu-dashboard #main-config #new-container .row .item.half {
+    max-width: inherit;
   }
   .modal-window.transfer-confirm {
     overflow-y: scroll;
