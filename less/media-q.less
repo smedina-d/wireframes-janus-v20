@@ -653,8 +653,18 @@
                             flex:inherit!important;
                             width: 100%;
                         }
-                        &.headers-row{
-                            display:none;
+                    }
+                    .column-3,
+                    .column-4{
+                        width: 50%;
+                        margin-bottom: 15px;
+                    }
+                    .column-3{
+                        text-align:left;
+                        span{
+                            &:first-child{
+                                margin-right: 5px;
+                            }
                         }
                         .column-1{
                             margin-bottom: 15px;
@@ -698,6 +708,9 @@
                             }
                         }
                     }
+                    .column-5{
+                        margin-bottom: 10px;
+                    }
                 }
                 .main-nav-footer {
                     padding:0;
@@ -717,8 +730,15 @@
                         }
                     }
                 }
-                #available-countries{
-                    margin:15px;
+            }
+            #available-countries{
+                margin:15px;
+            }
+            #transferir-correo{
+                margin: 0 0 30px;
+                .row{
+                    flex-direction: column;
+                    margin:0;
                 }
             }
             #main-config{
@@ -780,18 +800,19 @@
             }
         }
     }
-    .modal-window{
-        &.transfer-confirm{
-                overflow-y: scroll;
-                .inside-modal{
-                flex-direction: column;
-                top: 0;
-                margin: 15px 0;
-                padding:15px;
-                #receipt-content{
-                    width: 100%;
-                    margin: 0 0 25px;
-                }
+}
+
+.modal-window{
+    &.transfer-confirm{
+            overflow-y: scroll;
+            .inside-modal{
+            flex-direction: column;
+            top: 0;
+            margin: 15px 0;
+            padding:15px;
+            #receipt-content{
+                width: 100%!important;
+                margin: 0 0 25px!important;
             }
         }
         .dashboard-modal .button-modal{
@@ -817,22 +838,16 @@
     .modal-window {
         .transfer-confirm{
             display: flex;
-            align-items: center;
-            justify-content: center;
-            .inside-modal{
-                max-width: 700px;
-                display: flex;
-                flex-wrap: wrap;
-                h3,h4{
-                    width: 100%;
-                }
-                #receipt-content {
-                    border: solid #40df97 1px;
-                    border-radius: 9px;
-                    margin-bottom: 15px;
-                    width: calc(50% - 15px);
-                    margin: 0 7.5px;
-                }
+            flex-wrap: wrap;
+            h3,h4{
+                width: 100%;
+            }
+            #receipt-content {
+                border: solid #40df97 1px;
+                border-radius: 9px;
+                margin-bottom: 15px;
+                width: ~"calc(50% - 15px)";
+                margin: 0 7.5px;
             }
         }
     }

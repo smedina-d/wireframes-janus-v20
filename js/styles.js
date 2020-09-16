@@ -29,7 +29,6 @@ function addClassBody(){
     body[0].classList.add('modal-on');
 }
 jQuery(document).ready(function($) {
-
     //Modales
     var windowWidth = $(window).width();
     if(windowWidth < 768){
@@ -56,8 +55,6 @@ jQuery(document).ready(function($) {
             };
             closeMenu(menuActive);
         });
-
-
         $('.menu-dashboard h3, #ultimas-transacciones h3').click(function(){
             if($(this).hasClass('active')){
                 $(this).removeClass('active').next().slideUp(400);
@@ -80,4 +77,21 @@ jQuery(document).ready(function($) {
             event.stopPropagation();
         });
     }
+    $('#open-transaccion').click(function(e){
+        e.preventDefault();
+        $('#transferir-correo').slideDown(400);
+    });
+
+    $('*[data-modal]').click(function(event) {
+        event.preventDefault();
+        var idModal = $(this).data('modal');
+        $('#'+idModal).addClass('openmodal');
+        addClassBody();
+
+    });
+    $('*[data-close]').click(function(event) {
+        event.preventDefault();
+        $(this).closest('.openmodal').removeClass('openmodal');
+        $('body').removeClass('modal-on');
+    });
 });

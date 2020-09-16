@@ -120,7 +120,7 @@
                     <h3>Acceso directo</h3>
                     <div>
                         <a href="correo.html"><span class="icon-correo-electronico"></span>Correo electrónico</a>
-                        <a href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
+                        <a class="active" href="transferencia.html"><span class="icon-transferencia-bancaria"></span>Transferencia bancaria</a>
                         <a href="efectivo.html"><span class="icon-efectivo"></span>Efectivo</a>
                         <a href="recarga.html"><span class="icon-recarga-telefonica"></span>Recarga telefónica</a>
                         <a class="#" href="transacciones.html"><span class="icon-transacciones"></span>Transacciones</a>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="menu-dashboard">
-                    <h3>Acceso directo</h3>
+                    <h3>Accesos rápidos</h3>
                     <div>
                         <a href="#"><img src="img/dashboard/invitar-amigos.svg">Invitar amigos</a>
                         <a href="#"><img src="img/dashboard/ajustes.svg">Ajustes</a>
@@ -154,14 +154,14 @@
                         <div class="info-items"><span class="icon-flash"></span><h4>En minutos</h4></div>
                     </div>
                     <div class="item">
-                        <h3>Tiempo de transferencia</h3>
+                        <h3>Costo de comisión</h3>
                         <div class="info-items"><h4>USD 5%</h4></div>
                     </div>
                     <div class="item no-border">
-                        <h3>Tiempo de transferencia</h3>
+                        <h3>Cantidad máxima a enviar</h3>
                         <div class="info-items"><h4>$97.25 USD</h4></div>
                     </div>
-                    <a href="#" class="btn-continuar">
+                    <a href="#" id="open-transaccion" class="btn-continuar">
                         Continuar
                         <span class="icon-down-arrow-2"></span>
                     </a>
@@ -233,6 +233,7 @@
                             <div class="column-2">Detalle</div>
                             <div class="column-3">Estatus</div>
                             <div class="column-4">Monto</div>
+                            <div class="column-5">&nbsp;</div>
                         </div>
                         <div class="row-dashboard">
                             <div class="column-1">28 Jun</div>
@@ -244,6 +245,7 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                         <div class="row-dashboard">
                             <div class="column-1">28 Jun</div>
@@ -255,6 +257,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">35 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -267,6 +270,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">15 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -279,6 +283,7 @@
                                 <span class="icon-equis"></span>
                             </div>
                             <div class="column-4 red">-35 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -291,32 +296,33 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
+                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="main-nav-footer">
                     <div class="row">
-                        <a href="#" onclick="openModalTransferencia(event)">Términos y Condiciones</a>
-                        <a href="#" onclick="openModalcorreo(event)">Política de privacidad</a>
+                        <a data-modal="modalTransferencia" href="#">Términos y Condiciones</a>
+                        <a data-modal="modalCorreo" href="#">Política de privacidad</a>
                         <a href="#">Uso aceptable</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="open-modal-correo" class="modal-window dashboard-modal">
+    <div id="modalCorreo" class="modal-window dashboard-modal">
         <div class="inside-modal">
             <img src="img/question.png" alt="Mensaje">
             <h3>Transferencia por correo electrónico</h3>
             <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
             <p>En caso de lo contratrio, presione cancelar.</p>
             <div class="button-modal">
-                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
-                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
+                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
-    <div id="open-modal-transferencia" class="modal-window dashboard-modal">
+    <div id="modalTransferencia" class="modal-window dashboard-modal">
         <div class="inside-modal">
             <h3>Confirmación de transferencia</h3>
             <div class="tabla-transferencia">
@@ -359,14 +365,14 @@
                 <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
             </div>
             <div class="button-modal">
-                <a href="#" class="cancel-button" onclick="closeModal(event)">Cancelar</a>
-                <a href="#" class="continuar-button" onclick="closeModal(event)">Continuar</a>
+                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
-    <div id="modal-transfer-confirm" class="modal-window transfer-confirm openmodal">
+    <div id="modalTransaccion" class="modal-window transfer-confirm">
         <div class="inside-modal">
-            <span class="modal-close" onclick="closeModal(event)">x</span>
+            <span class="modal-close" data-close="close-modal">x</span>
             <h3>Transferencia por correo electrónico</h3>
             <h4>09:14 AM, Junio 27 2020</h4>
             <div id="receipt-content">

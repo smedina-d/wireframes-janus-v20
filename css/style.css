@@ -963,7 +963,7 @@ header {
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a {
   display: flex;
   align-items: center;
-  padding: 7.5px 0;
+  padding: 8.5px 0 5.5px;
   display: block;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a:hover,
@@ -1000,7 +1000,7 @@ header {
 }
 .dashboard #main-menu-dashboard .main .items-nav {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 0px 0 20px;
@@ -1010,6 +1010,8 @@ header {
 .dashboard #main-menu-dashboard .main .items-nav .item {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item.no-border:before {
   display: none;
@@ -1034,6 +1036,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item div span {
   font-size: 2.8em;
@@ -1047,7 +1050,11 @@ header {
   font-weight: 500;
   margin: 0;
 }
+.dashboard #main-menu-dashboard .main .items-nav a {
+  align-self: center;
+}
 .dashboard #main-menu-dashboard .main #transferir-correo {
+  display: none;
   padding: 0px 0 20px;
   margin: 0 30px 30px;
 }
@@ -1227,6 +1234,15 @@ header {
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.red {
   color: #f34213;
+}
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
+  flex: 1 1 100px;
+  text-align: center;
+}
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 a {
+  font-size: .9em;
+  justify-content: center;
+  padding: 4px 0px 1px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard p {
   line-height: 5px;
@@ -2106,44 +2122,55 @@ header {
     flex: inherit!important;
     width: 100%;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard.headers-row {
-    display: none;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-1 {
-    margin-bottom: 15px;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 {
-    margin-bottom: 15px;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 .sub-title {
-    margin-bottom: 5px;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3,
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3,
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-4 {
     width: 50%;
+    margin-bottom: 15px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 {
     text-align: left;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 span:first-child {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 span:first-child {
     margin-right: 5px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 .status {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-1 {
+    margin-bottom: 15px;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-2 {
+    margin-bottom: 15px;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-2 .sub-title {
+    margin-bottom: 5px;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3,
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-4 {
+    width: 50%;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 {
+    text-align: left;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 span:first-child {
+    margin-right: 5px;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 .status {
     display: inline-block;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.hold {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.hold {
     color: #1abfd5;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.complete {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.complete {
     color: #40df97;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.cancel {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.cancel {
     color: #f34213;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4:before {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-4:before {
     content: 'Monto: ';
     display: inline-block;
     margin-right: 5px;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-5 {
+    margin-bottom: 10px;
   }
   .dashboard #main-menu-dashboard .main .main-nav-footer {
     padding: 0;
@@ -2163,8 +2190,15 @@ header {
   .dashboard #main-menu-dashboard .main .main-nav-footer a:before {
     display: none;
   }
-  .dashboard #main-menu-dashboard .main #available-countries {
+  .dashboard #main-menu-dashboard #available-countries {
     margin: 15px;
+  }
+  .dashboard #main-menu-dashboard #transferir-correo {
+    margin: 0 0 30px;
+  }
+  .dashboard #main-menu-dashboard #transferir-correo .row {
+    flex-direction: column;
+    margin: 0;
   }
   .dashboard #main-menu-dashboard #main-config .block-config {
     padding: 0 15px 0;
@@ -2219,53 +2253,47 @@ header {
   .dashboard #main-menu-dashboard #main-config #new-container .row .item.half {
     max-width: inherit;
   }
-  .modal-window.transfer-confirm {
-    overflow-y: scroll;
-  }
-  .modal-window.transfer-confirm .inside-modal {
-    flex-direction: column;
-    top: 0;
-    margin: 15px 0;
-    padding: 15px;
-  }
-  .modal-window.transfer-confirm .inside-modal #receipt-content {
-    width: 100%;
-    margin: 0 0 25px;
-  }
-  .modal-window .dashboard-modal .button-modal {
-    flex-direction: column;
-  }
-  .modal-window .dashboard-modal .button-modal .cancel-button {
-    margin-bottom: 15px;
-  }
-  .modal-window .inside-modal .tabla-transferencia .left {
-    text-align: left;
-  }
-  .modal-window .inside-modal .tabla-transferencia .right {
-    max-width: 190px;
-    text-align: right;
-  }
+}
+.modal-window.transfer-confirm {
+  overflow-y: scroll;
+}
+.modal-window.transfer-confirm .inside-modal {
+  flex-direction: column;
+  top: 0;
+  margin: 15px 0;
+  padding: 15px;
+}
+.modal-window.transfer-confirm .inside-modal #receipt-content {
+  width: 100%!important;
+  margin: 0 0 25px!important;
+}
+.modal-window.transfer-confirm .dashboard-modal .button-modal {
+  flex-direction: column;
+}
+.modal-window.transfer-confirm .dashboard-modal .button-modal .cancel-button {
+  margin-bottom: 15px;
+}
+.modal-window.transfer-confirm .inside-modal .tabla-transferencia .left {
+  text-align: left;
+}
+.modal-window.transfer-confirm .inside-modal .tabla-transferencia .right {
+  max-width: 190px;
+  text-align: right;
 }
 @media (max-height: 750px) {
   .modal-window .transfer-confirm {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-window .transfer-confirm .inside-modal {
-    max-width: 700px;
-    display: flex;
     flex-wrap: wrap;
   }
-  .modal-window .transfer-confirm .inside-modal h3,
-  .modal-window .transfer-confirm .inside-modal h4 {
+  .modal-window .transfer-confirm h3,
+  .modal-window .transfer-confirm h4 {
     width: 100%;
   }
-  .modal-window .transfer-confirm .inside-modal #receipt-content {
+  .modal-window .transfer-confirm #receipt-content {
     border: solid #40df97 1px;
     border-radius: 9px;
     margin-bottom: 15px;
-    width: calc(35%);
+    width: calc(50% - 15px);
     margin: 0 7.5px;
   }
 }
