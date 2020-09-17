@@ -79,7 +79,13 @@ jQuery(document).ready(function($) {
     }
     $('#open-transaccion').click(function(e){
         e.preventDefault();
-        $('#transferir-correo').slideDown(400);
+        if($(this).hasClass('active')){
+            $('#transferir-correo').slideUp(400);
+            $(this).removeClass('active');    
+        }else{
+            $('#transferir-correo').slideDown(400);
+            $(this).addClass('active');
+        }
     });
 
     $('*[data-modal]').click(function(event) {
