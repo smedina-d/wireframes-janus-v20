@@ -122,15 +122,8 @@ img {
     width: 1280px;
   }
 }
-@media (max-width: 992px) {
-  .dashboard {
-    min-width: 992px;
-  }
-}
-@media (max-width: 768px) {
-  .dashboard {
-    min-width: inherit;
-  }
+.dashboard .container {
+  width: 100%!important;
 }
 /***MIDDLE BANNER***/
 .middle-banner {
