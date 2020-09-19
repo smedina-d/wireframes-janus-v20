@@ -125,33 +125,8 @@ img {
     width: 1280px;
   }
 }
-@media (max-width: 992px) {
-  .dashboard {
-    min-width: 992px;
-  }
-}
-@media (max-width: 768px) {
-  .dashboard {
-    min-width: inherit;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 980px;
-  }
-}
-@media (max-width: 992px) {
-  .container {
-    width: 95%;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-  body .login .container {
-    width: 980px;
-  }
+.dashboard .container {
+  width: 100%!important;
 }
 /***MIDDLE BANNER***/
 .middle-banner {
@@ -1311,6 +1286,9 @@ header {
   width: 145px;
   text-align: center;
   color: #707070;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.deactivate {
+  padding: 11px 25px 8px;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active {
   background: #3fde97;

@@ -100,4 +100,11 @@ jQuery(document).ready(function($) {
         $(this).closest('.openmodal').removeClass('openmodal');
         $('body').removeClass('modal-on');
     });
+    $('.row-config a').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass().addClass('deactivate').html('Desactivado');
+        }else{
+            $(this).removeClass().addClass('btn-continuar active').html('<span></span> Activado');
+        }
+    })
 });
