@@ -125,8 +125,33 @@ img {
     width: 1280px;
   }
 }
-.dashboard .container {
-  width: 100%!important;
+@media (max-width: 992px) {
+  .dashboard {
+    min-width: 992px;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard {
+    min-width: inherit;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+  body .login .container {
+    width: 980px;
+  }
 }
 /***MIDDLE BANNER***/
 .middle-banner {

@@ -112,24 +112,51 @@ img{
     }
 }
 .container-fixed() {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.container{
-    .container-fixed();
-    @media (min-width: @screen-sm-min) {
-        width: 100%;
+.container {
+  .container-fixed();
+  @media (min-width: @screen-sm-min) {
+    width: 100%;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;   
+  }
+  @media (min-width: 1367px) {
+    width: 1280px;
+  }
+}
+.dashboard {
+  @media (max-width: @screen-md-min) {
+    min-width: 992px;
+  }
+  @media (max-width: @screen-sm-min) {
+    min-width: inherit;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+  body {
+    .login {
+      .container {
+        width: 980px;
+      }
     }
-    @media (min-width: @screen-md-min) {
-        width: @container-md;
-        
-    }
-    @media (min-width: 1367px) {
-        width: 1280px;
-    }
-    .dashboard &{
-        width: 100%!important;
-    }
+  }
 }
