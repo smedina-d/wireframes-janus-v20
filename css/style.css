@@ -78,12 +78,17 @@ h4 {
 img {
   width: 100%;
 }
+.modal-detail-transaction {
+  color: #19416f;
+}
 .btn-continuar {
+  position: relative;
   color: #3fde97;
   border: solid 1px #3fde97;
-  padding: 10px 25px 7px;
+  padding: 12px 30px 10px;
   border-radius: 30px;
   display: flex;
+  width: 160px;
 }
 .btn-continuar.active {
   background: #3fde97;
@@ -95,7 +100,6 @@ img {
 .btn-continuar .icon-down-arrow-2 {
   margin-left: 5px;
   position: relative;
-  top: 2px;
 }
 .btn-continuar:hover {
   background: #3fde97;
@@ -188,7 +192,7 @@ img {
 /***MODAL***/
 .modal-window {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
   top: 0;
   right: 0;
   bottom: 0;
@@ -202,6 +206,11 @@ img {
   align-items: center;
   justify-content: center;
 }
+.modal-window.openmodal {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
 .modal-window.dashboard-modal {
   text-align: center;
 }
@@ -212,7 +221,7 @@ img {
   max-width: 150px;
 }
 .modal-window.dashboard-modal .inside-modal h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
   margin-bottom: 30px;
   color: #171717;
@@ -239,29 +248,43 @@ img {
   padding: 11px 25px 8px;
   color: #3fde97;
 }
+.modal-window.transfer-confirm {
+  overflow-y: scroll;
+}
 .modal-window.transfer-confirm .inside-modal {
-  max-width: 500px;
+  width: 500px;
+  flex-direction: column;
+  top: 0;
+  margin: 25px 0;
+  padding: 15px;
 }
 .modal-window.transfer-confirm .inside-modal h3 {
   text-align: center;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   color: #171717;
-  margin-bottom: 5px;
+  margin: 20px 0 5px;
+  font-weight: 500;
 }
 .modal-window.transfer-confirm .inside-modal h4 {
   color: #c4c4c4;
   text-align: center;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content {
+  background-color: #f9f9f9;
   border: solid #40df97 1px;
-  border-radius: 9px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+.modal-window.transfer-confirm .inside-modal #receipt-content:last-child {
+  margin-bottom: 0px;
+  border-radius: 0px 0px 5px 5px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content > div {
-  padding: 15px;
+  padding: 15px 20px;
   border-bottom: solid 1px #eaeaea;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content > div:last-child {
@@ -269,28 +292,29 @@ img {
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .amout-detials {
   text-align: center;
+  padding: 20px 0 15px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .amout-detials .payment-amount {
   color: #40df97;
-  font-size: 25px;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 1em;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .amout-detials .payment-subtitle {
   color: #c4c4c4;
+  font-size: 13px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .user {
   color: #1677ff;
   text-align: center;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .user span:before {
-  color: #707070;
-  margin-right: 5px;
+  color: #1677ff;
+  margin-right: 10px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .bank-info {
-  margin: 15px 0 0;
+  padding: 20px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .bank-info .row-receipt {
-  display: flex;
   margin-bottom: 10px;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .bank-info .row-receipt.two-rows {
@@ -309,8 +333,7 @@ img {
 .modal-window.transfer-confirm .inside-modal #receipt-content .bank-info .row-receipt .left {
   color: #c4c4c4;
 }
-.modal-window.transfer-confirm .inside-modal #receipt-content .bank-info .row-receipt .right {
-  flex: 1 1 0;
+.modal-window.transfer-confirm .inside-modal #receipt-content .bank-info .row-receipt .left .right {
   color: #707070;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .receipt-download {
@@ -318,19 +341,48 @@ img {
   align-items: center;
   justify-content: center;
   color: #1b406f;
-  font-weight: 600;
+  font-weight: 500;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content .receipt-download img {
-  max-width: 20px;
-  margin-right: 5px;
+  width: 20px;
+  margin-right: 10px;
+}
+.modal-window.transfer-confirm .dashboard-modal .button-modal {
+  flex-direction: column;
+}
+.modal-window.transfer-confirm .dashboard-modal .button-modal .cancel-button {
+  margin-bottom: 15px;
+}
+.modal-window.transfer-confirm .inside-modal .tabla-transferencia .left {
+  text-align: left;
+}
+.modal-window.transfer-confirm .inside-modal .tabla-transferencia .right {
+  max-width: 190px;
+  text-align: right;
 }
 .modal-window .inside-modal {
   width: 90%;
-  max-width: 400px;
   position: absolute;
-  padding: 2em;
-  background: #ffffff;
-  border-radius: 15px;
+  padding: 25px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+.modal-window .inside-modal .modal-close {
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.modal-window .inside-modal .modal-close:hover {
+  opacity: 1;
+}
+.modal-window .inside-modal .modal-close img {
+  width: 20px;
+}
+.modal-window .inside-modal .modal-close img:hover {
+  opacity: 1;
 }
 .modal-window .inside-modal .tabla-transferencia {
   display: flex;
@@ -348,39 +400,13 @@ img {
   color: #41e097;
   margin-left: auto;
 }
-.modal-window.openmodal {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  background: rgba(0, 0, 0, 0.25);
+.modal-window .inside-modal.landing {
+  width: 400px;
 }
-.modal-window header {
-  font-weight: bold;
-}
-.modal-window h1 {
-  font-size: 150%;
-  margin: 0 0 15px;
-}
-.modal-close {
-  color: #fff;
-  position: absolute;
-  right: -5px;
-  text-align: center;
-  top: 0px;
-  text-decoration: none;
-  background: #111;
-  padding: 1px 7px 0px 8px;
-  border-radius: 100%;
-  cursor: pointer;
-}
-.modal-close img {
-  width: 20px;
-}
-.modal-close img:hover {
-  opacity: 0.5;
-}
-.modal-close:hover {
-  opacity: 0.8;
+.modal-window .inside-modal.landing h2 {
+  font-size: 20px;
+  margin: 0 0 25px 0;
+  color: #3d424b;
 }
 /* Demo Styles */
 a {
@@ -407,9 +433,10 @@ textarea {
   font-weight: 500;
   color: #7f8591;
   width: 100%;
-  margin: 10px 0;
-  padding: 15px 20px;
+  margin-bottom: 10px;
+  padding: 14px 20px 12px;
   border: solid 1px #dbdbdb;
+  font-size: 14px;
 }
 input:focus,
 textarea:focus {
@@ -418,12 +445,12 @@ textarea:focus {
   border-color: #7f8591;
 }
 input {
-  border-radius: 30px;
+  border-radius: 5px;
 }
 textarea {
-  height: 77px;
+  height: 80px;
   resize: none;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 input[type=submit] {
   background-color: #dbdbdb;
@@ -757,7 +784,7 @@ header {
   background-size: 400px;
 }
 .dashboard .header-dashboard {
-  padding: 30px 0 15px;
+  padding: 20px 0;
 }
 .dashboard .header-dashboard > .container {
   display: flex;
@@ -789,7 +816,7 @@ header {
 }
 .dashboard .header-dashboard > .container .nav .available-money .item .title {
   color: #707070;
-  font-size: 1.2em;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 .dashboard .header-dashboard > .container .nav .available-money .item .subtitle-1 {
@@ -802,7 +829,7 @@ header {
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications {
   display: flex;
-  max-width: 265px;
+  max-width: 250px;
   justify-content: space-between;
   width: 100%;
 }
@@ -843,9 +870,9 @@ header {
   margin: 20px 0 0px;
   margin: 0;
   top: 150%;
-  width: 300px;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
+  width: 250px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
   z-index: 200;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul:before {
@@ -854,12 +881,12 @@ header {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 15px 15px 15px;
+  border-width: 0 12px 12px 12px;
   border-color: transparent transparent #fff transparent;
   position: absolute;
-  top: -15px;
+  top: -12px;
   left: 50%;
-  margin-left: -15px;
+  margin-left: -12px;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul:after {
   content: '';
@@ -871,44 +898,39 @@ header {
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li {
   background: #fff;
-  padding: 17px 25px 0px;
+  padding: 25px 25px 0;
   color: #707070;
   font-weight: 500;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li:first-child {
-  border-radius: 6px 6px 0 0;
+  border-radius: 5px 5px 0 0;
   color: #171717;
   border-bottom: solid 1px #f0f0f0;
-  padding: 13px 25px 7px;
+  padding: 20px 20px 15px 20px;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .icon-rounded ul li:last-child {
-  border-radius: 0 0 6px 6px;
-  padding: 17px 25px 10px;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .user {
-  padding: 10px;
+  padding: 10px 25px;
   border-radius: 30px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   background: #fff;
   color: #707070;
-  font-weight: 500;
 }
-.dashboard .header-dashboard > .container .nav .menu-notifications .user .user-img {
+.dashboard .header-dashboard > .container .nav .menu-notifications .user svg {
   width: 15px;
 }
 .dashboard .header-dashboard > .container .nav .menu-notifications .user > div {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  margin-left: 5px;
 }
-.dashboard .header-dashboard > .container .nav .menu-notifications .user img,
-.dashboard .header-dashboard > .container .nav .menu-notifications .user .polygon-1 {
+.dashboard .header-dashboard > .container .nav .menu-notifications .user img {
   margin: 0px 5px;
   display: inline-block;
-}
-.dashboard .header-dashboard > .container .nav .menu-notifications .user .polygon-1 {
-  width: 10px;
-  height: 15px;
 }
 .dashboard #sub-menu-container {
   display: flex;
@@ -916,7 +938,7 @@ header {
   padding: 15px 0;
 }
 .dashboard #sub-menu-container .container .sub-menu {
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   margin-left: 250px;
@@ -955,22 +977,22 @@ header {
   width: 100%;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard h3 {
-  font-size: 1em;
-  margin: 23px 0;
+  font-size: 15px;
+  margin: 20px 0 10px;
   color: #171717;
-  font-weight: 400;
+  font-weight: 500;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a {
   display: flex;
   align-items: center;
-  padding: 8.5px 0 5.5px;
+  padding: 10px 0 8px;
   display: block;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a:hover,
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a.active {
   background: #cde4ff;
   color: #1677ff;
-  border-radius: 2px 0 0 2px;
+  border-radius: 5px 0 0 5px;
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a:hover span:before,
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a.active span:before {
@@ -978,20 +1000,21 @@ header {
 }
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a img,
 .dashboard #main-menu-dashboard .sidebar-menu .menu-dashboard a span {
-  width: 17px;
-  top: 2px;
+  width: 15px;
+  top: 1px;
   position: relative;
-  margin: 0 15px;
+  margin: 0 10px 0 12px;
 }
 .dashboard #main-menu-dashboard .main {
-  background-color: #ffffff;
   flex: 1 1 0;
   position: relative;
+  min-height: 800px;
+  background-color: #fff;
 }
 .dashboard #main-menu-dashboard .main .breadcrumb {
+  background-color: #fff;
   border-bottom: solid 1px #f5f5f5;
-  padding: 23px 15px 17px;
-  margin-bottom: 30px;
+  padding: 20px 30px 17px;
   font-weight: 500;
   color: #171717;
 }
@@ -1000,11 +1023,9 @@ header {
 }
 .dashboard #main-menu-dashboard .main .items-nav {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0px 0 20px;
-  margin: 30px;
+  padding: 50px;
   justify-content: space-between;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item {
@@ -1037,12 +1058,13 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  position: relative;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item div span {
   font-size: 2.8em;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item div span.icon-flash {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .dashboard #main-menu-dashboard .main .items-nav .item div h4 {
   font-size: 20px;
@@ -1165,6 +1187,7 @@ header {
   color: #171717;
   margin: 0;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 .dashboard #main-menu-dashboard .main #available-countries .row {
   margin: 0 -7.5px;
@@ -1182,7 +1205,8 @@ header {
 .dashboard #main-menu-dashboard .main #ultimas-transacciones h3 {
   font-family: 'Avant';
   text-align: left;
-  padding: 0 30px 30px;
+  padding: 20px 30px;
+  margin: 0 0 30px 0;
   border-bottom: solid 1px #f5f5f5;
   font-weight: 500;
   color: #171717;
@@ -1191,7 +1215,7 @@ header {
   border-bottom: solid 1px #f5f5f5;
   display: flex;
   align-items: center;
-  margin: 0 40px;
+  margin: 0 50px;
   padding: 10px 0;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard.headers-row div {
@@ -1206,7 +1230,7 @@ header {
   flex-grow: 100;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 .sub-title {
-  color: #1b406f;
+  color: #171717;
   margin-bottom: 10px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 .name-detalle {
@@ -1236,20 +1260,18 @@ header {
   color: #f34213;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
-  flex: 1 1 100px;
-  text-align: center;
+  flex: 1 1 150px;
+  text-align: right;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 a {
-  font-size: .9em;
+  font-size: 15px;
   justify-content: center;
-  padding: 4px 0px 1px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard p {
   line-height: 5px;
 }
 .dashboard #main-menu-dashboard .main .main-nav-footer {
-  margin: 10px 0;
-  padding: 0px 15px;
+  padding: 15px 30px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1262,13 +1284,16 @@ header {
 }
 .dashboard #main-menu-dashboard .main .main-nav-footer a:before {
   content: '';
-  width: 2px;
+  width: 1px;
   height: 90%;
   background: #707070;
   position: absolute;
   right: 0;
   top: -1px;
   border-radius: 20px;
+}
+.dashboard #main-menu-dashboard .main #main-config {
+  padding: 50px 0 0;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config {
   padding: 0 45px 0px;
@@ -1359,16 +1384,17 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact .input-container:before {
   content: '';
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   background: url(../img/dashboard/search.svg) no-repeat center center;
   position: absolute;
-  top: 23px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact input {
-  padding: 13px 15px 10px 35px;
+  padding: 14px 20px 12px 35px;
   border-radius: 5px;
+  margin-bottom: 0;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact input::-webkit-input-placeholder {
   color: #b7b7b7;
@@ -1388,13 +1414,7 @@ header {
   margin-left: 15px;
   display: inline-block;
   align-self: center;
-}
-.dashboard #main-menu-dashboard .main #main-config .block-config .search-contact a span:before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: url(../img/dashboard/group.svg) no-repeat center center;
+  width: auto;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .add-account {
   display: flex;
@@ -1459,12 +1479,12 @@ header {
   color: #e03838;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container {
-  padding-bottom: 25px;
+  margin-bottom: 20px;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 30px;
+  padding: 0px 50px;
   color: #171717;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item {
@@ -1478,8 +1498,7 @@ header {
   width: 100%;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item label {
-  margin-left: 15px;
-  margin-bottom: 15px;
+  margin: 0 0 10px 15px;
   display: block;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item select {
@@ -1497,12 +1516,11 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item select + span {
   background: url(../img/dashboard/arrow-down.svg) no-repeat center center;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   position: absolute;
-  right: 25px;
-  bottom: 13px;
-  background-size: cover;
+  right: 35px;
+  bottom: 15px;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item input {
   border: solid 1px #b7b7b7;
@@ -1525,52 +1543,6 @@ header {
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item input:-ms-input-placeholder {
   color: #b7b7b7;
 }
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox {
-  margin-left: auto;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox label {
-  display: flex;
-  margin-left: 0;
-  font-size: 12px;
-  color: #707070;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox label input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: none;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox label input:checked + span {
-  background: #1677ff;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox label span {
-  height: 19px;
-  border-radius: 6px;
-  border: solid 1px #eaeaea;
-  display: block;
-  flex: 1 1 44px;
-  margin-right: 10px;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox .row-buttons {
-  display: flex;
-  justify-content: space-around;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox .row-buttons a {
-  padding: 10px 35px 6px;
-  border-radius: 30px;
-  display: block;
-  flex-basis: 0px;
-  text-align: center;
-  max-width: 140px;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox .row-buttons a.cancel {
-  border: solid 1px #b7b7b7;
-  color: #b7b7b7;
-}
-.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.checkbox .row-buttons a.save {
-  border: solid 1px #3fde97;
-  color: #3fde97;
-}
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item.half {
   display: flex;
   max-width: 50%;
@@ -1584,6 +1556,82 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item.alone {
   padding: 0 15px;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added {
+  padding: 0 50px;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #707070;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label input:checked ~ .checkmark:after {
+  display: block;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label:hover input ~ .checkmark {
+  border: 1px solid #d8d7d7;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .label .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid #2196F3;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .checkmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .row-buttons a {
+  padding: 12px 0 8px;
+  border-radius: 30px;
+  text-align: center;
+  width: 195px;
+  display: inline-block;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .row-buttons a.cancel {
+  border: solid 1px #b7b7b7;
+  color: #b7b7b7;
+  margin-right: 10px;
+}
+.dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .row-buttons a.save {
+  border: solid 1px #3fde97;
+  color: #3fde97;
+}
+.dashboard #main-menu-dashboard .main.bottom-space {
+  padding-bottom: 150px;
 }
 /* MEDIA QUERIES */
 @media only screen and (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
@@ -1756,6 +1804,9 @@ header {
   .slogan .txt-slogan .nav .btn-1 {
     margin: 0 0 10px 0;
   }
+  .modal-window .inside-modal.landing {
+    width: 95%;
+  }
 }
 @media (max-width: 767px) {
   body h2 {
@@ -1868,7 +1919,6 @@ header {
   .dashboard .header-dashboard > .container .nav {
     flex-direction: column;
     max-width: inherit;
-    background: #fff;
   }
   .dashboard .header-dashboard > .container .nav .menu-notifications {
     order: -1;
@@ -1906,10 +1956,10 @@ header {
     opacity: 0;
   }
   .dashboard .header-dashboard > .container .nav .menu-notifications .menu-mobile span {
-    width: 30px;
-    height: 3px;
+    width: 25px;
+    height: 2px;
     background: #707070;
-    border-radius: 50px;
+    border-radius: 30px;
     position: relative;
     opacity: 1;
     transition: all 0.4s ease-out;
@@ -1927,9 +1977,9 @@ header {
     height: inherit;
     background: #f2f2f2!important;
     box-shadow: inherit;
-    font-size: 1.2em;
+    font-size: 15px;
     border-radius: inherit;
-    padding: 11px 0;
+    padding: 12px 0;
     display: block;
     position: unset;
   }
@@ -1982,7 +2032,7 @@ header {
   .dashboard .header-dashboard > .container .nav .menu-notifications .user.active svg path {
     fill: #fff;
   }
-  .dashboard .header-dashboard > .container .nav .menu-notifications .user .user-img {
+  .dashboard .header-dashboard > .container .nav .menu-notifications .user svg {
     width: 20px;
   }
   .dashboard .header-dashboard > .container .nav .menu-notifications .user .polygon-1,
@@ -1990,9 +2040,8 @@ header {
     display: none!important;
   }
   .dashboard .header-dashboard > .container .nav .available-money {
-    padding: 15px 0 10px;
-    border-bottom: solid 1px #e8e8e8;
-    margin-bottom: 15px;
+    padding: 20px 0 15px;
+    margin-bottom: 10px;
   }
   .dashboard #sub-menu-container {
     background: #fff;
@@ -2074,6 +2123,7 @@ header {
   .dashboard #main-menu-dashboard .main {
     order: -1;
     position: inherit;
+    min-height: auto;
   }
   .dashboard #main-menu-dashboard .main .breadcrumb {
     padding: 23px 0px 17px;
@@ -2176,9 +2226,6 @@ header {
     margin-bottom: 10px;
   }
   .dashboard #main-menu-dashboard .main .main-nav-footer {
-    padding: 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
   }
   .dashboard #main-menu-dashboard .main .main-nav-footer .row {
@@ -2193,6 +2240,69 @@ header {
   .dashboard #main-menu-dashboard .main .main-nav-footer a:before {
     display: none;
   }
+  .dashboard #main-menu-dashboard .main #main-config .block-config {
+    padding: 0 15px 0;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-config {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-config h4 {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact a {
+    margin-left: auto;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left {
+    flex-wrap: wrap;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .name {
+    flex: 1 1 0;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left span {
+    display: none;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .email {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .right {
+    margin-top: 10px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .add-account {
+    flex-direction: column;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .add-account .header-title {
+    margin: 5px 0 15px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config #new-container .row {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .dashboard #main-menu-dashboard .main #main-config #new-container .row .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config #new-container .row .item.half {
+    max-width: inherit;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .confirmation-user-added {
+    padding: 0 15px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .row-buttons {
+    text-align: center;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .confirmation-user-added .row-buttons a {
+    margin: 0 0 10px 0 !important;
+  }
   .dashboard #main-menu-dashboard #available-countries {
     margin: 15px;
   }
@@ -2203,85 +2313,6 @@ header {
     flex-direction: column;
     margin: 0;
   }
-  .dashboard #main-menu-dashboard #main-config .block-config {
-    padding: 0 15px 0;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-config {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-config h4 {
-    margin-left: 0;
-    margin-bottom: 15px;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .search-contact {
-    flex-direction: column;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .search-contact a {
-    margin-left: auto;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact {
-    flex-direction: column;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left {
-    flex-wrap: wrap;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left .name {
-    flex: 1 1 0;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left span {
-    display: none;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .left .email {
-    width: 100%;
-    margin: 10px 0 0;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .row-contact .right {
-    margin-top: 10px;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .add-account {
-    flex-direction: column;
-  }
-  .dashboard #main-menu-dashboard #main-config .block-config .add-account .header-title {
-    margin: 5px 0 15px;
-  }
-  .dashboard #main-menu-dashboard #main-config #new-container .row {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-  .dashboard #main-menu-dashboard #main-config #new-container .row .item {
-    width: 100%;
-  }
-  .dashboard #main-menu-dashboard #main-config #new-container .row .item.half {
-    max-width: inherit;
-  }
-}
-.modal-window.transfer-confirm {
-  overflow-y: scroll;
-}
-.modal-window.transfer-confirm .inside-modal {
-  flex-direction: column;
-  top: 0;
-  margin: 15px 0;
-  padding: 15px;
-}
-.modal-window.transfer-confirm .inside-modal #receipt-content {
-  width: 100%!important;
-  margin: 0 0 25px!important;
-}
-.modal-window.transfer-confirm .dashboard-modal .button-modal {
-  flex-direction: column;
-}
-.modal-window.transfer-confirm .dashboard-modal .button-modal .cancel-button {
-  margin-bottom: 15px;
-}
-.modal-window.transfer-confirm .inside-modal .tabla-transferencia .left {
-  text-align: left;
-}
-.modal-window.transfer-confirm .inside-modal .tabla-transferencia .right {
-  max-width: 190px;
-  text-align: right;
 }
 @media (max-height: 750px) {
   .modal-window .transfer-confirm {
@@ -2394,6 +2425,10 @@ header {
 .icon-down-arrow-2:before {
   content: "\e90c";
   color: #40df97;
+  position: absolute;
+  top: 2px;
+  margin-left: 3px;
+  font-size: 14px;
 }
 .icon-efectivo:before {
   content: "\e90d";
@@ -2406,6 +2441,9 @@ header {
 .icon-flash:before {
   content: "\e90f";
   color: #1677ff;
+  position: absolute;
+  left: 0;
+  top: -8px;
 }
 .icon-gear:before {
   content: "\e910";

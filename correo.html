@@ -64,7 +64,7 @@
                     </div>
                     <div class="user">
                         <!-- <img class="user-img" src="img/dashboard/user.svg"> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17.552" height="20.067" viewBox="0 0 17.552 20.067">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.552 20.067">
                             <g id="user" transform="translate(-1132.48 -90.435)">
                                 <g id="Grupo_7" data-name="Grupo 7" transform="translate(1136.485 90.435)">
                                     <path id="Trazado_95" data-name="Trazado 95" d="M383.006,62.662a4.711,4.711,0,0,1-4.786-4.621v-.165a4.786,4.786,0,1,1,9.572,0h0a4.711,4.711,0,0,1-4.621,4.786Zm0-7.986a3.2,3.2,0,1,0,3.186,3.2,3.2,3.2,0,0,0-3.186-3.2Z" transform="translate(-378.22 -53.09)" fill="#707070"/>
@@ -75,7 +75,6 @@
                             </g>
                         </svg>
                         <div>7623658</div>
-                        <img class="polygon-1" src="img/dashboard/arrow-down.svg">
                     </div>
                 </div>
             </div>
@@ -242,7 +241,7 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
-                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
+                            <div class="column-5"><a href="#" class="modal-detail-transaction" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                         <div class="row-dashboard">
                             <div class="column-1">28 Jun</div>
@@ -254,7 +253,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">35 USD</div>
-                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
+                            <div class="column-5"><a href="#" class="modal-detail-transaction" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -267,7 +266,7 @@
                                 <span class="icon-check"></span>
                             </div>
                             <div class="column-4 green">15 USD</div>
-                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
+                            <div class="column-5"><a href="#" class="modal-detail-transaction" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -280,7 +279,7 @@
                                 <span class="icon-equis"></span>
                             </div>
                             <div class="column-4 red">-35 USD</div>
-                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
+                            <div class="column-5"><a href="#" class="modal-detail-transaction" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
 
                         <div class="row-dashboard">
@@ -293,7 +292,7 @@
                                 <span class="icon-minus"></span>
                             </div>
                             <div class="column-4 blue">-27 USD</div>
-                            <div class="column-5"><a href="#" class="btn-continuar" data-modal="modalTransaccion">Ver Detalle</a></div>
+                            <div class="column-5"><a href="#" class="modal-detail-transaction" data-modal="modalTransaccion">Ver Detalle</a></div>
                         </div>
                     </div>
                 </div>
@@ -369,7 +368,7 @@
     </div>
     <div id="modalTransaccion" class="modal-window transfer-confirm">
         <div class="inside-modal">
-            <span class="modal-close" data-close="close-modal">x</span>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
             <h3>Transferencia por correo electrónico</h3>
             <h4>09:14 AM, Junio 27 2020</h4>
             <div id="receipt-content">
@@ -380,58 +379,48 @@
                 <div class="user"><span class="icon-user"></span>Alejandra de los Santos</div>
                 <div class="bank-info">
                     <div class="row-receipt">
-                        <div class="left">Referencia:</div>
-                        <div class="right">0997 1345 3588</div>
+                        <div class="left">Referencia: <span class="right">0997 1345 3588</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">BIC:</div>
-                        <div class="right">CMBRFR2B</div>
+                        <div class="left">BIC: <span class="right">CMBRFR2B</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Banco destino:</div>
-                        <div class="right">Banorte</div>
+                        <div class="left">Banco destino: <span class="right">Banorte</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Comisión:</div>
-                        <div class="right">5%</div>
+                        <div class="left">Comisión: <span class="right">5%</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Monto a recibir:</div>
-                        <div class="right">45 USD</div>
+                        <div class="left">Monto a recibir: <span class="right">45 USD</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Estatus:</div>
-                        <div class="right">Completada</div>
+                        <div class="left">Estatus: <span class="right">Completada</span></div>
                     </div>
                 </div>
                 <div class="receipt-download">
-                    <img src="img/dashboard/download-1.png" alt="Download">Descargar comprobante
+                    <img src="img/dashboard/file.svg" alt="Download">Descargar comprobante
                 </div>
             </div>
             <div id="receipt-content">
                 <div class="bank-info">
                     <div class="row-receipt two-rows">
-                        <div class="left">Nota:</div>
+                        <div class="left"></div>
+                        <div class="left">Nota: <span class="right">Aquí va la nota.</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">BIC:</div>
-                        <div class="right">CMBRFR2B</div>
+                        <div class="left">BIC: <span class="right">CMBRFR2B</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Banco destino:</div>
-                        <div class="right">Banorte</div>
+                        <div class="left">Banco destino: <span class="right">Banorte</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Comisión:</div>
-                        <div class="right">5%</div>
+                        <div class="left">Comisión: <span class="right">5%</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Monto a recibir:</div>
-                        <div class="right">45 USD</div>
+                        <div class="left">Monto a recibir: <span class="right">45 USD</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Estatus:</div>
-                        <div class="right">Completada</div>
+                        <div class="left">Estatus: <span class="right">Completada</span></div>
                     </div>
                 </div>
             </div>

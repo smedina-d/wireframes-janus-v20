@@ -264,6 +264,13 @@
             }    
         }
     }
+    .modal-window {
+        .inside-modal{
+            &.landing {
+                width: 95%;
+            }
+        }
+    }
 
     
 } 
@@ -387,7 +394,6 @@
                 .nav{
                     flex-direction: column;
                     max-width: inherit;
-                    background:#fff;
                     .menu-notifications{
                         order:-1;
                         width: 100%;
@@ -422,10 +428,10 @@
                                 }
                             }
                             span{
-                                width: 30px;
-                                height: 3px;
+                                width: 25px;
+                                height: 2px;
                                 background:#707070;
-                                border-radius: 50px;
+                                border-radius: 30px;
                                 position: relative;
                                 opacity: 1;
                                 transition:all .4s ease-out;
@@ -444,9 +450,9 @@
                             height: inherit;
                             background: #f2f2f2!important;
                             box-shadow: inherit;
-                            font-size: 1.2em;
+                            font-size: 15px;
                             border-radius: inherit;
-                            padding: 11px 0;
+                            padding: 12px 0;
                             display: block;
                             position:unset;
                             &:hover{
@@ -498,7 +504,7 @@
                                     fill:#fff;
                                 }
                             }
-                            .user-img{
+                            svg{
                                 width: 20px;
                             }
                             .polygon-1, > div{
@@ -507,9 +513,8 @@
                         }
                     }
                     .available-money{
-                        padding: 15px 0 10px;
-                        border-bottom: solid 1px #e8e8e8;
-                        margin-bottom: 15px;
+                        padding: 20px 0 15px;
+                        margin-bottom: 10px;
                     }
                 }
             }
@@ -603,6 +608,7 @@
             .main{
                 order: -1;
                 position: inherit;
+                min-height: auto;
                 .breadcrumb{
                     padding: 23px 0px 17px;
                     display: none;
@@ -713,9 +719,6 @@
                     }
                 }
                 .main-nav-footer {
-                    padding:0;
-                    position: absolute;
-                    bottom: 0;
                     width: 100%;
                     .row{
                         margin:0;
@@ -730,6 +733,73 @@
                         }
                     }
                 }
+                #main-config{
+                    .block-config{
+                        padding:0 15px 0;
+                        .row-config{
+                            flex-direction: column;
+                            align-items: flex-start;
+                            h4{
+                                margin-left:0;
+                                margin-bottom: 15px;
+                            }
+                        }
+                        .search-contact{
+                            flex-direction: column;
+                            a{
+                                margin-left: auto;
+                            }
+                        }
+                        .row-contact{
+                            flex-direction: column;
+                            .left{
+                                flex-wrap: wrap;
+                                .name{
+                                    flex: 1 1 0;
+                                }
+                                span{
+                                    display: none;
+                                }
+                                .email{
+                                    width: 100%;
+                                    margin:10px 0 0;
+                                }
+                            }
+                            .right{
+                                margin-top:10px;
+                            }
+                        }
+                        .add-account{
+                            flex-direction: column;
+                            .header-title{
+                                margin:5px 0 15px;
+                            }
+                        }
+                    }
+                    #new-container{
+                        .row{
+                            flex-direction: column;
+                            margin:0;
+                            padding:0;
+                            .item{
+                                width: 100%;
+                                margin-bottom: 20px;
+                                &.half{
+                                    max-width: inherit;
+                                }
+                            }
+                        }
+                    }
+                    .confirmation-user-added {
+                        padding: 0 15px;
+                        .row-buttons {
+                            text-align: center;
+                            a {
+                                margin: 0 0 10px 0 !important;
+                            }
+                        }
+                    }
+                }
             }
             #available-countries{
                 margin:15px;
@@ -741,99 +811,10 @@
                     margin:0;
                 }
             }
-            #main-config{
-                .block-config{
-                    padding:0 15px 0;
-                    .row-config{
-                        flex-direction: column;
-                        align-items: flex-start;
-                        h4{
-                            margin-left:0;
-                            margin-bottom: 15px;
-                        }
-                    }
-                    .search-contact{
-                        flex-direction: column;
-                        a{
-                            margin-left: auto;
-                        }
-                    }
-                    .row-contact{
-                        flex-direction: column;
-                        .left{
-                            flex-wrap: wrap;
-                            .name{
-                                flex: 1 1 0;
-                            }
-                            span{
-                                display: none;
-                            }
-                            .email{
-                                width: 100%;
-                                margin:10px 0 0;
-                            }
-                        }
-                        .right{
-                            margin-top:10px;
-                        }
-                    }
-                    .add-account{
-                        flex-direction: column;
-                        .header-title{
-                            margin:5px 0 15px;
-                        }
-                    }
-                }
-                #new-container{
-                    .row{
-                        flex-direction: column;
-                        margin:0;
-                        padding:0;
-                        .item{
-                            width: 100%;
-                            &.half{
-                                max-width: inherit;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }
 
-.modal-window{
-    &.transfer-confirm{
-            overflow-y: scroll;
-            .inside-modal{
-            flex-direction: column;
-            top: 0;
-            margin: 15px 0;
-            padding:15px;
-            #receipt-content{
-                width: 100%!important;
-                margin: 0 0 25px!important;
-            }
-        }
-        .dashboard-modal .button-modal{
-            flex-direction:column;
-            .cancel-button{
-                margin-bottom:15px;
-            }
-        }
-        .inside-modal{
-            .tabla-transferencia{
-                .left{
-                    text-align: left;
-                }
-                .right{
-                    max-width: 190px;
-                    text-align: right;
-                }
-            }
-        }
-    }
-}
 @media (max-height:750px){
     .modal-window {
         .transfer-confirm{

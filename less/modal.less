@@ -4,7 +4,7 @@
 /***MODAL***/
 .modal-window {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     top: 0;
     right: 0;
     bottom: 0;
@@ -17,6 +17,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &.openmodal{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
     &.dashboard-modal{
         text-align:center;
         .inside-modal{
@@ -25,7 +30,7 @@
                 max-width: 150px;
             }
             h3{
-                font-size: 20px;
+                font-size: 18px;
                 margin:0;
                 margin-bottom:30px;
                 color:#171717;
@@ -55,27 +60,39 @@
         }
     }
     &.transfer-confirm{
+        overflow-y: scroll;
         .inside-modal{
-            max-width: 500px;
+            width: 500px;
+            flex-direction: column;
+            top: 0;
+            margin: 25px 0;
+            padding: 15px;
             h3{
-                text-align:center;
-                margin:0;
-                font-size: 20px;
+                text-align: center;
+                margin: 0;
+                font-size: 18px;
                 color: #171717;
-                margin-bottom: 5px;
+                margin: 20px 0 5px;
+                font-weight: 500;
             }
             h4{
                 color: #c4c4c4;
                 text-align:center;
                 margin:0;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
+                font-weight: 500;
             }
             #receipt-content{
+                background-color: #f9f9f9;
                 border:solid #40df97 1px;
-                border-radius: 9px;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
+                border-radius: 5px 5px 0px 0px;
+                &:last-child {
+                    margin-bottom: 0px;
+                    border-radius: 0px 0px 5px 5px;
+                }
                 > div{
-                    padding:15px;
+                    padding: 15px 20px;
                     border-bottom: solid 1px #eaeaea;
                     &:last-child{
                         border-bottom: none;
@@ -83,31 +100,31 @@
                 }
                 .amout-detials{
                     text-align:center;
+                    padding: 20px 0 15px;
                     .payment-amount{
                         color: #40df97;
-                        font-size: 25px;
-                        line-height: 1;
+                        font-size: 30px;
+                        line-height: 1em;
                     }
                     .payment-subtitle{
                         color: #c4c4c4;
+                        font-size: 13px;
                     }
                 }
                 .user{
                     color:#1677ff;
                     text-align: center;
                     span:before{
-                        color:#707070;
-                        margin-right: 5px;
+                        color:#1677ff;
+                        margin-right: 10px;
                     }
                 }
                 .bank-info{
-                    margin: 15px 0 0;
+                    padding: 20px;
                     .row-receipt{
-                        display: flex;
                         margin-bottom: 10px;
                         &.two-rows{
                             flex-direction: column;
-
                             input{
                                 width: 100%;
                                 border: none;
@@ -121,11 +138,10 @@
                         }
                         .left{
                             color:#c4c4c4;
-                        }
-                        .right{
-                            flex:1 1 0;
-                            color:#707070;
-                        }
+                            .right{
+                                color:#707070;
+                            }
+                        } 
                     }
                 }
                 .receipt-download{
@@ -133,22 +149,55 @@
                     align-items:center;
                     justify-content: center;
                     color: #1b406f;
-                    font-weight:600;
+                    font-weight: 500;
                     img{
-                        max-width: 20px;
-                        margin-right:5px;
+                        width: 20px;
+                        margin-right: 10px;
                     }
+                }
+            }
+        }
+        .dashboard-modal .button-modal{
+            flex-direction:column;
+            .cancel-button{
+                margin-bottom:15px;
+            }
+        }
+        .inside-modal{
+            .tabla-transferencia{
+                .left{
+                    text-align: left;
+                }
+                .right{
+                    max-width: 190px;
+                    text-align: right;
                 }
             }
         }
     }
     .inside-modal {
         width: 90%;
-        max-width: 400px;
         position: absolute;
-        padding: 2em;
-        background: #ffffff;
-        border-radius: 15px;
+        padding: 25px;
+        background: #f2f2f2;
+        border-radius: 10px;
+        .modal-close {
+            color: #fff;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            opacity:0.6;
+            &:hover {
+                opacity:1;
+            }
+            img {
+                width: 20px;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
         .tabla-transferencia{
             display: flex;
             flex-direction: column;
@@ -165,46 +214,15 @@
                 margin-left:auto;
             }
         }
+        &.landing {
+            width: 400px;
+            h2 {
+                font-size: 20px;
+                margin: 0 0 25px 0;
+                color: #3d424b;
+            }
+        }
     }
-}
-.modal-window.openmodal{
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  background: rgba(0, 0, 0, 0.25);
-}
-
-
-.modal-window header {
-  font-weight: bold;
-}
-
-.modal-window h1 {
-  font-size: 150%;
-  margin: 0 0 15px;
-}
-
-.modal-close {
-    color: #fff;
-    position: absolute;
-    right: -5px;
-    text-align: center;
-    top: 0px;
-    text-decoration: none;
-    background: #111;
-    padding: 1px 7px 0px 8px;
-    border-radius: 100%;
-    cursor:pointer;
-}
-.modal-close img {
-  width: 20px;
-}
-.modal-close img:hover {
-  opacity: 0.5;
-}
-
-.modal-close:hover {
-    opacity:0.8;
 }
 
 /* Demo Styles */
@@ -236,9 +254,10 @@ input, textarea {
   font-weight: 500;
   color: #7f8591;
   width: 100%;
-  margin: 10px 0;
-  padding: 15px 20px;
+  margin-bottom: 10px;
+  padding: 14px 20px 12px;
   border: solid 1px #dbdbdb;
+  font-size: 14px;
 }
 input:focus, textarea:focus {
   color: #7f8591;
@@ -247,13 +266,13 @@ input:focus, textarea:focus {
 }
 
 input {
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 textarea {
-  height: 77px;
+  height: 80px;
   resize: none;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 input[type=submit] {
