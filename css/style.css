@@ -1333,46 +1333,23 @@ header {
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a {
   align-self: center;
   margin-left: auto;
-  width: 145px;
-  text-align: center;
   color: #707070;
 }
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.deactivate {
-  padding: 11px 25px 8px;
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.desactivado {
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.desactivado:hover {
+  background-color: #ffffff;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active {
   background: #3fde97;
   color: #fff;
 }
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span {
-  background: #3fde97;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  position: relative;
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active img {
+  height: 15px;
+  width: 15px;
   margin-right: 5px;
-  top: -1px;
-  border: 1px #fff solid;
-}
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:before,
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:after {
-  content: '';
-  background: #fff;
-  position: absolute;
-}
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:before {
-  width: 5px;
-  height: 1px;
-  top: 10px;
-  left: 3px;
-  transform: rotate(40deg);
-}
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:after {
-  width: 10px;
-  height: 1px;
-  top: 8px;
-  left: 5px;
-  transform: rotate(-53deg);
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact {
   display: flex;
@@ -1426,10 +1403,11 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .add-account .header-title img {
   max-width: 30px;
+  margin-right: 10px;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .add-account a {
   margin-left: auto;
-  padding: 10px 33px 7px;
+  width: auto;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact {
   display: flex;
@@ -1450,9 +1428,6 @@ header {
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left span {
   margin-right: 15px;
 }
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .flag img {
-  width: 30px;
-}
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .name {
   color: #171717;
 }
@@ -1461,6 +1436,10 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .name.bank span {
   color: #1677ff;
+  margin-right: 10px;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .name img {
+  width: 20px;
   margin-right: 10px;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left span {
@@ -2256,6 +2235,7 @@ header {
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config .search-contact a {
     margin-left: auto;
+    margin-top: 20px;
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact {
     flex-direction: column;
@@ -2266,21 +2246,24 @@ header {
   .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .name {
     flex: 1 1 0;
   }
-  .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left span {
-    display: none;
-  }
   .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .left .email {
     width: 100%;
     margin: 10px 0 0;
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config .row-contact .right {
-    margin-top: 10px;
+    margin-top: 40px;
+    width: 100%;
+    text-align: right;
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config .add-account {
     flex-direction: column;
   }
   .dashboard #main-menu-dashboard .main #main-config .block-config .add-account .header-title {
-    margin: 5px 0 15px;
+    margin-bottom: 35px;
+  }
+  .dashboard #main-menu-dashboard .main #main-config .block-config .add-account a {
+    width: auto;
+    margin-top: 10px;
   }
   .dashboard #main-menu-dashboard .main #main-config #new-container .row {
     flex-direction: column;
