@@ -161,25 +161,29 @@
                     }
 
                     .user {
-                        padding: 10px 25px;
+                        padding: 10px;
                         border-radius: 30px;
                         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
                         background:#fff;
                         color:#707070;
-                        svg {
+                        font-weight: 500;
+                        .user-img{
                             width: 15px;
                         }
                         > div{
                             display: inline-block;
                             vertical-align: middle;
                             position: relative;
-                            margin-left: 5px;
                         }
-                        img{
+                        img, .polygon-1{
                             margin: 0px 5px;
                             display: inline-block;
                         }
 
+                        .polygon-1 {
+                            width: 10px;
+                            height: 15px;
+                        }
                     }
                 }
             }
@@ -509,11 +513,12 @@
                         }
                     }
                     .column-5{
-                        flex: 1 1 150px;
-                        text-align: right;
+                        flex: 1 1 100px;
+                        text-align: center;
                         a{
-                            font-size: 15px;
+                            font-size: .9em;
                             justify-content: center;
+                            padding: 4px 0px 1px;
                         }
                     }
 
@@ -524,7 +529,8 @@
                 }
             }
             .main-nav-footer {
-                padding: 15px 30px;
+                margin:10px 0;
+                padding: 0px 15px;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -535,7 +541,7 @@
                     font-size: 12px;
                     &:before{
                         content:'';
-                        width: 1px;
+                        width: 2px;
                         height: 90%;
                         background: #707070;
                         position: absolute;
