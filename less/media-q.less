@@ -565,11 +565,6 @@
                 .sidebar-menu{
                     max-width: inherit;
                     padding:0 15px;
-                    #shortcuts.menu-dashboard{
-                        h3 + div{
-                            display: block;
-                        }    
-                    }
                     .menu-dashboard{
                         h3{
                             &:before{
@@ -611,7 +606,7 @@
                 }
             }
             .main{
-                //order: -1;
+                order: -1;
                 position: inherit;
                 min-height: auto;
                 .breadcrumb{
@@ -635,31 +630,34 @@
                     }
                 }
                 #ultimas-transacciones {
-                padding:0 15px;
-                margin-bottom: 0;
-                h3{
-                    padding:0;
-                    border-bottom:0;
-                    margin: revert;
-                }
-                .row-dashboard{
-                    margin: 0 0 10px;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    > div{
-                        flex:inherit!important;
-                        width: 100%;
-                    }
-                    &.headers-row{
-                        display:none;
-                    }
-                    .column-1{
-                        margin-bottom: 15px;
-                    }
-                    .column-2{
-                        margin-bottom: 15px;
-                        .sub-title{
-                            margin-bottom: 5px;
+                    padding:0 15px;
+                    margin-bottom: 0;
+                    h3{
+                        padding:0;
+                        border-bottom:0;
+                            &:before{
+                                content:'+';
+                                margin-right: 2px;
+                                display: inline-block;
+                                font-size: 1.2em;
+                                transition: all .4s ease-in;
+                            }
+                            &.active{
+                                &:before{
+                                    transform:rotate(-45deg);
+                                }
+                            }
+                            & + div{
+                                display: none;
+                            }
+                        }
+                    .row-dashboard{
+                        margin: 0 0 10px;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        > div{
+                            flex:inherit!important;
+                            width: 100%;
                         }
                     }
                     .column-3,
@@ -674,32 +672,52 @@
                                 margin-right: 5px;
                             }
                         }
-                        .status{
-                            display: inline-block;
+                        .column-1{
+                            margin-bottom: 15px;
                         }
-                        &.hold{
-                            color: #1abfd5;
+                        .column-2{
+                            margin-bottom: 15px;
+                            .sub-title{
+                                margin-bottom: 5px;
+                            }
                         }
-                        &.complete{
-                            color:#40df97;
+                        .column-3,
+                        .column-4{
+                            width: 50%;
                         }
+                        .column-3{
+                            text-align:left;
+                            span{
+                                &:first-child{
+                                    margin-right: 5px;
+                                }
+                            }
+                            .status{
+                                display: inline-block;
+                            }
+                            &.hold{
+                                color: #1abfd5;
+                            }
+                            &.complete{
+                                color:#40df97;
+                            }
 
-                        &.cancel{
-                            color:#f34213;
+                            &.cancel{
+                                color:#f34213;
+                            }
                         }
-                    }
-                    .column-4{
-                        &:before{
-                            content:'Monto: ';
-                            display: inline-block;
-                            margin-right: 5px;
+                        .column-4{
+                            &:before{
+                                content:'Monto: ';
+                                display: inline-block;
+                                margin-right: 5px;
+                            }
                         }
                     }
                     .column-5{
                         margin-bottom: 10px;
                     }
                 }
-            }
                 .main-nav-footer {
                     width: 100%;
                     .row{

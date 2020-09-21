@@ -55,11 +55,11 @@ jQuery(document).ready(function($) {
             };
             closeMenu(menuActive);
         });
-        $('.menu-dashboard:not(#shortcuts) h3').click(function(){
+        $('.menu-dashboard h3, #ultimas-transacciones h3').click(function(){
             if($(this).hasClass('active')){
                 $(this).removeClass('active').next().slideUp(400);
             }else{
-                $('.menu-dashboard:not(#shortcuts) h3').removeClass('active').next().slideUp(400);
+                $('.menu-dashboard h3').removeClass('active').next().slideUp(400);
                 $(this).addClass('active');
                 $(this).next().slideDown(400);
             }
@@ -100,8 +100,7 @@ jQuery(document).ready(function($) {
         $(this).closest('.openmodal').removeClass('openmodal');
         $('body').removeClass('modal-on');
     });
-    $('.row-config a').click(function(e){
-        e.preventDefault();
+    $('.row-config a').click(function(){
         if($(this).hasClass('active')){
             $(this).removeClass().addClass('deactivate').html('Desactivado');
         }else{
