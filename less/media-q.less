@@ -566,6 +566,16 @@
                     max-width: inherit;
                     padding:0 15px;
                     .menu-dashboard{
+                        &#shortcuts{
+                            h3{
+                                &:before{
+                                    display: none;
+                                }
+                                &  + div{
+                                    display: block;
+                                }
+                            }
+                        }
                         h3{
                             &:before{
                                 content:'+';
@@ -606,7 +616,6 @@
                 }
             }
             .main{
-                order: -1;
                 position: inherit;
                 min-height: auto;
                 .breadcrumb{
@@ -630,27 +639,13 @@
                     }
                 }
                 #ultimas-transacciones {
-                    padding:0 15px;
-                    margin-bottom: 0;
-                    h3{
-                        padding:0;
-                        border-bottom:0;
-                            &:before{
-                                content:'+';
-                                margin-right: 2px;
-                                display: inline-block;
-                                font-size: 1.2em;
-                                transition: all .4s ease-in;
-                            }
-                            &.active{
-                                &:before{
-                                    transform:rotate(-45deg);
-                                }
-                            }
-                            & + div{
-                                display: none;
-                            }
-                        }
+                padding:0 15px;
+                margin-bottom: 0;
+                h3{
+                    padding: 14px 0 9px;
+                    border-bottom:0;
+                    margin:0;
+                    }
                     .row-dashboard{
                         margin: 0 0 10px;
                         align-items: flex-start;
@@ -659,18 +654,8 @@
                             flex:inherit!important;
                             width: 100%;
                         }
-                    }
-                    .column-3,
-                    .column-4{
-                        width: 50%;
-                        margin-bottom: 15px;
-                    }
-                    .column-3{
-                        text-align:left;
-                        span{
-                            &:first-child{
-                                margin-right: 5px;
-                            }
+                        &.headers-row{
+                            display:none;
                         }
                         .column-1{
                             margin-bottom: 15px;
@@ -684,6 +669,7 @@
                         .column-3,
                         .column-4{
                             width: 50%;
+                            margin-bottom: 15px;
                         }
                         .column-3{
                             text-align:left;
@@ -713,9 +699,9 @@
                                 margin-right: 5px;
                             }
                         }
-                    }
-                    .column-5{
-                        margin-bottom: 10px;
+                        .column-5{
+                            margin-bottom: 10px;
+                        }
                     }
                 }
                 .main-nav-footer {

@@ -509,11 +509,12 @@
                         }
                     }
                     .column-5{
-                        flex: 1 1 150px;
-                        text-align: right;
+                        flex: 1 1 100px;
+                        text-align: center;
                         a{
-                            font-size: 15px;
+                            font-size: .9em;
                             justify-content: center;
+                            padding: 4px 0px 1px;
                         }
                     }
 
@@ -586,7 +587,12 @@
                         a{
                             align-self: center;
                             margin-left: auto;
+                            width: 145px;
+                            text-align: center;
                             color: #707070;
+                            &.deactivate{
+                                padding: 11px 25px 8px;
+                            }
                             &.desactivado{
                                 border: 1px solid #fff;
                                 cursor: pointer;
@@ -597,6 +603,36 @@
                             &.active{
                                 background: #3fde97;
                                 color: #fff;
+                                span{
+                                    background:#3fde97;
+                                    width: 18px;
+                                    height: 18px;
+                                    border-radius:100%;
+                                    position:relative;
+                                    margin-right: 5px;
+                                    top: -1px;
+                                    border: 1px #fff solid;
+                                    &:before,
+                                    &:after{
+                                        content:'';
+                                        background: #fff;
+                                        position: absolute;
+                                    }
+                                    &:before{
+                                        width: 5px;
+                                        height: 1px;
+                                        top: 10px;
+                                        left: 3px;
+                                        transform: rotate(40deg);
+                                    }
+                                    &:after{
+                                        width: 10px;
+                                        height: 1px;
+                                        top: 8px;
+                                        left: 5px;
+                                        transform: rotate(-53deg);
+                                    }
+                                }
                                 img {
                                     height: 15px;
                                     width: 15px;

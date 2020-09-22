@@ -55,11 +55,11 @@ jQuery(document).ready(function($) {
             };
             closeMenu(menuActive);
         });
-        $('.menu-dashboard h3, #ultimas-transacciones h3').click(function(){
+        $('.menu-dashboard:not(#shortcuts) h3').click(function(){
             if($(this).hasClass('active')){
                 $(this).removeClass('active').next().slideUp(400);
             }else{
-                $('.menu-dashboard h3').removeClass('active').next().slideUp(400);
+                $('.menu-dashboard:not(#shortcuts) h3').removeClass('active').next().slideUp(400);
                 $(this).addClass('active');
                 $(this).next().slideDown(400);
             }

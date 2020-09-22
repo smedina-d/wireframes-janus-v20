@@ -82,13 +82,11 @@ img {
   color: #19416f;
 }
 .btn-continuar {
-  position: relative;
   color: #3fde97;
   border: solid 1px #3fde97;
-  padding: 12px 30px 10px;
+  padding: 10px 25px 7px;
   border-radius: 30px;
   display: flex;
-  width: 160px;
 }
 .btn-continuar.active {
   background: #3fde97;
@@ -1260,12 +1258,13 @@ header {
   color: #f34213;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
-  flex: 1 1 150px;
-  text-align: right;
+  flex: 1 1 100px;
+  text-align: center;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 a {
-  font-size: 15px;
+  font-size: .9em;
   justify-content: center;
+  padding: 4px 0px 1px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard p {
   line-height: 5px;
@@ -1333,7 +1332,12 @@ header {
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a {
   align-self: center;
   margin-left: auto;
+  width: 145px;
+  text-align: center;
   color: #707070;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.deactivate {
+  padding: 11px 25px 8px;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.desactivado {
   border: 1px solid #fff;
@@ -1345,6 +1349,36 @@ header {
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active {
   background: #3fde97;
   color: #fff;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span {
+  background: #3fde97;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  position: relative;
+  margin-right: 5px;
+  top: -1px;
+  border: 1px #fff solid;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:before,
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:after {
+  content: '';
+  background: #fff;
+  position: absolute;
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:before {
+  width: 5px;
+  height: 1px;
+  top: 10px;
+  left: 3px;
+  transform: rotate(40deg);
+}
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active span:after {
+  width: 10px;
+  height: 1px;
+  top: 8px;
+  left: 5px;
+  transform: rotate(-53deg);
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active img {
   height: 15px;
@@ -2069,6 +2103,12 @@ header {
     max-width: inherit;
     padding: 0 15px;
   }
+  .dashboard #main-menu-dashboard .container .sidebar-menu .menu-dashboard#shortcuts h3:before {
+    display: none;
+  }
+  .dashboard #main-menu-dashboard .container .sidebar-menu .menu-dashboard#shortcuts h3 + div {
+    display: block;
+  }
   .dashboard #main-menu-dashboard .container .sidebar-menu .menu-dashboard h3:before {
     content: '+';
     margin-right: 2px;
@@ -2100,7 +2140,6 @@ header {
     font-size: 1.5em;
   }
   .dashboard #main-menu-dashboard .main {
-    order: -1;
     position: inherit;
     min-height: auto;
   }
@@ -2129,21 +2168,9 @@ header {
     margin-bottom: 0;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones h3 {
-    padding: 0;
+    padding: 14px 0 9px;
     border-bottom: 0;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones h3:before {
-    content: '+';
-    margin-right: 2px;
-    display: inline-block;
-    font-size: 1.2em;
-    transition: all 0.4s ease-in;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones h3.active:before {
-    transform: rotate(-45deg);
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones h3 + div {
-    display: none;
+    margin: 0;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard {
     margin: 0 0 10px;
@@ -2154,54 +2181,47 @@ header {
     flex: inherit!important;
     width: 100%;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3,
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-4 {
-    width: 50%;
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard.headers-row {
+    display: none;
+  }
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-1 {
     margin-bottom: 15px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 {
-    text-align: left;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 span:first-child {
-    margin-right: 5px;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-1 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 {
     margin-bottom: 15px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-2 {
-    margin-bottom: 15px;
-  }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-2 .sub-title {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 .sub-title {
     margin-bottom: 5px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3,
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-4 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3,
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4 {
     width: 50%;
+    margin-bottom: 15px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 {
     text-align: left;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 span:first-child {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 span:first-child {
     margin-right: 5px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3 .status {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 .status {
     display: inline-block;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.hold {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.hold {
     color: #1abfd5;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.complete {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.complete {
     color: #40df97;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-3.cancel {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3.cancel {
     color: #f34213;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-3 .column-4:before {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4:before {
     content: 'Monto: ';
     display: inline-block;
     margin-right: 5px;
   }
-  .dashboard #main-menu-dashboard .main #ultimas-transacciones .column-5 {
+  .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
     margin-bottom: 10px;
   }
   .dashboard #main-menu-dashboard .main .main-nav-footer {
