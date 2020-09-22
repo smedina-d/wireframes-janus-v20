@@ -1342,13 +1342,10 @@ header {
   color: #707070;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.deactivate {
-  padding: 11px 25px 8px;
-}
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.desactivado {
   border: 1px solid #fff;
   cursor: pointer;
 }
-.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.desactivado:hover {
+.dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.deactivate:hover {
   background-color: #ffffff;
 }
 .dashboard #main-menu-dashboard .main #main-config .block-config .row-config a.active {
