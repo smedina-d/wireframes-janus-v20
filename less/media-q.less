@@ -416,7 +416,7 @@
                                     background:#fff;
                                     &.top{
                                         transform:rotate(45deg);
-                                        top: 3px;
+                                        top: 1px;
                                     }
                                     &.bottom{
                                         transform:rotate(-45deg);
@@ -428,7 +428,7 @@
                                 }
                             }
                             span{
-                                width: 25px;
+                                width: 20px;
                                 height: 2px;
                                 background:#707070;
                                 border-radius: 30px;
@@ -524,7 +524,7 @@
             padding:0;
             position: absolute;
             width: 100%;
-            top: 142px;
+            top: 140px;
             display: none;
             z-index: 100;
             .container{
@@ -550,6 +550,9 @@
                         padding: 18px 0 15px;
                         border-bottom:solid 1px #e8e8e8;
                         color: #171717;
+                        &:first-child{
+                            border-bottom:0;
+                        }
                         &:last-child{
                             border-bottom:0;
                         }
@@ -566,6 +569,7 @@
                     max-width: inherit;
                     padding:0 15px;
                     .menu-dashboard{
+                        margin-bottom: 10px;
                         &#shortcuts{
                             h3{
                                 &:before{
@@ -576,12 +580,26 @@
                                 }
                             }
                         }
+                        &.quick-access {
+                            border-bottom: solid 1px #cecece;
+                            margin-bottom: 40px;
+                            div {
+                                padding-bottom: 20px;
+                            }
+                        }
+                        &.favorites {
+                            border-bottom: solid 1px #cecece;
+                            div {
+                                padding-bottom: 20px;
+                            }
+                        }
                         h3{
+                            margin: 15px 0 15px;
                             &:before{
                                 content:'+';
-                                margin-right: 2px;
+                                margin-right: 12px;
                                 display: inline-block;
-                                font-size: 1.2em;
+                                font-size: 20px;
                                 transition: all .4s ease-in;
                             }
                             &.active{
@@ -598,17 +616,18 @@
                                 display: none;
                             }
                             a{
-                                padding: 12.5px 35px 8.5px;
-                                border-radius: 20px;
-                                border: solid 1px;
+                                padding: 15px 50px 12px;
+                                border-radius: 30px;
+                                border: solid 1px #cecece;
                                 display: flex;
                                 align-items: center;
-                                margin-bottom: 20px;
+                                margin-bottom: 15px;
                                 span{
                                     top: -1px;
                                     position: relative;
-                                    margin: 0 15px;
+                                    margin: 0 15px 0 0;
                                     font-size: 1.5em;
+                                    width: auto;
                                 }
                             }
                         }
@@ -639,8 +658,8 @@
                     }
                 }
                 #ultimas-transacciones {
-                padding:0 15px;
-                margin-bottom: 0;
+                padding: 15px;
+                margin-bottom: 10px;
                 h3{
                     padding: 14px 0 9px;
                     border-bottom:0;
@@ -666,12 +685,8 @@
                                 margin-bottom: 5px;
                             }
                         }
-                        .column-3,
-                        .column-4{
-                            width: 50%;
-                            margin-bottom: 15px;
-                        }
-                        .column-3{
+                        .column-3 {
+                            width: 25px;
                             text-align:left;
                             span{
                                 &:first-child{
@@ -693,6 +708,8 @@
                             }
                         }
                         .column-4{
+                            width: auto;
+                            margin-bottom: 15px;
                             &:before{
                                 content:'Monto: ';
                                 display: inline-block;
@@ -706,14 +723,18 @@
                 }
                 .main-nav-footer {
                     width: 100%;
+                    padding: 15px;
+                    position: relative;
                     .row{
                         margin:0;
-                        display: flex;
-                        justify-content: space-evenly;
+                        display: contents;
                     }
                     a{
-                        padding:0;
-                        font-size: 9px;
+                        padding: 0;
+                        white-space: nowrap;
+                        &:first-child {
+                            margin-right: 10px;
+                        }
                         &:before{
                             display: none;
                         }
@@ -725,6 +746,11 @@
                         .row-config{
                             flex-direction: column;
                             align-items: flex-start;
+                            border-bottom: 1px solid #f1f1f1;
+                            padding-bottom: 30px;
+                            &:last-child {
+                                border-bottom-width: 0;
+                            }   
                             h4{
                                 margin-left:0;
                                 margin-bottom: 30px;

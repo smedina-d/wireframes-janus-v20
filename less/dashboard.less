@@ -465,6 +465,9 @@
                     align-items: center;
                     margin: 0 50px;
                     padding: 10px 0;
+                    &:last-child {
+                        border-bottom-width: 0;
+                    }
                     &.headers-row{
                         div{
                             color: #171717;
@@ -509,12 +512,12 @@
                         }
                     }
                     .column-5{
-                        flex: 1 1 100px;
-                        text-align: center;
+                        flex: 1 1 150px;
+                        text-align: right;
                         a{
-                            font-size: .9em;
+                            font-size: 15px;
                             justify-content: center;
-                            padding: 4px 0px 1px;
+                            cursor: pointer;
                         }
                     }
 
