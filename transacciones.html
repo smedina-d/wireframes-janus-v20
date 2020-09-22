@@ -231,19 +231,24 @@
     </div>
     <div id="modalCorreo" class="modal-window dashboard-modal">
         <div class="inside-modal">
-            <img src="img/question.png" alt="Mensaje">
-            <h3>Transferencia por correo electrónico</h3>
-            <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
-            <p>En caso de lo contratrio, presione cancelar.</p>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
+            <img class="reference-icon" src="img/email-transfer-confirmation.svg" alt="Confirma el movimiento" />
+            <div class="date-title">
+                <h3>Transferencia por correo electrónico</h3>
+            </div>
+            <p>Estás a punto de enviar una transacción por correo electrónico a <span class="email">usuario@email.com,</span> si estás seguro de esta transacción presione continuar.<br>En caso de lo contratrio, presione cancelar.</p>
             <div class="button-modal">
-                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
-                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+                <a href="#" class="btn-continuar cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="btn-continuar" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
     <div id="modalTransferencia" class="modal-window dashboard-modal">
         <div class="inside-modal">
-            <h3>Confirmación de transferencia</h3>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
+            <div class="date-title">
+                <h3>Confirmación de transferencia</h3>
+            </div>
             <div class="tabla-transferencia">
                 <div class="row-tabla">
                     <div class="left">Beneficiario</div>
@@ -284,16 +289,18 @@
                 <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
             </div>
             <div class="button-modal">
-                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
-                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+                <a href="#" class="btn-continuar cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="btn-continuar" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
     <div id="modalTransaccion" class="modal-window transfer-confirm">
         <div class="inside-modal">
             <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
-            <h3>Transferencia por correo electrónico</h3>
-            <h4>09:14 AM, Junio 27 2020</h4>
+            <div class="date-title">
+                <h3>Transferencia por correo electrónico</h3>
+                <h4 class="date-time">09:14 AM, Junio 27 2020</h4>
+            </div>
             <div id="receipt-content">
                 <div class="amout-detials">
                     <div class="payment-amount">15 USD</div>

@@ -274,19 +274,24 @@
     </div>
     <div id="modalCorreo" class="modal-window dashboard-modal">
         <div class="inside-modal">
-            <img src="img/question.png" alt="Mensaje">
-            <h3>Transferencia por correo electrónico</h3>
-            <p>Estás a punto de enviar una transacción por correo electrónico a usuario@email.com, si estás seguro de esta transacción presione continuar.</p>
-            <p>En caso de lo contratrio, presione cancelar.</p>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
+            <img class="reference-icon" src="img/email-transfer-confirmation.svg" alt="Confirma el movimiento" />
+            <div class="date-title">
+                <h3>Transferencia por correo electrónico</h3>
+            </div>
+            <p>Estás a punto de enviar una transacción por correo electrónico a <span class="email">usuario@email.com,</span> si estás seguro de esta transacción presione continuar.<br>En caso de lo contratrio, presione cancelar.</p>
             <div class="button-modal">
-                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
-                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+                <a href="#" class="btn-continuar cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="btn-continuar" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
     <div id="modalTransferencia" class="modal-window dashboard-modal">
         <div class="inside-modal">
-            <h3>Confirmación de transferencia</h3>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
+            <div class="date-title">
+                <h3>Confirmación de transferencia</h3>
+            </div>
             <div class="tabla-transferencia">
                 <div class="row-tabla">
                     <div class="left">Beneficiario</div>
@@ -327,16 +332,18 @@
                 <p>Si está seguro de está transacción presione continuar. En caso contrario, presione cancelar.</p>
             </div>
             <div class="button-modal">
-                <a href="#" class="cancel-button" data-close="close-modal">Cancelar</a>
-                <a href="#" class="continuar-button" data-close="close-modal">Continuar</a>
+                <a href="#" class="btn-continuar cancel-button" data-close="close-modal">Cancelar</a>
+                <a href="#" class="btn-continuar" data-close="close-modal">Continuar</a>
             </div>
         </div>
     </div>
     <div id="modalTransaccion" class="modal-window transfer-confirm">
         <div class="inside-modal">
-            <span class="modal-close" data-close="close-modal">x</span>
-            <h3>Transferencia por correo electrónico</h3>
-            <h4>09:14 AM, Junio 27 2020</h4>
+            <a href="#" title="Close" class="modal-close" data-close="close-modal"><img src="img/close.svg"></a>
+            <div class="date-title">
+                <h3>Transferencia por correo electrónico</h3>
+                <h4 class="date-time">09:14 AM, Junio 27 2020</h4>
+            </div>
             <div id="receipt-content">
                 <div class="amout-detials">
                     <div class="payment-amount">15 USD</div>
@@ -345,58 +352,48 @@
                 <div class="user"><span class="icon-user"></span>Alejandra de los Santos</div>
                 <div class="bank-info">
                     <div class="row-receipt">
-                        <div class="left">Referencia:</div>
-                        <div class="right">0997 1345 3588</div>
+                        <div class="left">Referencia: <span class="right">0997 1345 3588</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">BIC:</div>
-                        <div class="right">CMBRFR2B</div>
+                        <div class="left">BIC: <span class="right">CMBRFR2B</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Banco destino:</div>
-                        <div class="right">Banorte</div>
+                        <div class="left">Banco destino: <span class="right">Banorte</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Comisión:</div>
-                        <div class="right">5%</div>
+                        <div class="left">Comisión: <span class="right">5%</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Monto a recibir:</div>
-                        <div class="right">45 USD</div>
+                        <div class="left">Monto a recibir: <span class="right">45 USD</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Estatus:</div>
-                        <div class="right">Completada</div>
+                        <div class="left">Estatus: <span class="right">Completada</span></div>
                     </div>
                 </div>
                 <div class="receipt-download">
-                    <img src="img/dashboard/download-1.png" alt="Download">Descargar comprobante
+                    <img src="img/dashboard/file.svg" alt="Download">Descargar comprobante
                 </div>
             </div>
             <div id="receipt-content">
                 <div class="bank-info">
                     <div class="row-receipt two-rows">
-                        <div class="left">Nota:</div>
+                        <div class="left"></div>
+                        <div class="left">Nota: <span class="right">Aquí va la nota.</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">BIC:</div>
-                        <div class="right">CMBRFR2B</div>
+                        <div class="left">BIC: <span class="right">CMBRFR2B</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Banco destino:</div>
-                        <div class="right">Banorte</div>
+                        <div class="left">Banco destino: <span class="right">Banorte</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Comisión:</div>
-                        <div class="right">5%</div>
+                        <div class="left">Comisión: <span class="right">5%</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Monto a recibir:</div>
-                        <div class="right">45 USD</div>
+                        <div class="left">Monto a recibir: <span class="right">45 USD</span></div>
                     </div>
                     <div class="row-receipt">
-                        <div class="left">Estatus:</div>
-                        <div class="right">Completada</div>
+                        <div class="left">Estatus: <span class="right">Completada</span></div>
                     </div>
                 </div>
             </div>

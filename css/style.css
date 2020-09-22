@@ -88,7 +88,7 @@ img {
   padding: 12px 30px 10px;
   border-radius: 30px;
   display: flex;
-  width: 160px;
+  min-width: 100px;
 }
 .btn-continuar.active {
   background: #3fde97;
@@ -98,7 +98,7 @@ img {
   color: #fff;
 }
 .btn-continuar .icon-down-arrow-2 {
-  margin-left: 5px;
+  margin: 0 15px 0 5px;
   position: relative;
 }
 .btn-continuar:hover {
@@ -220,33 +220,12 @@ img {
 .modal-window.dashboard-modal .inside-modal img {
   max-width: 150px;
 }
-.modal-window.dashboard-modal .inside-modal h3 {
-  font-size: 18px;
-  margin: 0;
-  margin-bottom: 30px;
-  color: #171717;
-}
 .modal-window.dashboard-modal .inside-modal p {
   color: #707070;
   margin-top: 30px;
 }
 .modal-window.dashboard-modal .inside-modal p a {
   color: #1677ff;
-}
-.modal-window.dashboard-modal .button-modal {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 10px;
-}
-.modal-window.dashboard-modal .button-modal .cancel-button {
-  color: #171717;
-}
-.modal-window.dashboard-modal .button-modal .continuar-button {
-  border-radius: 30px;
-  border: solid 1px #3fde97;
-  padding: 11px 25px 8px;
-  color: #3fde97;
 }
 .modal-window.transfer-confirm {
   overflow-y: scroll;
@@ -257,21 +236,6 @@ img {
   top: 0;
   margin: 25px 0;
   padding: 15px;
-}
-.modal-window.transfer-confirm .inside-modal h3 {
-  text-align: center;
-  margin: 0;
-  font-size: 18px;
-  color: #171717;
-  margin: 20px 0 5px;
-  font-weight: 500;
-}
-.modal-window.transfer-confirm .inside-modal h4 {
-  color: #c4c4c4;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 20px;
-  font-weight: 500;
 }
 .modal-window.transfer-confirm .inside-modal #receipt-content {
   background-color: #f9f9f9;
@@ -367,6 +331,9 @@ img {
   background: #f2f2f2;
   border-radius: 10px;
 }
+.modal-window .inside-modal .reference-icon {
+  height: 100px;
+}
 .modal-window .inside-modal .modal-close {
   color: #fff;
   position: absolute;
@@ -384,6 +351,38 @@ img {
 .modal-window .inside-modal .modal-close img:hover {
   opacity: 1;
 }
+.modal-window .inside-modal .date-title {
+  margin: 20px 0;
+  text-align: center;
+}
+.modal-window .inside-modal .date-title h3 {
+  font-size: 18px;
+  color: #171717;
+  font-weight: 500;
+  margin: 0;
+}
+.modal-window .inside-modal .date-title h4 {
+  color: #c4c4c4;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.modal-window .inside-modal .button-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.modal-window .inside-modal .button-modal .cancel-button {
+  border: 1px solid #f2f2f2;
+  width: 145px;
+  text-align: center;
+  color: #707070;
+}
+.modal-window .inside-modal .button-modal .cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #707070;
+}
 .modal-window .inside-modal .tabla-transferencia {
   display: flex;
   flex-direction: column;
@@ -391,7 +390,7 @@ img {
 .modal-window .inside-modal .tabla-transferencia > div {
   flex: 1 1 0;
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .modal-window .inside-modal .tabla-transferencia .left {
   color: #707070;
@@ -1285,6 +1284,10 @@ header {
   padding: 0 15px;
   position: relative;
   font-size: 12px;
+}
+.dashboard #main-menu-dashboard .main .main-nav-footer a:last-child:before {
+  content: '';
+  width: 0px;
 }
 .dashboard #main-menu-dashboard .main .main-nav-footer a:before {
   content: '';
