@@ -941,6 +941,9 @@ header {
   justify-content: space-between;
   margin-left: 250px;
 }
+.dashboard #sub-menu-container .container .sub-menu a {
+  color: #1877fe;
+}
 .dashboard #sub-menu-container .container #messages-slide,
 .dashboard #sub-menu-container .container #settings-slide,
 .dashboard #sub-menu-container .container #user-slide {
@@ -1235,7 +1238,7 @@ header {
   margin-bottom: 10px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-2 .name-detalle {
-  color: #1677ff;
+  color: #2664ad;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 {
   flex: 1 1 90px;
@@ -1268,6 +1271,7 @@ header {
   font-size: 15px;
   justify-content: center;
   cursor: pointer;
+  color: #2664ad;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard p {
   line-height: 5px;
