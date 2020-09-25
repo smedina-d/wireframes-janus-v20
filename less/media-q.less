@@ -544,15 +544,39 @@
                             }
                         }
                     }
+                    .inside-menu{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 15px 0 0;
+                        h4{
+                            margin: 0;
+                            margin-bottom: 3px;
+                            font-weight: normal;
+                            border-bottom: 1px solid #181818;
+                            padding-bottom: 8px;
+                        }
+                    }
                     a{
                         padding: 18px 0 15px;
                         border-bottom:solid 1px #e8e8e8;
                         color: #171717;
+                        text-align: left;
                         &:first-child{
                             border-bottom:0;
                         }
                         &:last-child{
                             border-bottom:0;
+                        }
+                        span{
+                            &:before{
+                                margin-right:5px;
+                            }
+                        }
+                        img{
+                            max-width: 15px;
+                            margin-right:5px;
+                            position: relative;
+                            top: 3px;
                         }
                     }
                 }

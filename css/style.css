@@ -2103,16 +2103,38 @@ header {
   .dashboard #sub-menu-container .container .sub-menu#messages-slide a:first-child {
     color: #171717;
   }
+  .dashboard #sub-menu-container .container .sub-menu .inside-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 0;
+  }
+  .dashboard #sub-menu-container .container .sub-menu .inside-menu h4 {
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: normal;
+    border-bottom: 1px solid #181818;
+    padding-bottom: 8px;
+  }
   .dashboard #sub-menu-container .container .sub-menu a {
     padding: 18px 0 15px;
     border-bottom: solid 1px #e8e8e8;
     color: #171717;
+    text-align: left;
   }
   .dashboard #sub-menu-container .container .sub-menu a:first-child {
     border-bottom: 0;
   }
   .dashboard #sub-menu-container .container .sub-menu a:last-child {
     border-bottom: 0;
+  }
+  .dashboard #sub-menu-container .container .sub-menu a span:before {
+    margin-right: 5px;
+  }
+  .dashboard #sub-menu-container .container .sub-menu a img {
+    max-width: 15px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
   }
   .dashboard #main-menu-dashboard .container {
     flex-direction: column;
