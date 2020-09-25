@@ -1514,6 +1514,14 @@ header {
   position: relative;
   width: 50%;
 }
+.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.error select,
+.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.error input {
+  border: solid 1px #f90000;
+}
+.dashboard #main-menu-dashboard .main #main-config #new-container .row .item.error .error-txt {
+  color: #f90000;
+  padding: 13px 15px 0;
+}
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item label,
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item select {
   width: 100%;
@@ -1541,7 +1549,7 @@ header {
   height: 12px;
   position: absolute;
   right: 35px;
-  bottom: 15px;
+  top: 47px;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item input {
   border: solid 1px #b7b7b7;
@@ -2174,6 +2182,7 @@ header {
   .dashboard #main-menu-dashboard .main {
     position: inherit;
     min-height: auto;
+    order: -1;
   }
   .dashboard #main-menu-dashboard .main .breadcrumb {
     padding: 23px 0px 17px;
