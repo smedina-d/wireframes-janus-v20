@@ -2144,6 +2144,7 @@ header {
   .dashboard #main-menu-dashboard .container .sidebar-menu {
     max-width: inherit;
     padding: 0 15px;
+    display: none;
   }
   .dashboard #main-menu-dashboard .container .sidebar-menu .menu-dashboard {
     margin-bottom: 10px;
