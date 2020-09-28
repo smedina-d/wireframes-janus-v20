@@ -941,6 +941,11 @@ header {
   justify-content: space-between;
   margin-left: 250px;
 }
+.dashboard #sub-menu-container .container .sub-menu .inside-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .dashboard #sub-menu-container .container .sub-menu .inside-menu:not(:first-child) {
   display: none;
 }
