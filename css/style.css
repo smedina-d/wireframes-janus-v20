@@ -1255,21 +1255,24 @@ header {
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 .status {
   display: none;
 }
-.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 img {
-  width: 15px;
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 span {
+  font-size: 20px;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4 {
   flex: 1 1 70px;
   text-align: center;
 }
-.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.blue {
-  color: #1abfd5;
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.yellow {
+  color: #e8d646;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.green {
-  color: #40df97;
+  color: #68bb8c;
+}
+.dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.orange {
+  color: #da8b38;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-4.red {
-  color: #f34213;
+  color: #f34215;
 }
 .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-5 {
   flex: 1 1 150px;
@@ -2266,11 +2269,11 @@ header {
     margin-bottom: 5px;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 {
-    width: 25px;
+    width: 30px;
     text-align: left;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 span:first-child {
-    margin-right: 5px;
+    font-size: 18px;
   }
   .dashboard #main-menu-dashboard .main #ultimas-transacciones .row-dashboard .column-3 .status {
     display: inline-block;
