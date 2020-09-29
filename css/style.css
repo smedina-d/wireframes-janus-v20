@@ -517,6 +517,17 @@ header {
   height: 85%;
   z-index: -1;
 }
+#home > .container:after {
+  content: '';
+  background: url('../img/overlay.svg') no-repeat top right;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  z-index: -1;
+}
 .slogan {
   max-width: 480px;
 }
@@ -1701,7 +1712,8 @@ header {
   }
 }
 @media (max-width: 1280px) {
-  #home .container:before {
+  #home .container:before,
+  #home .container:after {
     height: 70%;
   }
   .info .info-items-image img {
@@ -1772,7 +1784,8 @@ header {
     align-items: center;
     text-align: center;
   }
-  #home .container:before {
+  #home .container:before,
+  #home .container:after {
     display: none;
   }
   #home .slogan {
