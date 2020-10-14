@@ -2417,20 +2417,17 @@ header {
   font-style: normal;
   font-display: block;
 }
-/***VARIABLES***/
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'janus' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.icon-warning:before {
+  content: "\e911";
+  color: #e8d647;
+}
+.icon-cancel:before {
+  content: "\e900";
+  color: #f34213;
+}
+.icon-in-progress:before {
+  content: "\e90e";
+  color: #da8a38;
 }
 .icon-alert-2 .path1:before {
   content: "\e901";
@@ -2482,47 +2479,55 @@ header {
 .icon-down-arrow-2:before {
   content: "\e90c";
   color: #40df97;
-  position: absolute;
-  top: 2px;
-  margin-left: 3px;
-  font-size: 14px;
 }
 .icon-efectivo:before {
   content: "\e90d";
   color: #707070;
 }
 .icon-equis:before {
-  content: "\e90e";
+  content: "\e90f";
   color: #e8451d;
 }
 .icon-flash:before {
-  content: "\e90f";
+  content: "\e910";
   color: #1677ff;
-  position: absolute;
-  left: 0;
-  top: -8px;
 }
 .icon-gear:before {
-  content: "\e910";
+  content: "\e914";
   color: #717070;
 }
 .icon-minus:before {
-  content: "\e912";
+  content: "\e913";
   color: #30bad1;
 }
 .icon-recarga-telefonica:before {
-  content: "\e913";
+  content: "\e915";
   color: #707070;
 }
 .icon-transacciones:before {
-  content: "\e914";
+  content: "\e918";
   color: #707070;
 }
 .icon-transferencia-bancaria:before {
-  content: "\e915";
+  content: "\e919";
   color: #707070;
 }
 .icon-user:before {
   content: "\e916";
   color: #707070;
+}
+/***VARIABLES***/
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'janus' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
