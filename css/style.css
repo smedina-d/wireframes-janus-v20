@@ -1520,7 +1520,8 @@ header {
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item.error .error-txt {
   color: #f90000;
-  padding: 13px 15px 0;
+  padding: 5px 10px 0;
+  font-size: 13px;
 }
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item label,
 .dashboard #main-menu-dashboard .main #main-config #new-container .row .item select {
